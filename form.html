@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pink - Конкурс</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+
+<body>
+
+  <header class="page-header page-header--inner">
+    <div class="page-header__nav-bar">
+      <div class="container">
+        <a href="/" class="page-header__logo-link">
+          <img src="" alt="Pink">
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Возможности</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Стоимость</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="main-nav__toggle"></a>
+      </div>
+    </div>
+    <div class="page-header__heading">
+      <div class="container">
+        <h1>
+          Конкурс на самое безбашенное путешествие с Пинк
+        </h1>
+      </div>
+    </div>
+  </header>
+  
+  <form class="contest-form" method="POST" action=".">
+    <div class="contest-form__main-info">
+      <div class="container">
+        <div class="contest-form__promo">
+          Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту!
+        </div>
+
+        <div class="contest-form__person">
+          <label>Имя: * <input type="text" placeholder="Введите ваше имя" name="person-name" required autofocus></label>
+          <label>Фамилия: * <input type="text" placeholder="Укажите фамилию" name="person-surname" required></label>
+          <label>Отчество: <input type="text" placeholder="Ну и отчество тоже" name="person-patronymic"></label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contest-form__app-type">
+      <div class="container">
+        <h2 class="contest-form__block-heading">С каким приложением путешествовали? *</h2>
+        <label><input type="radio" value="iOS" name="app-type" checked>Pink для iOS</label>
+        <label><input type="radio" value="Android" name="app-type">Pink для Android</label>
+        <label><input type="radio" value="Windows-Phone" name="app-type">Windows Phone</label>
+      </div>
+    </div>
+    
+    <div class="contest-form__dates">
+      <div class="container">
+        <h2 class="contest-form__block-heading">Когда вы путешествовали? *</h2>
+        <label><input type="text" placeholder="1 апреля 2015" name="date-start" required>Дата выезда</label>
+        <!-- input type="date" не должно иметь placeholder, и формат даты будет другой -->
+        <label>
+          <div class="increment-field">
+            <input type="text" placeholder="10 дней" name="duration">
+          </div>
+          Продолжительность
+        </label>
+        <label><input type="text" placeholder="1 апреля 2015" name="date-end" readonly>Дата возвращения</label>
+      </div>
+    </div>
+
+    <div class="contest-form__companions">
+      <div class="container">
+        <label>
+          Количество попутчиков
+          <div class="increment-field">
+            <input type="text" placeholder="2 чел" name="companions-number">
+          </div>
+        </label>
+
+        <div class="contest-form__companions-list">
+          <div class="contest-form__companions-list-item">
+            <div class="contest-form__companions-list-item-number">
+              <label>№ <input type="number" value="1" min="1" name="companion-number-1" readonly></label>
+            </div>
+            <div class="contest-form__companions-list-item-info">
+              <label>Имя: * <input type="text" name="companion-1-name" placeholder="Введите ваше имя" required></label>
+              <label>Прозвище: <input type="text" name="companion-1-nickname" placeholder="Ну как же без этого!"></label>
+            </div>
+          </div>
+
+          <div class="contest-form__companions-list-item">
+            <div class="contest-form__companions-list-item-number">
+              <label>№ <input type="number" value="2" min="1" name="companion-number-1" readonly></label>
+            </div>
+            <div class="contest-form__companions-list-item-info">
+              <label>Имя: * <input type="text" name="companion-2-name" placeholder="Введите ваше имя" required></label>
+              <label>Прозвище: <input type="text" name="companion-2-nickname" placeholder="Ну как же без этого!"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contest-form__achievements">
+      <div class="container">
+        <h2 class="contest-form__block-heading">Ваши безбашенные достижения в путешествии</h2>
+        <label><input type="checkbox" name="achievements-selfi" checked>Сделал селфи с акулой</label>
+        <label><input type="checkbox" name="achievements-suntan" checked>Обгорел на пляже</label>
+        <label><input type="checkbox" name="achievements-norris">Видел Чака Норриса</label>
+        <label><input type="checkbox" name="achievements-souvenirs">Накупил сувениров</label>
+        <label><input type="checkbox" name="achievements-mind" checked>Удержал башню</label>
+        <label><input type="checkbox" name="achievements-defeat">Разгромил отель</label>
+      </div>
+    </div>
+    
+    <div class="contest-form__photos">
+      <div class="container">
+        <h2 class="contest-form__block-heading">Ваши фотографии из поездки</h2>
+        <button type="button" class="btn-upload-photo">Загрузить фото</button>
+        <div class="contest-form__photos-items">
+          <div class="contest-form__single-photo">
+            <img src="" alt="img-1.jpg">
+          </div>
+          <div class="contest-form__single-photo">
+            <img src="" alt="img-2.jpg">
+          </div>
+          <div class="contest-form__single-photo">
+            <img src="" alt="img-3.jpg">
+          </div>
+          <div class="contest-form__single-photo">
+            <img src="" alt="img-4.jpg">
+          </div>
+          <div class="contest-form__single-photo">
+            <img src="" alt="img-5.jpg">
+          </div>
+          <div class="contest-form__single-photo">
+            <img src="" alt="img-6.jpg">
+          </div>
+          <div class="contest-form__single-photo">
+            <img src="" alt="img-7.jpg">
+          </div>
+          <div class="contest-form__single-photo">
+            <img src="" alt="img-8.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contest-form__ending">
+      <div class="container">
+        <input type="submit" value="Отправить форму">
+        <div class="contest-form__legend">
+          <span class="form-important">*</span> &mdash; обязательные поля
+        </div>
+      </div>
+    </div>
+  </form>
+  
+
+  <footer class="inner-footer">
+    <div class="inner-footer__logo">
+      <a href="/"><img src="" alt="Pink"></a>
+    </div>
+    <div class="inner-footer__social">
+      <ul class="social-links">
+        <li><a class="social-links__item  social-links__item--twitter" href="#">Мы в Твиттере</a></li>
+        <li><a class="social-links__item  social-links__item--fb" href="#">Мы в Facebook</a></li>
+        <li><a class="social-links__item  social-links__item--youtube" href="#">Мы в Youtube</a></li>
+      </ul>
+    </div>
+    <div class="inner-footer_developer">
+      Разработано 
+      <a class="developer-htmlacademy" href="http://htmlacademy.ru">HtmlAcademy</a>
+    </div>
+  </footer>
+
+  <!-- <script src="js/script.js"></script> -->
+
+</body>
+</html>

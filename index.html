@@ -3,13 +3,178 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: pink</title>
+  <title>Pink - Взгляните на жизнь иначе!</title>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 
 <body>
 
-  <p>Репозиторий создан для обучения на продвинутом онлайн-интенсиве «<a href="https://htmlacademy.ru/advanced_intensive">Создание веб-интерфейсов с помощью HTML и CSS</a>».</p>
+  <header class="page-header page-header--index">
+    <div class="page-header__nav-bar">
+      <div class="container">
+        <a href="/" class="page-header__logo-link">
+          <img src="" alt="Pink">
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Возможности</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Стоимость</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="main-nav__toggle"></a>
+      </div>
+    </div>
+    <div class="page-header__heading">
+      <div class="container">
+        <h1>
+          Взгляните на жизнь иначе
+        </h1>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="index-download">
+    <div class="container">
+      <a class="btn  btn--download" href="#">
+        Скачать приложение
+      </a>
+      <div class="index-download__buttons">
+        <a class="btn-iconic  btn-iconic--ios" href="#">
+          Для iOS
+        </a>
+        <a class="btn-iconic  btn-iconic--android" href="#">
+          Для Android
+        </a>
+        <a class="btn-iconic  btn-iconic--windows" href="#">
+          Для Windows
+        </a>
+      </div>
+      <div class="index-download__text">
+        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+      </div>
+    </div>
+  </section>
+
+  <section class="index-description">
+    <div class="container">
+      <div class="index-description__promo">
+        <p>
+          Устали от серости мегаполиса?
+        </p>
+        <p>
+          Нам есть, что вам предложить!
+        </p>
+      </div>
+
+      <div class="index-description__whatfor">
+        <div class="index-description__item">
+          <h2 class="index-description__heading">
+            Поднимает настроение
+          </h2>
+          <div class="index-description__text">
+            Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+          </div>
+        </div>
+
+        <div class="index-description__item">
+          <h2 class="index-description__heading">
+            Меняет мир вокруг
+          </h2>
+          <div class="index-description__text">
+            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+          </div>
+        </div>
+
+        <div class="index-description__item">
+          <h2 class="index-description__heading">
+            Заводит новых друзей
+          </h2>
+          <div class="index-description__text">
+            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="reviews">
+    <div class="container">
+      <div class="slider-reviews">
+        <article class="slider-reviews__item">
+          <h1 class="slider-reviews__header">Николай Петров</h1>
+          <div class="slider-reviews__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</div>
+        </article>
+        <div class="slider-reviews__pagination">
+          <i class="slider-reviews__pagination-item  slider-reviews__pagination-item--active"></i>
+          <i class="slider-reviews__pagination-item"></i>
+          <i class="slider-reviews__pagination-item"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="price">
+    <div class="slider-price">
+      <article class="slider-price  slider-price__item--hit">
+        <div class="slider-price__heading">
+          <h2 class="slider-price__name">
+            Стандарт
+          </h2>
+          <div class="slider-price__price">
+            3,99 USD
+          </div>
+        </div>
+        <div class="slider-price__features">
+          <div class="slider-price__features-item">
+            Розовый фильтр
+          </div>
+          <div class="slider-price__features-item">
+            Смайлики
+          </div>
+          <div class="slider-price__features-item  slider-price__features-item--no">
+            Комментарии
+          </div>
+        </div>
+      </article>
+
+      <div class="slider-price__pagination">
+        <i class="slider-price__pagination-item"></i>
+        <i class="slider-price__pagination-item  slider-price__pagination-item--active"></i>
+        <i class="slider-price__pagination-item"></i>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="index-footer">
+    <div class="index-footer__contacts">
+      <div class="index-footer__heading">
+        Остались вопросы? Свяжитесь с нами!
+      </div>
+      <div class="index-footer__contact-item">
+        <div class="index-footer__contact-heading">
+          Звоните:
+        </div>
+        <a class="index-footer__contact-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+      </div>
+      <div class="index-footer__contact-item">
+        <div class="index-footer__contact-heading">
+          Пишите:
+        </div>
+        <a class="index-footer__contact-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </div>
+      <div class="index-footer__contact-item">
+        <div class="index-footer__contact-heading">
+          Приезжайте в гости:
+        </div>
+        <a class="index-footer__contact-link" href="http://maps.google.com">ул. Большая Конюшенная, 19/8</a>
+      </div>
+    </div>
+    <div class="index-footer__map">
+    </div>
+  </footer>
 
   <!-- <script src="js/script.js"></script> -->
 
