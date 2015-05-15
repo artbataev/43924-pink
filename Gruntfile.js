@@ -6,6 +6,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-lintspaces');
+  grunt.loadNpmTasks('grunt-notify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -59,6 +61,20 @@ module.exports = function(grunt) {
           dest: 'gosha',
         }]
       }
+    },
+
+    watch: {
+      less: {
+        // We watch and compile less files as normal but don't live reload here
+        files: ['less/*', 'less/*/*'],
+        tasks: ['less'],
+      },
+      livereload: {
+        // Here we watch the files the less task will compile to
+        // These files are sent to the live reload server after less compiles to them
+        options: { livereload: true },
+        files: ['css/style.css'],
+      },
     },
 
     clean: {
