@@ -1,0 +1,60 @@
+.index-footer {
+    padding-bottom: 200px;
+
+    text-align: center;
+
+    background: url("../img/index-sm-map.jpg") no-repeat center bottom;
+    &__contacts {
+        position: relative;
+
+        padding-top: 45px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+
+        background: @main-light-color;
+        &:after,
+        &:before {
+            position: absolute;
+            bottom: -35px;
+
+            display: block;
+
+            content: "";
+        }
+        &:after {
+            left: 50%;
+
+            border-top: 35px solid @main-light-color;
+            border-right: 160px solid transparent;
+        }
+        &:before {
+            left: 0;
+
+            border-top: 35px solid @main-light-color;
+            border-left: 160px solid transparent;
+        }
+    }
+    &__heading {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 28px;
+
+        margin-bottom: 35px;
+    }
+    &__contact-item {
+        margin-bottom: 20px;
+    }
+    &__contact-heading {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    &__contact-link {
+        font-size: 24px;
+        font-weight: 300;
+
+        text-decoration: none;
+
+        color: @pink-color;
+    }
+}

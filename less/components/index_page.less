@@ -1,0 +1,184 @@
+.index-download {
+    padding-top: 25px;
+    padding-bottom: 35px;
+
+    text-align: center;
+
+    color: @main-light-color;
+    background: @main-dark-color;
+    &__text {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    &__buttons {
+        font-size: 0;
+        margin-bottom: 30px;
+    }
+}
+
+.btn-download {
+    font-size: 18px;
+    line-height: 18px;
+
+    display: block;
+
+    margin: auto 25px;
+    margin-bottom: 25px;
+    padding: 20px 15px;
+
+    text-decoration: none;
+
+    color: @main-light-color;
+    border: 4px solid @main-light-color;
+    border-radius: 40px;
+}
+
+.btn-iconic {
+    font-size: 0;
+    width: 47px;
+    height: 65px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 30px;
+    &:last-child {
+        margin-right: 0;
+    }
+    &--ios {
+        background: url('../img/icon-apple.png') no-repeat 50% 50%;
+    }
+    &--android {
+        background: url('../img/icon-android.png') no-repeat 50% 50%;
+    }
+    &--windows {
+        background: url('../img/icon-windows.png') no-repeat 50% 50%;
+    }
+}
+
+.index-description {
+    text-align: center;
+    &__heading {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 24px;
+
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    &__promo {
+        font-size: 24px;
+        font-weight: 300;
+
+        margin-bottom: 40px;
+    }
+    &__whatfor {
+        font-size: 14px;
+        line-height: 24px;
+
+        position: relative;
+
+        margin-top: 35px;
+        padding: 0 20px;
+        padding-top: 55px;
+        padding-bottom: 300px;
+
+        background: @minor-light-color url("../img/index-phone-hello.png") no-repeat center bottom;
+        &:before {
+            position: absolute;
+            top: -35px;
+            left: 0;
+
+            display: block;
+
+            content: "";
+
+            border-top: 35px solid transparent;
+            border-right: 320px solid @minor-light-color;
+        }
+    }
+    &__item {
+        margin-bottom: 40px;
+    }
+}
+
+.reviews {
+    padding-bottom: 25px;
+
+    text-align: center;
+}
+
+.slider-reviews {
+    &__item {
+        padding-top: 50px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    &__header {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 30px;
+
+        margin: 0;
+        margin-bottom: 25px;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 30px;
+    }
+    &__pagination {
+        font-size: 0;
+
+        padding-top: 35px;
+        padding-bottom: 25px;
+    }
+    &__pagination-item {
+        display: inline-block;
+
+        width: 6px;
+        height: 6px;
+        margin-right: 19px;
+
+        cursor: pointer;
+        vertical-align: top;
+
+        border: 3px solid white;
+        border-radius: 50%;
+        background: #bec2c7;
+        &:last-child {
+            margin-right: 0;
+        }
+        &--active {
+            border: 3px solid @main-dark-color;
+            background: @main-light-color;
+        }
+    }
+}
+
+.price {
+    position: relative;
+
+    padding-top: 65px;
+
+    background: @minor-light-color;
+    &:before {
+        position: absolute;
+        top: -25px;
+        left: 0;
+
+        display: block;
+
+        content: "";
+
+        border-top: 25px solid transparent;
+        border-right: 320px solid @minor-light-color;
+    }
+}
+
+.slider-price {
+    &__heading {
+        color: @main-light-color;
+        background: @main-dark-color;
+    }
+}

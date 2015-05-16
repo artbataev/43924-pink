@@ -1,0 +1,48 @@
+.page-header {
+    color: @main-light-color;
+    background: @main-dark-color;
+
+    &--index {
+      background: url('../img/bg-index-header.jpg') no-repeat center top;
+      padding-bottom: 310px;
+    }
+
+    &__nav-bar {
+      height: 66px;
+      margin-bottom: 25px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+    &__logo-link {
+      padding: 20px;
+      display: block;
+      width: 74px;
+      float: left;
+    }
+
+    &__heading {
+        font-size: 24px;
+        font-weight: 300;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin: 0;
+
+        text-align: center;
+    }
+}
+
+.main-nav {
+  &__list {
+    display: none;
+  }
+  &__toggle {
+    display: block;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 50px;
+    height: 25px;
+    content: "";
+    background: linear-gradient(to bottom, white 5px, transparent 5px, transparent 10px, white 10px, white 15px, transparent 15px, transparent 20px, white 20px);
+  }
+}
+
