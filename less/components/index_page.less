@@ -1,6 +1,6 @@
 .index-download {
-    padding-top: 25px;
-    padding-bottom: 35px;
+    padding-top: 27px;
+    padding-bottom: 30px;
 
     text-align: center;
 
@@ -15,7 +15,8 @@
     }
     &__buttons {
         font-size: 0;
-        margin-bottom: 30px;
+        margin-bottom: 16px;
+        padding-top: 4px;
     }
 }
 
@@ -25,15 +26,15 @@
 
     display: block;
 
-    margin: auto 25px;
+    margin: auto 18px;
     margin-bottom: 25px;
-    padding: 20px 15px;
+    padding: 15px;
 
     text-decoration: none;
 
     color: @main-light-color;
     border: 4px solid @main-light-color;
-    border-radius: 40px;
+    border-radius: 30px;
 }
 
 .btn-iconic {
@@ -42,18 +43,18 @@
     height: 65px;
     display: inline-block;
     vertical-align: top;
-    margin-right: 30px;
+    margin-right: 33px;
     &:last-child {
         margin-right: 0;
     }
     &--ios {
-        background: url('../img/icon-apple.png') no-repeat 50% 50%;
+        background: url('../img/icon-apple.png') no-repeat 0 2px;
     }
     &--android {
-        background: url('../img/icon-android.png') no-repeat 50% 50%;
+        background: url('../img/icon-android.png') no-repeat 0 10px;
     }
     &--windows {
-        background: url('../img/icon-windows.png') no-repeat 50% 50%;
+        background: url('../img/icon-windows.png') no-repeat 0 14px;
     }
 }
 
@@ -65,13 +66,24 @@
         line-height: 24px;
 
         margin: 0;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
     }
     &__promo {
         font-size: 24px;
         font-weight: 300;
 
-        margin-bottom: 40px;
+        padding-bottom: 30px;
+        padding-top: 40px;
+        line-height: 29px;
+
+        p {
+            margin: 0;
+            margin-bottom: 30px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
     }
     &__whatfor {
         font-size: 14px;
@@ -81,8 +93,8 @@
 
         margin-top: 35px;
         padding: 0 20px;
-        padding-top: 55px;
-        padding-bottom: 300px;
+        padding-top: 47px;
+        padding-bottom: 285px;
 
         background: @minor-light-color url("../img/index-phone-hello.png") no-repeat center bottom;
         &:before {
@@ -99,7 +111,7 @@
         }
     }
     &__item {
-        margin-bottom: 40px;
+        margin-bottom: 32px;
     }
 }
 
@@ -111,7 +123,7 @@
 
 .slider-reviews {
     &__item {
-        padding-top: 50px;
+        padding-top: 40px;
         padding-right: 20px;
         padding-left: 20px;
     }
@@ -121,7 +133,7 @@
         line-height: 30px;
 
         margin: 0;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
     }
     &__text {
         font-size: 14px;
@@ -130,7 +142,7 @@
     &__pagination {
         font-size: 0;
 
-        padding-top: 35px;
+        padding-top: 32px;
         padding-bottom: 25px;
     }
     &__pagination-item {
@@ -138,7 +150,7 @@
 
         width: 6px;
         height: 6px;
-        margin-right: 19px;
+        margin-right: 13px;
 
         cursor: pointer;
         vertical-align: top;
@@ -159,7 +171,7 @@
 .price {
     position: relative;
 
-    padding-top: 65px;
+    padding-top: 68px;
 
     background: @minor-light-color;
     &:before {
@@ -191,7 +203,7 @@
 
     &__item {
         font-size: 14px;
-        width: @sm-screen - 40;
+        width: @sm-screen - 40 - 3;
         display: inline-block;
         border-left: 1px solid #e5e5e5;
         border-right: 1px solid #e5e5e5;
@@ -206,15 +218,15 @@
             top: 0;
             background: @pink-color;
             color: @main-light-color;
-            transform: rotate(-45deg) translateX(-25px) translateY(-20px);
-            padding: 5px 45px;
+            transform: rotate(-45deg) translateX(-35px) translateY(-19px);
+            padding: 0px 45px;
         }
     }
 
     &__heading {
         color: @main-light-color;
         background: @main-dark-color;
-        padding-top: 25px;
+        padding-top: 16px;
         text-align: center;
     }
     &__name {
@@ -222,7 +234,7 @@
         padding: 0;
         font-size: 18px;
         color: @main-light-color;
-        margin-bottom: 10px;
+        margin-bottom: 3px;
     }
     &__price {
         font-size: 24px;
@@ -235,7 +247,7 @@
     }
 
     &__features-item {
-        padding: 25px;
+        padding: 14px 22px;
         border-bottom: 2px solid #e5e5e5;
 
         background: @main-light-color url('../img/icon-ok.png') no-repeat (@sm-screen - 85) 50%;
@@ -247,8 +259,8 @@
     &__pagination {
         font-size: 0;
 
-        padding-top: 35px;
-        padding-bottom: 25px;
+        padding-top: 27px;
+        padding-bottom: 30px;
         text-align: center;
     }
     &__pagination-item {
@@ -256,7 +268,7 @@
 
         width: 6px;
         height: 6px;
-        margin-right: 19px;
+        margin-right: 13px;
 
         cursor: pointer;
         vertical-align: top;
