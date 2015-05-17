@@ -1,0 +1,126 @@
+.contest-form {
+  padding-top: 40px;
+  &__promo {
+    margin-bottom: 30px;
+
+    text-align: center;
+  }
+  label {
+    font-size: 14px;
+    line-height: 30px;
+
+    margin-left: 23px;
+
+    text-transform: uppercase;
+
+    color: @pink-color;
+  }
+  input[type="text"] {
+    display: block;
+
+    box-sizing: border-box;
+    width: 280px;
+    padding: 20px;
+
+    text-transform: none;
+
+    color: @main-dark-color;
+    border: 2px solid #e5e5e5;
+  }
+  input[readonly] {
+    background: @minor-light-color;
+  }
+  &__block-heading {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: @pink-color;
+  }
+  &__main-info {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  &__app-type {
+    background: @minor-light-color;
+    label {
+      display: block;
+
+      padding-bottom: 15px;
+
+      text-transform: none;
+
+      color: @main-dark-color;
+    }
+  }
+  &__companions {
+    background: @minor-light-color;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  &__achievements {
+    label {
+      display: block;
+    }
+  }
+  &__photos {
+    background: @minor-light-color;
+    padding-right: 20px;
+    padding-left: 20px;
+    &-items {
+      font-size: 0;
+    }
+  }
+  &__single-photo {
+    position: relative;
+    z-index: 10;
+
+    display: inline-block;
+
+    width: 67px;
+    height: 68px;
+    margin-right: 35px;
+    margin-bottom: 35px;
+
+
+    vertical-align: top;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:after {
+      position: absolute;
+      z-index: 100;
+      top: -16px;
+      right: -17px;
+
+      display: block;
+
+      width: 34px;
+      height: 33px;
+
+      content: "";
+      cursor: pointer;
+
+      border-radius: 50%;
+      background: url("../img/icon-photo-del.png") no-repeat 0 0;
+    }
+  }
+  &__ending {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+}
+
+.btn-submit-form {
+  display: block;
+  text-transform: uppercase;
+  color: @main-light-color;
+  background: #2aab6d;
+  width: 280px;
+  text-align: center;
+  padding: 20px;
+}
