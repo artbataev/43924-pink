@@ -9,34 +9,29 @@
 
 <body>
 
-  <header class="page-header page-header--inner">
-    <div class="page-header__nav-bar">
-      <div class="container">
-        <a href="/" class="page-header__logo-link">
-          <img src="" alt="Pink">
-        </a>
-        <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li><a href="#">Информация</a></li>
-            <li><a href="#">Возможности</a></li>
-            <li><a href="#">Отзывы</a></li>
-            <li><a href="#">Стоимость</a></li>
-          </ul>
-        </nav>
-        <a href="#" class="main-nav__toggle"></a>
+  <div class="container">
+    <header class="page-header">
+      <div class="page-header__nav-bar">
+          <a href="#" class="page-header__logo-link">
+            <img src="img/sm-logo.png" alt="Pink">
+          </a>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__close"><a href="#">Закрыть</a></li>
+              <li><a href="#">Информация</a></li>
+              <li><a href="#">Возможности</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Стоимость</a></li>
+            </ul>
+          </nav>
+          <a href="#" class="main-nav__toggle"></a>
       </div>
-    </div>
-    <div class="page-header__heading">
-      <div class="container">
-        <h1>
-          Блог путешественников, пользователей Пинк
-        </h1>
-      </div>
-    </div>
-  </header>
+      <h1 class="page-header__heading">
+        Блог путешественников, пользователей Пинк
+      </h1>
+    </header>
 
-  <section class="blog-posts">
-    <div class="container">
+    <section class="blog-posts">
       <article class="blog-posts__item">
         <h1 class="blog-posts__item-heading">
           <a href="post.html">Антон и Надя в Тайланде</a>
@@ -86,31 +81,30 @@
       </article>
 
       <ul class="blog-posts__pagination">
-        <li class="blog-posts__pagination-item  blog-posts__pagination-item--active">1</li>
+        <li class="blog-posts__pagination-item  blog-posts__pagination-item--active"><span>1</span></li>
         <li class="blog-posts__pagination-item"><a href="#">2</a></li>
         <li class="blog-posts__pagination-item"><a href="#">3</a></li>
         <li class="blog-posts__pagination-item"><a href="#">4</a></li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <footer class="inner-footer">
-    <div class="inner-footer__logo">
-      <a href="/"><img src="" alt="Pink"></a>
-    </div>
-    <div class="inner-footer__social">
-      <ul class="social-links">
-        <li><a class="social-links__item  social-links__item--twitter" href="#">Мы в Твиттере</a></li>
-        <li><a class="social-links__item  social-links__item--fb" href="#">Мы в Facebook</a></li>
-        <li><a class="social-links__item  social-links__item--youtube" href="#">Мы в Youtube</a></li>
-      </ul>
-    </div>
-    <div class="inner-footer_developer">
-      Разработано 
-      <a class="developer-htmlacademy" href="http://htmlacademy.ru">HtmlAcademy</a>
-    </div>
-  </footer>
-  
+    <footer class="inner-footer">
+      <div class="inner-footer__logo">
+        <a href="/"><img src="img/sm-footer-logo.png" alt="Pink"></a>
+      </div>
+      <div class="inner-footer__social">
+        <ul class="social-links">
+          <li><a class="social-links__item  social-links__item--twitter" href="#">Мы в Твиттере</a></li>
+          <li><a class="social-links__item  social-links__item--fb" href="#">Мы в Facebook</a></li>
+          <li><a class="social-links__item  social-links__item--youtube" href="#">Мы в Youtube</a></li>
+        </ul>
+      </div>
+      <div class="inner-footer__developer">
+        Разработано 
+        <a class="developer-htmlacademy" href="http://htmlacademy.ru">HtmlAcademy</a>
+      </div>
+    </footer>
+  </div>
 
   <!-- <script src="js/script.js"></script> -->
 
