@@ -1,6 +1,6 @@
 .contest-form {
   padding-top: 45px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   &__promo {
     font-size: 14px;
     line-height: 30px;
@@ -110,23 +110,63 @@
   &__dates {
     padding-top: 50px;
     padding-right: 20px;
+    padding-bottom: 22px;
     padding-left: 20px;
 
     text-align: center;
+    input[type="text"] {
+      margin-bottom: 10px;
+    }
+    label {
+      margin-bottom: 17px;
+    }
   }
   &__companions {
+    padding-top: 30px;
     padding-right: 20px;
+    padding-bottom: 30px;
     padding-left: 20px;
 
     background: @minor-light-color;
+    &-number-wrapper {
+      padding-bottom: 35px;
+
+      text-align: center;
+      label {
+        margin-bottom: 28px;
+      }
+    }
     &-list {
       border-top: 2px solid @main-divider-color;
       &-item {
-        
+        padding-top: 28px;
+
+        .clearfix();
+        label {
+          padding-left: 20px;
+          padding-left: 25px;
+        }
+        &-number {
+          float: left;
+
+          width: 60px;
+          input[type="number"] {
+            width: 65px;
+          }
+        }
+        &-info {
+          float: right;
+
+          width: 220px;
+          input[type="text"] {
+            width: 220px;
+          }
+        }
       }
     }
   }
   &__achievements {
+    padding-top: 48px;
     padding-right: 20px;
     padding-left: 20px;
     label {
@@ -168,13 +208,14 @@
   &__photos {
     padding-top: 35px;
     padding-right: 20px;
+    padding-bottom: 5px;
     padding-left: 20px;
 
     background: @minor-light-color;
     &-items {
       font-size: 0;
 
-      margin-top: 40px;
+      margin-top: 33px;
       padding-top: 35px;
 
       border-top: 2px solid #e5e5e5;
@@ -189,7 +230,7 @@
     width: 67px;
     height: 68px;
     margin-right: 39px;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
 
     vertical-align: top;
     &:nth-child(3n) {
@@ -219,11 +260,13 @@
       font-size: 12px;
       line-height: 18px;
 
+      padding-top: 7px;
+
       text-transform: uppercase;
     }
   }
   &__ending {
-    padding-top: 20px;
+    padding-top: 50px;
     padding-right: 20px;
     padding-left: 20px;
 
@@ -243,12 +286,12 @@
   &:before,
   &:after {
     position: absolute;
-    top: 2px;
+    top: 0;
 
     display: block;
 
     width: 59px;
-    height: 59px;
+    height: 62px;
 
     content: "";
     cursor: pointer;
@@ -276,7 +319,8 @@
     display: block;
 
     width: 280px;
-    padding: 10px;
+    margin-top: -7px;
+    padding: 17px;
 
     text-transform: uppercase;
 
@@ -284,15 +328,13 @@
     border-radius: 1px;
     background: @main-light-color;
   }
-
-
   &-submit-form {
     font-size: 18px;
 
     display: block;
 
     width: 280px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     padding: 20px;
 
     text-align: center;
@@ -303,4 +345,8 @@
     border-radius: 1px;
     background: #2aab6d;
   }
+}
+
+.form-important {
+  color: @pink-color;
 }
