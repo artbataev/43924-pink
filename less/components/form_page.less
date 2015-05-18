@@ -1,7 +1,11 @@
 .contest-form {
-  padding-top: 40px;
+  padding-top: 45px;
+  padding-bottom: 30px;
   &__promo {
-    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 30px;
+
+    margin-bottom: 35px;
 
     text-align: center;
   }
@@ -9,23 +13,31 @@
     font-size: 14px;
     line-height: 30px;
 
-    margin-left: 23px;
+    display: block;
+
+    margin-bottom: 5px;
 
     text-transform: uppercase;
 
     color: @pink-color;
   }
-  input[type="text"] {
+  input[type="text"],
+  input[type="number"] {
+    font-size: 18px;
+    line-height: 30px;
+
     display: block;
 
     box-sizing: border-box;
     width: 280px;
-    padding: 20px;
+    margin-bottom: 15px;
+    padding: 14px 20px;
 
     text-transform: none;
 
     color: @main-dark-color;
-    border: 2px solid #e5e5e5;
+    border: 2px solid @main-divider-color;
+    border-radius: 1px;
   }
   input[readonly] {
     background: @minor-light-color;
@@ -35,6 +47,9 @@
     font-weight: normal;
     line-height: 18px;
 
+    margin: 0;
+    margin-bottom: 41px;
+
     text-align: center;
     text-transform: uppercase;
 
@@ -42,36 +57,127 @@
   }
   &__main-info {
     padding-right: 20px;
+    padding-bottom: 35px;
     padding-left: 20px;
+    label {
+      margin-left: 23px;
+    }
   }
   &__app-type {
+    padding-top: 35px;
+    padding-right: 20px;
+    padding-left: 20px;
+
     background: @minor-light-color;
     label {
+      font-size: 18px;
+
+      position: relative;
+
       display: block;
 
-      padding-bottom: 15px;
+      padding-bottom: 40px;
+      padding-left: 60px;
 
       text-transform: none;
 
       color: @main-dark-color;
+      &:before {
+        position: absolute;
+        top: -2px;
+        left: 2px;
+
+        display: block;
+
+        width: 15px;
+        height: 15px;
+
+        content: "";
+
+        border: 10px solid @main-light-color;
+        border-radius: 50%;
+        background: @main-light-color;
+        box-shadow: 0 0 0 2px @main-divider-color;
+      }
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    input[type="radio"]:checked + label:before {
+      background: @pink-color;
     }
   }
-  &__companions {
-    background: @minor-light-color;
-    padding-left: 20px;
+  &__dates {
+    padding-top: 50px;
     padding-right: 20px;
+    padding-left: 20px;
+
+    text-align: center;
+  }
+  &__companions {
+    padding-right: 20px;
+    padding-left: 20px;
+
+    background: @minor-light-color;
+    &-list {
+      border-top: 2px solid @main-divider-color;
+      &-item {
+        
+      }
+    }
   }
   &__achievements {
+    padding-right: 20px;
+    padding-left: 20px;
     label {
+      font-size: 18px;
+
+      position: relative;
+
       display: block;
+
+      padding-bottom: 47px;
+      padding-left: 60px;
+
+      text-transform: none;
+
+      color: @main-dark-color;
+      &:before {
+        position: absolute;
+        top: -4px;
+        left: -2px;
+
+        display: block;
+
+        width: 36px;
+        height: 36px;
+
+        content: "";
+
+        border: 2px solid @main-divider-color;
+        background: @main-light-color;
+      }
+    }
+    input[type="checkbox"] {
+      display: none;
+    }
+    input[type="checkbox"]:checked + label:before {
+      background: @main-light-color url("../img/icon-check.png") no-repeat center 50%;
     }
   }
   &__photos {
-    background: @minor-light-color;
+    padding-top: 35px;
     padding-right: 20px;
     padding-left: 20px;
+
+    background: @minor-light-color;
     &-items {
       font-size: 0;
+
+      margin-top: 40px;
+      padding-top: 35px;
+
+      border-top: 2px solid #e5e5e5;
     }
   }
   &__single-photo {
@@ -82,9 +188,8 @@
 
     width: 67px;
     height: 68px;
-    margin-right: 35px;
+    margin-right: 39px;
     margin-bottom: 35px;
-
 
     vertical-align: top;
     &:nth-child(3n) {
@@ -107,20 +212,95 @@
       border-radius: 50%;
       background: url("../img/icon-photo-del.png") no-repeat 0 0;
     }
+    img {
+      display: block;
+    }
+    &-name {
+      font-size: 12px;
+      line-height: 18px;
+
+      text-transform: uppercase;
+    }
   }
   &__ending {
-    padding-left: 20px;
+    padding-top: 20px;
     padding-right: 20px;
+    padding-left: 20px;
+
     text-align: center;
+    text-transform: uppercase;
   }
 }
 
-.btn-submit-form {
-  display: block;
-  text-transform: uppercase;
-  color: @main-light-color;
-  background: #2aab6d;
-  width: 280px;
-  text-align: center;
-  padding: 20px;
+
+.increment-field {
+  position: relative;
+  input {
+    display: block;
+
+    text-align: center;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    top: 2px;
+
+    display: block;
+
+    width: 59px;
+    height: 59px;
+
+    content: "";
+    cursor: pointer;
+  }
+  &:before {
+    left: 0;
+
+    border-right: 2px solid @main-divider-color;
+    background: url("../img/icon-decrement.png") no-repeat 50% 50%;
+  }
+  &:after {
+    right: 0;
+
+    border-left: 2px solid @main-divider-color;
+    background: url("../img/icon-increment.png") no-repeat 50% 50%;
+  }
+}
+
+
+.btn {
+  &-upload-photo {
+    font-size: 18px;
+    font-weight: bold;
+
+    display: block;
+
+    width: 280px;
+    padding: 10px;
+
+    text-transform: uppercase;
+
+    border: 1px solid @main-divider-color;
+    border-radius: 1px;
+    background: @main-light-color;
+  }
+
+
+  &-submit-form {
+    font-size: 18px;
+
+    display: block;
+
+    width: 280px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: @main-light-color;
+    border: none;
+    border-radius: 1px;
+    background: #2aab6d;
+  }
 }

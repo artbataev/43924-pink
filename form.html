@@ -10,7 +10,7 @@
 <body>
 
   <div class="container">
-    <header class="page-header">
+    <header class="page-header  page-header--form">
       <div class="page-header__nav-bar">
           <a href="#" class="page-header__logo-link">
             <img src="img/sm-logo.png" alt="Pink">
@@ -38,58 +38,59 @@
         </div>
 
         <div class="contest-form__person">
-          <label>Имя: * <input type="text" placeholder="Введите ваше имя" name="person-name" required autofocus></label>
-          <label>Фамилия: * <input type="text" placeholder="Укажите фамилию" name="person-surname" required></label>
-          <label>Отчество: <input type="text" placeholder="Ну и отчество тоже" name="person-patronymic"></label>
+          <label for="person-name">Имя: * </label><input type="text" placeholder="Введите ваше имя" name="person-name" id="person-name" required autofocus>
+          <label for="person-surname">Фамилия: * </label><input type="text" placeholder="Укажите фамилию" name="person-surname" id="person-surname" required>
+          <label for="person-patronymic">Отчество: </label><input type="text" placeholder="Ну и отчество тоже" name="person-patronymic" id="person-patronymic">
         </div>
       </div>
       
       <div class="contest-form__app-type">
         <h2 class="contest-form__block-heading">С каким приложением путешествовали? *</h2>
-        <label><input type="radio" value="iOS" name="app-type" checked>Pink для iOS</label>
-        <label><input type="radio" value="Android" name="app-type">Pink для Android</label>
-        <label><input type="radio" value="Windows-Phone" name="app-type">Windows Phone</label>
+        <input type="radio" value="iOS" name="app-type" id="app-ios" checked><label for="app-ios">Pink для iOS</label>
+        <input type="radio" value="Android" name="app-type" id="app-android"><label for="app-android">Pink на Android</label>
+        <input type="radio" value="Windows-Phone" name="app-type" id="app-windows"><label for="app-windows">Windows Phone</label>
       </div>
       
       <div class="contest-form__dates">
         <h2 class="contest-form__block-heading">Когда вы путешествовали? *</h2>
-        <label><input type="text" placeholder="1 апреля 2015" name="date-start" required>Дата выезда</label>
-        <!-- input type="date" не должно иметь placeholder, и формат даты будет другой -->
-        <label>
-          <div class="increment-field">
-            <input type="text" placeholder="10 дней" name="duration">
-          </div>
+        <input type="text" placeholder="1 апреля 2015" name="date-start" id="date-start" required><label for="date-start">Дата выезда</label>
+        <!-- input type="date" не должно иметь placeholder, и формат даты будет другой -->        
+        <div class="increment-field">
+          <input type="text" placeholder="10 дней" name="duration" id="duration">
+        </div>
+        <label for="duration">
           Продолжительность
         </label>
-        <label><input type="text" placeholder="1 апреля 2015" name="date-end" readonly>Дата возвращения</label>
+        <input type="text" placeholder="1 апреля 2015" name="date-end" id="date-end" readonly><label for="date-end">Дата возвращения</label>
       </div>
 
       <div class="contest-form__companions">
-          <label>
-            Количество попутчиков
-            <div class="increment-field">
-              <input type="text" placeholder="2 чел" name="companions-number">
-            </div>
+          <label for="companions-number">
+            Количество попутчиков *
           </label>
+          <div class="increment-field">
+            <input type="text" placeholder="2 чел" name="companions-number" id="companions-number">
+          </div>
+          
 
           <div class="contest-form__companions-list">
             <div class="contest-form__companions-list-item">
               <div class="contest-form__companions-list-item-number">
-                <label>№ <input type="number" value="1" min="1" name="companion-number-1" readonly></label>
+                <label>№</label for="companion-number-1"><input type="number" value="1" min="1" name="companion-number-1" id="companion-number-1" readonly>
               </div>
               <div class="contest-form__companions-list-item-info">
-                <label>Имя: * <input type="text" name="companion-1-name" placeholder="Введите ваше имя" required></label>
-                <label>Прозвище: <input type="text" name="companion-1-nickname" placeholder="Ну как же без этого!"></label>
+                <label for="companion-1-name">Имя: * </label><input type="text" name="companion-1-name" id="companion-1-name" placeholder="Введите ваше имя" required>
+                <label for="companion-1-nickname">Прозвище: </label><input type="text" name="companion-1-nickname" id="companion-1-nickname" placeholder="Ну как же без этого!">
               </div>
             </div>
 
             <div class="contest-form__companions-list-item">
               <div class="contest-form__companions-list-item-number">
-                <label>№ <input type="number" value="2" min="1" name="companion-number-1" readonly></label>
+                <label for="companion-number-1">№ </label><input type="number" value="2" min="1" name="companion-number-1" id="companion-number-1" readonly>
               </div>
               <div class="contest-form__companions-list-item-info">
-                <label>Имя: * <input type="text" name="companion-2-name" placeholder="Введите ваше имя" required></label>
-                <label>Прозвище: <input type="text" name="companion-2-nickname" placeholder="Ну как же без этого!"></label>
+                <label for="companion-2-name">Имя: * </label><input type="text" name="companion-2-name" id="companion-2-name" placeholder="Введите ваше имя" required>
+                <label for="companion-2-nickname">Прозвище: </label><input type="text" name="companion-2-nickname" id="companion-2-nickname" placeholder="Ну как же без этого!">
               </div>
             </div>
           </div>
@@ -97,41 +98,49 @@
 
       <div class="contest-form__achievements">
           <h2 class="contest-form__block-heading">Ваши безбашенные достижения в путешествии</h2>
-          <label><input type="checkbox" name="achievements-selfi" checked>Сделал селфи с акулой</label>
-          <label><input type="checkbox" name="achievements-suntan" checked>Обгорел на пляже</label>
-          <label><input type="checkbox" name="achievements-norris">Видел Чака Норриса</label>
-          <label><input type="checkbox" name="achievements-souvenirs">Накупил сувениров</label>
-          <label><input type="checkbox" name="achievements-mind" checked>Удержал башню</label>
-          <label><input type="checkbox" name="achievements-defeat">Разгромил отель</label>
+          <input type="checkbox" name="achievements-selfi" id="selfi" checked><label for="selfi">Сделал селфи с акулой</label>
+          <input type="checkbox" name="achievements-suntan" id="suntan" checked><label for="suntan">Обгорел на пляже</label>
+          <input type="checkbox" name="achievements-norris" id="norris"><label for="norris">Видел Чака Норриса</label>
+          <input type="checkbox" name="achievements-souvenirs" id="souvenirs"><label for="souvenirs">Накупил сувениров</label>
+          <input type="checkbox" name="achievements-mind" id="mind" checked><label for="mind">Удержал башню</label>
+          <input type="checkbox" name="achievements-defeat" id="defeat"><label for="defeat">Разгромил отель</label>
       </div>
       
       <div class="contest-form__photos">
-          <h2 class="contest-form__block-heading">Ваши фотографии из поездки</h2>
+          <h2 class="contest-form__block-heading">Ваши фотографии из поездки *</h2>
           <button type="button" class="btn-upload-photo">Загрузить фото</button>
           <div class="contest-form__photos-items">
             <div class="contest-form__single-photo">
               <img alt="" src="img/photo-sm-1.jpg">
+              <div class="contest-form__single-photo-name">img-1.jpg</div>
             </div>
             <div class="contest-form__single-photo">
               <img alt="" src="img/photo-sm-1.jpg">
+              <div class="contest-form__single-photo-name">img-2.jpg</div>
             </div>
             <div class="contest-form__single-photo">
               <img alt="" src="img/photo-sm-1.jpg">
+              <div class="contest-form__single-photo-name">img-3.jpg</div>
             </div>
             <div class="contest-form__single-photo">
               <img alt="" src="img/photo-sm-1.jpg">
+              <div class="contest-form__single-photo-name">img-4.jpg</div>
             </div>
             <div class="contest-form__single-photo">
               <img alt="" src="img/photo-sm-1.jpg">
+              <div class="contest-form__single-photo-name">img-5.jpg</div>
             </div>
             <div class="contest-form__single-photo">
               <img alt="" src="img/photo-sm-1.jpg">
+              <div class="contest-form__single-photo-name">img-6.jpg</div>
             </div>
             <div class="contest-form__single-photo">
               <img alt="" src="img/photo-sm-1.jpg">
+              <div class="contest-form__single-photo-name">img-7.jpg</div>
             </div>
             <div class="contest-form__single-photo">
               <img alt="" src="img/photo-sm-1.jpg">
+              <div class="contest-form__single-photo-name">img-8.jpg</div>
             </div>
           </div>
       </div>

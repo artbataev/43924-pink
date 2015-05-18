@@ -1,111 +1,114 @@
 .page-header {
-    color: @main-light-color;
-    background: @main-dark-color;
-    padding-bottom: 43px;
-    background: #2b3a4a url("../img/bg-header.jpg") no-repeat center top;
-    &--index {
-        padding-bottom: 315px;
+  padding-bottom: 43px;
 
-        background: #2b3a4a url("../img/bg-index-header.jpg") no-repeat center top;
-    }
-    &__nav-bar {
-        height: 66px;
-        margin-bottom: 30px;
+  color: @main-light-color;
+  background: @main-dark-color;
+  background: #2b3a4a url("../img/bg-header.jpg") no-repeat center top;
+  &--index {
+    padding-bottom: 315px;
 
-        background: rgba(0, 0, 0, 0.3);
-    }
-    &__logo-link {
-        position: relative;
-        z-index: 100;
+    background: #2b3a4a url("../img/bg-index-header.jpg") no-repeat center top;
+  }
+  &--form {
+    padding-bottom: 57px;
+  }
+  &__nav-bar {
+    height: 66px;
+    margin-bottom: 30px;
 
-        display: block;
-        float: left;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  &__logo-link {
+    position: relative;
+    z-index: 100;
 
-        width: 74px;
-        padding: 20px;
-    }
-    &__heading {
-        font-size: 24px;
-        font-weight: 300;
-        line-height: 28px;
+    display: block;
+    float: left;
 
-        margin: 0;
-        padding-right: 20px;
-        padding-left: 20px;
+    width: 74px;
+    padding: 20px;
+  }
+  &__heading {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28px;
 
-        text-align: center;
-    }
+    margin: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    text-align: center;
+  }
 }
 
 .main-nav {
-    &__list {
-        position: absolute;
-        z-index: 10;
+  &__list {
+    position: absolute;
+    z-index: 10;
 
-        display: none;
-        &--active {
-          display: block;
-        }
+    display: none;
+    // Для теста 
+    // .page-header__nav-bar:hover & {
+    //   display: block;
+    // }
+    // Для теста 
 
-        // Для теста 
-        // .page-header__nav-bar:hover & {
-        //   display: block;
-        // }
-        // Для теста 
+    margin: 0;
+    padding: 0;
 
-        margin: 0;
-        padding: 0;
-
-        list-style: none;
-        li {
-            border-top: 1px solid #495561;
-            border-bottom: 1px solid #003001;
-            background: @main-dark-color;
-            &:first-child {
-                border-top: none;
-            }
-        }
-        a {
-            font-size: 18px;
-            font-weight: bold;
-            line-height: 32px;
-
-            display: block;
-
-            width: @sm-screen - 50;
-            padding: 25px;
-
-            text-align: center;
-            text-decoration: none;
-            text-transform: uppercase;
-
-            color: @main-light-color;
-        }
+    list-style: none;
+    &--active {
+      display: block;
     }
-    &__close {
-        text-align: right;
-        a {
-            font-size: 0;
-
-            display: inline-block;
-
-            width: 23px;
-            height: 22px;
-
-            background: url("../img/btn-menu-close.png") no-repeat 50% 50%;
-        }
+    li {
+      border-top: 1px solid #495561;
+      border-bottom: 1px solid #003001;
+      background: @main-dark-color;
+      &:first-child {
+        border-top: none;
+      }
     }
-    &__toggle {
-        display: block;
-        float: right;
+    a {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 32px;
 
-        width: 50px;
-        height: 25px;
-        margin-top: 20px;
-        margin-right: 20px;
+      display: block;
 
-        content: "";
+      width: @sm-screen - 50;
+      padding: 25px;
 
-        background: linear-gradient(to bottom, white 5px, transparent 5px, transparent 10px, white 10px, white 15px, transparent 15px, transparent 20px, white 20px);
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      color: @main-light-color;
     }
+  }
+  &__close {
+    text-align: right;
+    a {
+      font-size: 0;
+
+      display: inline-block;
+
+      width: 23px;
+      height: 22px;
+
+      background: url("../img/btn-menu-close.png") no-repeat 50% 50%;
+    }
+  }
+  &__toggle {
+    display: block;
+    float: right;
+
+    width: 50px;
+    height: 25px;
+    margin-top: 20px;
+    margin-right: 20px;
+
+    content: "";
+
+    background: linear-gradient(to bottom, white 5px, transparent 5px, transparent 10px, white 10px, white 15px, transparent 15px, transparent 20px, white 20px);
+  }
 }
