@@ -1,14 +1,19 @@
+// отправка формы и работа с файлами
 (function() {
   if(!("FormData" in window)) {
     return;
   }
 
   var form = document.querySelector(".js-contest-form");
+  var allFiles = [];
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
 
     var data = new FormData(form);
+    allFiles.forEach(function(element) {
+      data.append("images", element.file);
+    });
     console.log(data);
     
     request(data, function(response) {
@@ -30,11 +35,13 @@
 
   if ("FileReader" in window) {
     var area = document.querySelector(".js-upload-images");
+
     form.querySelector("#upload-photos").addEventListener("change", function() {
         var files = this.files;
         for (var i = 0; i < files.length; i++) {
           preview(files[i]);
         }
+        this.value = "";
     });
 
     function preview(file) {
@@ -42,12 +49,14 @@
         var reader = new FileReader();
 
         reader.addEventListener("load", function(event) {
-          var container = document.createElement("div");
+          var container = document.createElement("li");
           container.classList.add("user-photo");
 
           var img = document.createElement("img");
           img.src = event.target.result; 
           img.alt = file.name;
+
+          allFiles.push({file: file, img: img});
 
           var subscription = document.createElement("span");
           subscription.innerText = file.name;
@@ -82,3 +91,69 @@
   }
 
 })();
+
+
+// поле с инкрементом/декрементом
+// можно вписать "2", можно вписать "2 чел", можно вписать "2 клевых чела" - работать будет
+(function() {
+  var incrementElements = document.querySelectorAll(".increment-field");
+  for (var i = 0; i < incrementElements.length; i++) {
+    initIncrementField(incrementElements[i]);
+  }
+
+  function initIncrementField(parentBlock) {
+    var input = parentBlock.querySelector("input");
+    var minus = parentBlock.querySelector(".increment-field__minus");
+    var plus = parentBlock.querySelector(".increment-field__plus");
+
+    if(minus) {
+      minus.addEventListener("click", function(){
+        changeNumber(false);
+      });
+    }
+    if(plus) {
+      plus.addEventListener("click", function(){
+        changeNumber(true);
+      });
+    }
+
+    input.addEventListener("keydown", function(event) {
+      var key = event.keyCode;
+      console.log(event.keyCode);
+      if(key==38) { changeNumber(true); } // стрелка вверх
+      if(key==40) { changeNumber(false); } // стрелка вниз
+    });
+  
+    function changeNumber(operation) {
+      var initText = input.value;
+      var initNumber = parseInt(initText, 10);
+      var textPosition = 0;
+
+      while(textPosition < initText.length && !isNaN(parseFloat(initText[textPosition]))) {
+        textPosition++;
+      }
+      if(isNaN(initNumber) || initNumber < 0) {
+        input.value = 0;
+      } 
+      else {
+        if(operation) {
+          initNumber++;
+        }
+        else {
+          initNumber = Math.max(0, initNumber - 1);
+        }
+        input.value =  initNumber + initText.substr(textPosition);
+      }
+    }
+
+  }
+})();
+
+
+
+
+
+
+
+
+
