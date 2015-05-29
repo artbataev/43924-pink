@@ -1,288 +1,245 @@
 .index-download {
-    padding-top: 27px;
-    padding-bottom: 30px;
+  padding-top: 27px;
+  padding-bottom: 30px;
+
+  text-align: center;
+
+  color: @main-light-color;
+  background: @main-dark-color;
+  &__text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  &__buttons {
+    font-size: 0;
+
+    margin-bottom: 16px;
+    padding-top: 4px;
+  }
+}
+
+.index-description {
+  text-align: center;
+}
+
+.index-promo {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+
+  padding-top: 40px;
+  padding-bottom: 30px;
+  &__wrapper {
+    width: @sm-screen - 2 * @wrapper-padding;
+    margin: 0 auto;
+  }
+  p {
+    margin: 0;
+    margin-bottom: 30px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.index-whatfor {
+  font-size: 14px;
+  line-height: 24px;
+
+  position: relative;
+
+  margin-top: 35px;
+  padding-top: 47px;
+  padding-bottom: 285px;
+
+  background: @minor-light-color url("../img/screen-mobile-3.png") no-repeat center bottom;
+  &:before {
+    position: absolute;
+    top: -35px;
+    left: 0;
+
+    display: block;
+
+    content: "";
+
+    border-top: 35px solid transparent;
+    border-right: 100vw solid @minor-light-color;
+  }
+  &__heading {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+
+    margin: 0;
+    margin-bottom: 12px;
+  }
+  &__item {
+    margin-bottom: 32px;
+  }
+  &__wrapper {
+    width: @sm-screen - 2 * @wrapper-padding;
+    margin: 0 auto;
+  }
+}
+
+.reviews {
+  padding-bottom: 25px;
+
+  text-align: center;
+}
+
+.slider-reviews {
+  &__wrapper {
+    width: @sm-screen - 2 * @wrapper-padding;
+    margin: 0 auto;
+  }
+  &__item {
+    padding-top: 40px;
+  }
+  &__header {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 30px;
+
+    margin: 0;
+  }
+}
+
+.slider-pagination {
+  font-size: 0;
+
+  padding-top: 32px;
+  padding-bottom: 25px;
+  &__item {
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+    margin-right: 13px;
+
+    cursor: pointer;
+    vertical-align: top;
+
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background: #bec2c7;
+    &:last-child {
+      margin-right: 0;
+    }
+    &--active {
+      border: 3px solid @main-dark-color;
+      background: @main-light-color;
+    }
+  }
+}
+
+
+.price {
+  position: relative;
+
+  padding-top: 68px;
+
+  background: @minor-light-color;
+  &:before {
+    position: absolute;
+    top: -25px;
+    left: 0;
+
+    display: block;
+
+    content: "";
+
+    border-top: 25px solid transparent;
+    border-right: 100vw solid @minor-light-color;
+  }
+}
+
+
+.slider-price {
+  font-size: 0;
+  line-height: 30px;
+
+  overflow: hidden;
+
+  text-transform: uppercase;
+
+  color: @main-dark-color;
+  &__wrapper {
+    width: (@sm-screen - 40)*3;
+    
+    // transform: translateX(-@sm-screen + 20 * 3);
+  }
+  &__item {
+    font-size: 14px;
+
+    position: relative;
+
+    display: inline-block;
+    overflow: hidden;
+
+    width: @sm-screen - 40 - 3;
+
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    &--hit:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: block;
+
+      padding: 0 45px;
+
+      content: "Хит";
+      transform: rotate(-45deg) translateX(-35px) translateY(-19px);
+
+      color: @main-light-color;
+      background: @pink-color;
+    }
+  }
+  &__heading {
+    padding-top: 16px;
 
     text-align: center;
 
     color: @main-light-color;
     background: @main-dark-color;
-    &__text {
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 24px;
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-    &__buttons {
-        font-size: 0;
-        margin-bottom: 16px;
-        padding-top: 4px;
-    }
-}
-
-.btn-download {
+  }
+  &__name {
     font-size: 18px;
-    line-height: 18px;
 
-    display: block;
-
-    margin: auto 18px;
-    margin-bottom: 25px;
-    padding: 15px;
-
-    text-decoration: none;
+    margin: 0;
+    margin-bottom: 3px;
+    padding: 0;
 
     color: @main-light-color;
-    border: 4px solid @main-light-color;
-    border-radius: 30px;
-}
+  }
+  &__price {
+    font-size: 24px;
+    font-weight: 300;
 
-.btn-iconic {
-    font-size: 0;
-    width: 47px;
-    height: 65px;
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 33px;
-    &:last-child {
-        margin-right: 0;
+    padding-bottom: 20px;
+  }
+  &__features {
+  }
+  &__features-item {
+    padding: 14px 22px;
+
+    border-bottom: 2px solid #e5e5e5;
+    background: @main-light-color url("../img/icon-ok.png") no-repeat (@sm-screen - 85) 50%;
+    &--no {
+      background: @main-light-color url("../img/icon-no.png") no-repeat (@sm-screen - 85) 50%;
     }
-    &--ios {
-        background: url('../img/icon-apple.png') no-repeat 0 2px;
-    }
-    &--android {
-        background: url('../img/icon-android.png') no-repeat 0 10px;
-    }
-    &--windows {
-        background: url('../img/icon-windows.png') no-repeat 0 14px;
-    }
-}
-
-.index-description {
-    text-align: center;
-    &__heading {
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 24px;
-
-        margin: 0;
-        margin-bottom: 12px;
-    }
-    &__promo {
-        font-size: 24px;
-        font-weight: 300;
-
-        padding-bottom: 30px;
-        padding-top: 40px;
-        line-height: 29px;
-
-        p {
-            margin: 0;
-            margin-bottom: 30px;
-            &:last-of-type {
-                margin-bottom: 0;
-            }
-        }
-
-    }
-    &__whatfor {
-        font-size: 14px;
-        line-height: 24px;
-
-        position: relative;
-
-        margin-top: 35px;
-        padding: 0 20px;
-        padding-top: 47px;
-        padding-bottom: 285px;
-
-        background: @minor-light-color url("../img/index-phone-hello.png") no-repeat center bottom;
-        &:before {
-            position: absolute;
-            top: -35px;
-            left: 0;
-
-            display: block;
-
-            content: "";
-
-            border-top: 35px solid transparent;
-            border-right: 320px solid @minor-light-color;
-        }
-    }
-    &__item {
-        margin-bottom: 32px;
-    }
-}
-
-.reviews {
-    padding-bottom: 25px;
-
-    text-align: center;
-}
-
-.slider-reviews {
-    &__item {
-        padding-top: 40px;
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-    &__header {
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 30px;
-
-        margin: 0;
-        margin-bottom: 15px;
-    }
-    &__text {
-        font-size: 14px;
-        line-height: 30px;
-    }
-    &__pagination {
-        font-size: 0;
-
-        padding-top: 32px;
-        padding-bottom: 25px;
-    }
-    &__pagination-item {
-        display: inline-block;
-
-        width: 6px;
-        height: 6px;
-        margin-right: 13px;
-
-        cursor: pointer;
-        vertical-align: top;
-
-        border: 3px solid @main-light-color;
-        border-radius: 50%;
-        background: #bec2c7;
-        &:last-child {
-            margin-right: 0;
-        }
-        &--active {
-            border: 3px solid @main-dark-color;
-            background: @main-light-color;
-        }
-    }
-}
-
-.price {
-    position: relative;
-
-    padding-top: 68px;
-
-    background: @minor-light-color;
-    &:before {
-        position: absolute;
-        top: -25px;
-        left: 0;
-
-        display: block;
-
-        content: "";
-
-        border-top: 25px solid transparent;
-        border-right: 320px solid @minor-light-color;
-    }
-}
-
-.slider-price {
-    text-transform: uppercase;
-    font-size: 0;
-    line-height: 30px;
-    color: @main-dark-color;
-    overflow: hidden;
-
-    &__wrapper {
-        width: @sm-screen*3;
-        transform: translateX(-@sm-screen + 20 * 3);
-
-    }
-
-    &__item {
-        font-size: 14px;
-        width: @sm-screen - 40 - 3;
-        display: inline-block;
-        border-left: 1px solid #e5e5e5;
-        border-right: 1px solid #e5e5e5;
-        position: relative;
-        overflow: hidden;
-
-        &--hit:before {
-            content: "Хит";
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 0;
-            background: @pink-color;
-            color: @main-light-color;
-            transform: rotate(-45deg) translateX(-35px) translateY(-19px);
-            padding: 0px 45px;
-        }
-    }
-
-    &__heading {
-        color: @main-light-color;
-        background: @main-dark-color;
-        padding-top: 16px;
-        text-align: center;
-    }
-    &__name {
-        margin: 0;
-        padding: 0;
-        font-size: 18px;
-        color: @main-light-color;
-        margin-bottom: 3px;
-    }
-    &__price {
-        font-size: 24px;
-        font-weight: 300;
-        padding-bottom: 20px;
-    }
-    
-    &__features {
-
-    }
-
-    &__features-item {
-        padding: 14px 22px;
-        border-bottom: 2px solid #e5e5e5;
-
-        background: @main-light-color url('../img/icon-ok.png') no-repeat (@sm-screen - 85) 50%;
-        &--no {
-            background: @main-light-color url('../img/icon-no.png') no-repeat (@sm-screen - 85) 50%;
-        }
-    }
-
-    &__pagination {
-        font-size: 0;
-
-        padding-top: 27px;
-        padding-bottom: 30px;
-        text-align: center;
-    }
-    &__pagination-item {
-        display: inline-block;
-
-        width: 6px;
-        height: 6px;
-        margin-right: 13px;
-
-        cursor: pointer;
-        vertical-align: top;
-
-        border: 3px solid @minor-light-color;
-        border-radius: 50%;
-        background: #bec2c7;
-        &:last-child {
-            margin-right: 0;
-        }
-        &--active {
-            border: 3px solid @main-dark-color;
-            background: @minor-light-color;
-        }
-    }
-
+  }
 }

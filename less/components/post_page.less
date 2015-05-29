@@ -1,3 +1,14 @@
+.post-wrapper {
+  width: @sm-screen - 2 * @wrapper-padding;
+  margin: 0 auto;
+}
+
+@media(min-width:@md-screen) {
+  .post-wrapper {
+    width: @md-screen - 2 * @wrapper-padding;
+  }
+}
+
 .single-post {
   padding-right: 20px;
   padding-left: 20px;

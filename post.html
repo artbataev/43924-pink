@@ -4,34 +4,56 @@
 <head>
   <meta charset="utf-8">
   <title>Pink - Антон и Надя в Тайланде</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   
-  <div class="container">
     <header class="page-header">
-      <div class="page-header__nav-bar">
-          <a href="#" class="page-header__logo-link">
-            <img src="img/sm-logo.png" alt="Pink">
-          </a>
-          <nav class="main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__close"><a href="#">Закрыть</a></li>
-              <li><a href="#">Информация</a></li>
-              <li><a href="#">Возможности</a></li>
-              <li><a href="#">Отзывы</a></li>
-              <li><a href="#">Стоимость</a></li>
-            </ul>
-          </nav>
-          <a href="#" class="main-nav__toggle"></a>
+    <div class="page-header__nav-bar">
+      <div class="page-header__nav-bar-wrapper">
+        <a href="#" class="page-header__logo-link">
+          <picture>
+            <source media="(min-width:940px)" srcset="img/logotype-white-desktop.svg">
+            <source media="(min-width:700px)" srcset="img/logotype-white-tablet.svg">
+            <img src="img/logotype-white-mobile.svg" alt="Pink">
+          </picture>
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Возможности</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Стоимость</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="main-nav__toggle"></a>
       </div>
+    </div>
+    <div class="page-header__heading-block">
       <h1 class="page-header__heading">
         Блог путешественников, пользователей Пинк
       </h1>
-    </header>
+    </div>
+  </header>
 
- 
+  <div class="post-wrapper">
+    <article class="post">
+      <header class="post__header">
+        <h1 class="post__title">
+          <a href="post.html">Антон и Надя в Тайланде</a>
+        </h1>
+        <div class="post__time">
+          Опубликовано: 6 месяцев назад
+        </div>
+      </header>
+      <div class="post__lead">
+        Читайте рассказ о том, как семейная пара посещала Тайланд, стараясь максимально избегать избитых туристических мест и районов.
+      </div>
+    </article>
+  </div>
+
     <article class="single-post">
       <div class="single-post__promo-wrapper">
         <h1 class="single-post__heading">
@@ -76,23 +98,24 @@
       <a class="single-post__nav-item  single-post__nav-item--back" href="blog.html">Назад к списку</a>
     </div>
 
-    <footer class="inner-footer">
-      <div class="inner-footer__logo">
-        <a href="/"><img src="img/sm-footer-logo.png" alt="Pink"></a>
-      </div>
-      <div class="inner-footer__social">
-        <ul class="social-links">
-          <li><a class="social-links__item  social-links__item--twitter" href="#">Мы в Твиттере</a></li>
-          <li><a class="social-links__item  social-links__item--fb" href="#">Мы в Facebook</a></li>
-          <li><a class="social-links__item  social-links__item--youtube" href="#">Мы в Youtube</a></li>
-        </ul>
-      </div>
-      <div class="inner-footer__developer">
-        Разработано 
-        <a class="developer-htmlacademy" href="http://htmlacademy.ru">HtmlAcademy</a>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <a href="/"><img src="img/logotype-blue-tablet.svg" alt="Pink"></a>
+        </div>
+        <div class="page-footer__social">
+          <ul class="social-links">
+            <li><a class="social-links__item  social-links__item--twitter" href="#">Мы в Твиттере</a></li>
+            <li><a class="social-links__item  social-links__item--fb" href="#">Мы в Facebook</a></li>
+            <li><a class="social-links__item  social-links__item--youtube" href="#">Мы в Youtube</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__developer">
+          Разработано 
+          <a class="developer-htmlacademy" href="http://htmlacademy.ru">HTML Academy</a>
+        </div>
       </div>
     </footer>
-  </div>
 
   <!-- <script src="js/script.js"></script> -->
 

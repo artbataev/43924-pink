@@ -1,0 +1,103 @@
+.contest-form {
+  line-height: 30px;
+
+  div:nth-child(2n) {
+    background: @minor-light-color;
+    @media (min-width:@md-screen) {
+      background: @main-light-color;
+    }
+  }
+  &__main-info {
+    padding-top: 50px;
+    padding-bottom: 15px;
+    padding-left: @wrapper-padding;
+    padding-right: @wrapper-padding;
+  }
+  &__app {
+    padding-top: 40px;
+    padding-bottom: 5px;
+    padding-left: @wrapper-padding;
+    padding-right: @wrapper-padding;
+  }
+  &__dates {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    padding-left: @wrapper-padding;
+    padding-right: @wrapper-padding;
+  }
+  &__companions {
+    padding-top: 35px;
+    padding-bottom: 5px;
+    padding-left: @wrapper-padding;
+    padding-right: @wrapper-padding;
+  }
+  &__achievements {
+    padding-top: 50px;
+    padding-bottom: 5px;
+    padding-left: @wrapper-padding;
+    padding-right: @wrapper-padding;
+  }
+  &__photos {
+    padding-top: 40px;
+    padding-bottom: 5px;
+    padding-left: @wrapper-padding;
+    padding-right: @wrapper-padding;
+  }
+  &__ending {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    padding-left: @wrapper-padding;
+    padding-right: @wrapper-padding;
+  }
+}
+
+/* Полная хрень */
+
+fieldset {
+  padding: 0;
+
+  border: none;
+
+  .form-block-wrapper();
+  @media (min-width:@md-screen) {
+    padding-right: 50px;
+    padding-left: 50px;
+
+    border: 2px solid @main-divider-color;
+    border-radius: 2px;
+  }
+}
+
+legend {
+  text-align: center;
+  text-transform: uppercase;
+
+  color: @pink-color;
+}
+
+.upload-photos img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Полная хрень */
+
+.form-lead {
+  &__additional {
+
+  }
+}
+
+.input-text {
+  display: block;
+  
+}
+
+
+
+.form-clarification {
+  text-transform: uppercase;
+  &__important {
+    color: @pink-color;
+  }
+}

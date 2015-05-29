@@ -5,56 +5,59 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pink - Взгляните на жизнь иначе!</title>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <div class="container">
-    <header class="page-header page-header--index">
-      <div class="page-header__nav-bar">
-          <a href="#" class="page-header__logo-link">
-            <img src="img/sm-logo.png" alt="Pink">
-          </a>
-          <nav class="main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__close"><a href="#">Закрыть</a></li>
-              <li><a href="#">Информация</a></li>
-              <li><a href="#">Возможности</a></li>
-              <li><a href="#">Отзывы</a></li>
-              <li><a href="#">Стоимость</a></li>
-            </ul>
-          </nav>
-          <a href="#" class="main-nav__toggle"></a>
+  <header class="page-header">
+    <div class="page-header__nav-bar">
+      <div class="page-header__nav-bar-wrapper">
+        <a href="#" class="page-header__logo-link">
+          <img src="img/logotype-white-mobile.svg" alt="Pink">
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Возможности</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Стоимость</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="main-nav__toggle"></a>
       </div>
+    </div>
+    <div class="page-header__heading-block  page-header__heading-block--index">
       <h1 class="page-header__heading">
         Взгляните на жизнь иначе
       </h1>
-    </header>
+    </div>
+  </header>
 
 
-    <section class="index-download">
-      <a class="btn-download" href="#">
-        Скачать приложение
+  <div class="index-download">
+    <a class="btn-download" href="#">
+      Скачать приложение
+    </a>
+    <div class="index-download__buttons">
+      <a class="btn-iconic  btn-iconic--ios" href="#">
+        Для iOS
       </a>
-      <div class="index-download__buttons">
-        <a class="btn-iconic  btn-iconic--ios" href="#">
-          Для iOS
-        </a>
-        <a class="btn-iconic  btn-iconic--android" href="#">
-          Для Android
-        </a>
-        <a class="btn-iconic  btn-iconic--windows" href="#">
-          Для Windows
-        </a>
-      </div>
-      <div class="index-download__text">
-        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-      </div>
-    </section>
+      <a class="btn-iconic  btn-iconic--android" href="#">
+        Для Android
+      </a>
+      <a class="btn-iconic  btn-iconic--windows" href="#">
+        Для Windows
+      </a>
+    </div>
+    <div class="index-download__text">
+      Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+    </div>
+  </div>
 
-    <section class="index-description">
-      <div class="index-description__promo">
+  <div class="index-description">
+    <div class="index-promo">
+      <div class="index-promo__wrapper">
         <p>
           Устали от серости мегаполиса?
         </p>
@@ -62,153 +65,157 @@
           Нам есть, что вам предложить!
         </p>
       </div>
+    </div>
 
-      <div class="index-description__whatfor">
-        <div class="index-description__item">
-          <h2 class="index-description__heading">
+    <div class="index-whatfor">
+      <div class="index-whatfor__wrapper">
+        <div class="index-whatfor__item">
+          <h2 class="index-whatfor__heading">
             Поднимает настроение
           </h2>
-          <div class="index-description__text">
+          <div class="index-whatfor__text">
             Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
           </div>
         </div>
 
-        <div class="index-description__item">
-          <h2 class="index-description__heading">
+        <div class="index-whatfor__item">
+          <h2 class="index-whatfor__heading">
             Меняет мир вокруг
           </h2>
-          <div class="index-description__text">
+          <div class="index-whatfor__text">
             Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
           </div>
         </div>
 
-        <div class="index-description__item">
-          <h2 class="index-description__heading">
+        <div class="index-whatfor__item">
+          <h2 class="index-whatfor__heading">
             Заводит новых друзей
           </h2>
-          <div class="index-description__text">
+          <div class="index-whatfor__text">
             Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
           </div>
         </div>
       </div>
-    </section>
-    
-    <section class="reviews">
-      <div class="slider-reviews">
-        <article class="slider-reviews__item">
-          <h1 class="slider-reviews__header">Николай Петров</h1>
-          <div class="slider-reviews__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</div>
-        </article>
-        <div class="slider-reviews__pagination">
-          <i class="slider-reviews__pagination-item  slider-reviews__pagination-item--active"></i>
-          <i class="slider-reviews__pagination-item"></i>
-          <i class="slider-reviews__pagination-item"></i>
-        </div>
-      </div>
-    </section>
-
-    <section class="price">
-      <div class="slider-price">
-        <div class="slider-price__wrapper">
-          <article class="slider-price__item">
-            <div class="slider-price__heading">
-              <h2 class="slider-price__name">
-                Стандарт
-              </h2>
-              <div class="slider-price__price">
-                3,99 USD
-              </div>
-            </div>
-            <div class="slider-price__features">
-              <div class="slider-price__features-item">
-                Розовый фильтр
-              </div>
-              <div class="slider-price__features-item  slider-price__features-item--no">
-                Смайлики
-              </div>
-              <div class="slider-price__features-item  slider-price__features-item--no">
-                Комментарии
-              </div>
-            </div>
-          </article>
-          <article class="slider-price__item  slider-price__item--hit">
-            <div class="slider-price__heading">
-              <h2 class="slider-price__name">
-                Стандарт
-              </h2>
-              <div class="slider-price__price">
-                3,99 USD
-              </div>
-            </div>
-            <div class="slider-price__features">
-              <div class="slider-price__features-item">
-                Розовый фильтр
-              </div>
-              <div class="slider-price__features-item">
-                Смайлики
-              </div>
-              <div class="slider-price__features-item  slider-price__features-item--no">
-                Комментарии
-              </div>
-            </div>
-          </article>
-          <article class="slider-price__item">
-            <div class="slider-price__heading">
-              <h2 class="slider-price__name">
-                Стандарт
-              </h2>
-              <div class="slider-price__price">
-                3,99 USD
-              </div>
-            </div>
-            <div class="slider-price__features">
-              <div class="slider-price__features-item">
-                Розовый фильтр
-              </div>
-              <div class="slider-price__features-item">
-                Смайлики
-              </div>
-              <div class="slider-price__features-item  slider-price__features-item--no">
-                Комментарии
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="slider-price__pagination">
-          <i class="slider-price__pagination-item"></i>
-          <i class="slider-price__pagination-item  slider-price__pagination-item--active"></i>
-          <i class="slider-price__pagination-item"></i>
-        </div>
-      </div>
-    </section>
-    
-    <footer class="index-footer">
-      <div class="index-footer__contacts">
-        <div class="index-footer__heading">
-          Остались вопросы? Свяжитесь с нами!
-        </div>
-        <div class="index-footer__contact-item">
-          <div class="index-footer__contact-heading">
-            Звоните:
-          </div>
-          <a class="index-footer__contact-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
-        </div>
-        <div class="index-footer__contact-item">
-          <div class="index-footer__contact-heading">
-            Пишите:
-          </div>
-          <a class="index-footer__contact-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </div>
-        <div class="index-footer__contact-item">
-          <div class="index-footer__contact-heading">
-            Приезжайте в гости:
-          </div>
-          <a class="index-footer__contact-link" href="http://maps.google.com">ул. Большая Конюшенная, 19/8</a>
-        </div>
-      </div>
-    </footer>
+    </div>
   </div>
+  
+  <section class="reviews">
+    <div class="slider-reviews">
+      <div class="slider-reviews__wrapper">
+        <article class="slider-reviews__item">
+          <cite class="slider-reviews__header">Николай Петров</cite>
+          <blockquote class="slider-reviews__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</blockquote>
+        </article>
+        <div class="slider-pagination">
+          <i class="slider-pagination__item  slider-pagination__item--active"></i>
+          <i class="slider-pagination__item"></i>
+          <i class="slider-pagination__item"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="price">
+    <div class="slider-price">
+      <div class="slider-price__wrapper">
+        <article class="slider-price__item">
+          <div class="slider-price__heading">
+            <h2 class="slider-price__name">
+              Стандарт
+            </h2>
+            <div class="slider-price__price">
+              3,99 USD
+            </div>
+          </div>
+          <div class="slider-price__features">
+            <div class="slider-price__features-item">
+              Розовый фильтр
+            </div>
+            <div class="slider-price__features-item  slider-price__features-item--no">
+              Смайлики
+            </div>
+            <div class="slider-price__features-item  slider-price__features-item--no">
+              Комментарии
+            </div>
+          </div>
+        </article>
+        <article class="slider-price__item  slider-price__item--hit">
+          <div class="slider-price__heading">
+            <h2 class="slider-price__name">
+              Стандарт
+            </h2>
+            <div class="slider-price__price">
+              3,99 USD
+            </div>
+          </div>
+          <div class="slider-price__features">
+            <div class="slider-price__features-item">
+              Розовый фильтр
+            </div>
+            <div class="slider-price__features-item">
+              Смайлики
+            </div>
+            <div class="slider-price__features-item  slider-price__features-item--no">
+              Комментарии
+            </div>
+          </div>
+        </article>
+        <article class="slider-price__item">
+          <div class="slider-price__heading">
+            <h2 class="slider-price__name">
+              Стандарт
+            </h2>
+            <div class="slider-price__price">
+              3,99 USD
+            </div>
+          </div>
+          <div class="slider-price__features">
+            <div class="slider-price__features-item">
+              Розовый фильтр
+            </div>
+            <div class="slider-price__features-item">
+              Смайлики
+            </div>
+            <div class="slider-price__features-item  slider-price__features-item--no">
+              Комментарии
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="slider-pagination">
+        <i class="slider-pagination__item"></i>
+        <i class="slider-pagination__item  slider-pagination__item--active"></i>
+        <i class="slider-pagination__item"></i>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="index-footer">
+    <div class="index-footer__contacts">
+      <div class="index-footer__heading">
+        Остались вопросы? Свяжитесь с нами!
+      </div>
+      <div class="index-footer__contact-item">
+        <div class="index-footer__contact-heading">
+          Звоните:
+        </div>
+        <a class="index-footer__contact-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
+      </div>
+      <div class="index-footer__contact-item">
+        <div class="index-footer__contact-heading">
+          Пишите:
+        </div>
+        <a class="index-footer__contact-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </div>
+      <div class="index-footer__contact-item">
+        <div class="index-footer__contact-heading">
+          Приезжайте в гости:
+        </div>
+        <a class="index-footer__contact-link" href="http://maps.google.com">ул. Большая Конюшенная, 19/8</a>
+      </div>
+    </div>
+  </footer>
   <!-- <script src="js/script.js"></script> -->
 
 </body>

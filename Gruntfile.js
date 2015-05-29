@@ -73,7 +73,7 @@ module.exports = function(grunt) {
         // Here we watch the files the less task will compile to
         // These files are sent to the live reload server after less compiles to them
         options: { livereload: true },
-        files: ['css/style.css',"*.html"],
+        files: ['css/style.css',"*.html",'js/script.js'],
       },
     },
 

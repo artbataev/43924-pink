@@ -6,3 +6,14 @@
     content: "";
   }
 }
+
+.form-block-wrapper() {
+  width: @sm-screen - 2*@wrapper-padding;
+  margin: 0 auto;
+  @media (min-width:@md-screen) {
+    width: @md-screen - 2*@wrapper-padding;
+  }
+  @media (min-width:@lg-screen) {
+    width: @lg-screen - 2*@wrapper-padding;
+  }
+}
