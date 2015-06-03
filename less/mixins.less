@@ -7,13 +7,14 @@
   }
 }
 
-.form-block-wrapper() {
-  width: @sm-screen - 2*@wrapper-padding;
+.block-wrapper() {
+  width: @sm-container;
   margin: 0 auto;
+  box-sizing: border-box;
   @media (min-width:@md-screen) {
-    width: @md-screen - 2*@wrapper-padding;
+    width: @md-container;
   }
   @media (min-width:@lg-screen) {
-    width: @lg-screen - 2*@wrapper-padding;
+    width: @lg-container;
   }
 }

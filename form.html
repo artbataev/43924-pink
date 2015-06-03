@@ -39,172 +39,219 @@
 
   <form class="contest-form  js-contest-form" method="POST" action="http://simonenko.su/academy/echo">
 
-    <div class="contest-form__main-info">
+    <div class="contest-form__block  contest-form__block--main">
       <div class="form-lead">
         Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту! 
-        <span class="form-lead__addittional">Пожалуйста, заполните форму ниже:</span>
+        <span class="form-lead__additional">Пожалуйста, заполните форму ниже:</span>
       </div>
 
-      <fieldset class="form-person">
-        <label>
-          <span class="form-person__name">Имя: * </span>
-          <input class="input-text" type="text" placeholder="Введите ваше имя" name="person-name" required autofocus>
+      <fieldset class="form-fieldset  form-fieldset--no-caption">
+        <label class="field-block">
+          <span class="field-block__name">Имя: * </span>
+          <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="person-name" required autofocus>
         </label>
-        <label>
-          <span class="form-person__surname">Фамилия: * </span>
-          <input class="input-text" type="text" placeholder="Укажите фамилию" name="person-surname" required>
+        <label class="field-block">
+          <span class="field-block__name">Фамилия: * </span>
+          <input class="field-block__input" type="text" placeholder="Укажите фамилию" name="person-surname" required>
         </label>
-        <label>
-          <span class="form-person__patronymic">Отчество: </span>
-          <input class="input-text" type="text" placeholder="Ну и отчество тоже" name="person-patronymic">
+        <label class="field-block">
+          <span class="field-block__name">Отчество: </span>
+          <input class="field-block__input" type="text" placeholder="Ну и отчество тоже" name="person-patronymic">
         </label>
       </fieldset>
     </div>
     
-    <div class="contest-form__app">
-      <fieldset class="form-app">
-        <legend class="form-app__title">С каким приложением путешествовали? *</legend>
-        <label>
-          <input type="radio" value="iOS" name="app-type" checked>
-          <span class="form-app__name">Pink для iOS</span>
+    <div class="contest-form__block  contest-form__block--dark  contest-form__block--app">
+      <fieldset class="form-fieldset">
+        <legend class="form-fieldset__title">С каким приложением путешествовали? *</legend>
+        <label class="radio-item">
+          <input class="radio-item__input" type="radio" value="iOS" name="app-type" checked>
+          <span class="radio-item__name">Pink для iOS</span>
         </label>
-        <label>
-          <input type="radio" value="Android" name="app-type">
-          <span class="form-app__name">Pink на Android</span>
+        <label class="radio-item">
+          <input class="radio-item__input" type="radio" value="Android" name="app-type">
+          <span class="radio-item__name">Pink на Android</span>
         </label>
-        <label>
-          <input type="radio" value="Windows-Phone" name="app-type">
-          <span class="form-app__name">Windows Phone</span>
+        <label class="radio-item">
+          <input class="radio-item__input" type="radio" value="Windows-Phone" name="app-type">
+          <span class="radio-item__name">Windows Phone</span>
         </label>
       </fieldset>
     </div>
 
-    <div class="contest-form__dates">
-      <fieldset class="form-dates">
-        <legend class="form-dates__title">Когда вы путешествовали? *</legend>
-        <label>
-          <input class="input-text" type="text" placeholder="1 апреля 2015" name="date-start" required>
-          <span class="form-dates__name">Дата выезда</span>
-        </label>  
-        <label for="duration"><span class="form-dates__name">Продолжительность</span></label>   
-          <div class="increment-field">
-            <a class="increment-field__minus">-</a>
-            <input class="increment-field__text" type="text" placeholder="10 дней" name="duration" id="duration">
-            <a class="increment-field__plus">+</a>
-          </div>
-        <label>
-          <input type="text" class="input-text" placeholder="1 апреля 2015" name="date-end" readonly>
-          <span class="form-dates__name">Дата возвращения</span>
+    <div class="contest-form__block  contest-form__block--date">
+      <fieldset class="form-fieldset">
+        <legend class="form-fieldset__title">Когда вы путешествовали? *</legend>
+        <label class="field-block">
+          <input class="field-block__input" type="text" placeholder="1 апреля 2015" name="date-start" required>
+          <span class="field-block__name  field-block__name--after">Дата выезда</span>
+        </label>    
+        <div class="increment-field">
+          <a class="increment-field__minus">-</a>
+          <input class="increment-field__input" type="text" placeholder="10 дней" name="duration" id="duration">
+          <a class="increment-field__plus">+</a>
+        </div>
+        <label for="duration" class="field-block"><span class="field-block__name  field-block__name--after">Продолжительность</span></label> 
+        <label class="field-block">
+          <input type="text" class="field-block__input" placeholder="1 апреля 2015" name="date-end" readonly>
+          <span class="field-block__name  field-block__name--after">Дата возвращения</span>
         </label>
       </fieldset>
     </div>
     
-    <div class="contest-form__companions">
-      <fieldset class="form-companions">
-        <legend class="form-companions__title">Количество попутчиков *</legend>
+    <div class="contest-form__block  contest-form__block--dark  contest-form__block--companions">
+      <fieldset class="form-fieldset">
+        <legend class="form-fieldset__title">Количество попутчиков *</legend>
           <div class="increment-field">
             <a class="increment-field__minus">-</a>
-            <input class="increment-field__text" type="text" placeholder="2 чел" name="cnt-persons">
+            <input class="increment-field__input" type="text" placeholder="2 чел" name="cnt-persons">
             <a class="increment-field__plus">+</a>
           </div>
           
 
           <ol class="form-companions-list">
-            <li>
-              <label>
-                <span class="form-companions-list__name">№</span>
-                <input type="number" value="1" min="1" readonly>
-              </label>
-              <label>
-                <span class="form-companions-list__name">Имя: *</span>
-                <input class="input-text" type="text" placeholder="Введите ваше имя" required>
-              </label>
-              <label>
-                <span class="form-companions-list__name">Прозвище:</span>
-                <input class="input-text" type="text" placeholder="Ну как же без этого!">
-              </label>
+            <li class="form-companions-list__item">
+              <div class="form-companions-list__item-counter  companions-counter">
+                <div class="companions-counter__name">№</div>
+                <div class="companions-counter__number"></div>
+              </div>
+              <div class="form-companions-list__item-info">
+                <label class="field-block">
+                  <span class="field-block__name">Имя: *</span>
+                  <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="companion-1-name" required>
+                </label>
+                <label class="field-block">
+                  <span class="field-block__name">Прозвище:</span>
+                  <input class="field-block__input" type="text" placeholder="Ну как же без этого!" name="companion-1-nickname" required>
+                </label>
+              </div>
             </li>
-
-            <li>
-              <label>
-                <span class="form-companions-list__name">№</span>
-                <input type="number" value="1" min="1" readonly>
-              </label>
-              <label>
-                <span class="form-companions-list__name">Имя: *</span>
-                <input class="input-text" type="text" placeholder="Введите ваше имя" required>
-              </label>
-              <label>
-                <span class="form-companions-list__name">Прозвище:</span>
-                <input class="input-text" type="text" placeholder="Ну как же без этого!">
-              </label>
-            </li>
+            
+            <li class="form-companions-list__item">
+              <div class="form-companions-list__item-counter  companions-counter">
+                <div class="companions-counter__name">№</div>
+                <div class="companions-counter__number"></div>
+              </div>
+              <div class="form-companions-list__item-info">
+                <label class="field-block">
+                  <span class="field-block__name">Имя: *</span>
+                  <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="companion-2-name" required>
+                </label>
+                <label class="field-block">
+                  <span class="field-block__name">Прозвище:</span>
+                  <input class="field-block__input" type="text" placeholder="Ну как же без этого!" name="companion-2-nickname" required>
+                </label>
+              </div>
+            </li> 
           </ol>
       </fieldset>
     </div>
     
-    <div class="contest-form__achievements">
-      <fieldset class="form-achievements">
-        <legend class="form-achievements__title">Ваши безбашенные достижения в путешествии</legend>
-        <label>
-          <input type="checkbox" name="achievements-selfi" checked>
-          <span class="form-achievements__text">Сделал селфи с акулой</span>
+    <div class="contest-form__block  contest-form__block--achievements">
+      <fieldset class="form-fieldset">
+        <legend class="form-fieldset__title">Ваши безбашенные достижения в путешествии</legend>
+        <label class="checkbox-item">
+          <input class="checkbox-item__input" type="checkbox" name="achievements-selfi" checked>
+          <span class="checkbox-item__name">Сделал селфи с акулой</span>
         </label>
-        <label>
-          <input type="checkbox" name="achievements-suntan" checked>
-          <span class="form-achievements__text">Обгорел на пляже</span>
+        <label class="checkbox-item">
+          <input class="checkbox-item__input" type="checkbox" name="achievements-suntan" checked>
+          <span class="checkbox-item__name">Обгорел на пляже</span>
         </label>
-        <label>
-          <input type="checkbox" name="achievements-norris" id="norris">
-          <span class="form-achievements__text">Видел Чака Норриса</span>
+        <label class="checkbox-item">
+          <input class="checkbox-item__input" type="checkbox" name="achievements-norris" id="norris">
+          <span class="checkbox-item__name">Видел Чака Норриса</span>
         </label>
-        <label>
-          <input type="checkbox" name="achievements-souvenirs" id="souvenirs">
-          <span class="form-achievements__text">Накупил сувениров</span>
+        <label class="checkbox-item">
+          <input class="checkbox-item__input" type="checkbox" name="achievements-souvenirs" id="souvenirs">
+          <span class="checkbox-item__name">Накупил сувениров</span>
         </label>
-        <label>
-          <input type="checkbox" name="achievements-mind" id="mind" checked>
-          <span class="form-achievements__text">Удержал башню</span>
+        <label class="checkbox-item">
+          <input class="checkbox-item__input" type="checkbox" name="achievements-mind" id="mind" checked>
+          <span class="checkbox-item__name">Удержал башню</span>
         </label>
-        <label>
-          <input type="checkbox" name="achievements-defeat" id="defeat">
-          <span class="form-achievements__text">Разгромил отель</span>
+        <label class="checkbox-item">
+          <input class="checkbox-item__input" type="checkbox" name="achievements-defeat" id="defeat">
+          <span class="checkbox-item__name">Разгромил отель</span>
         </label>
       </fieldset>
     </div>
     
-    <div class="contest-form__photos">
-      <fieldset class="form-photos">
-        <legend class="form-photos__title">Ваши фотографии из поездки *</legend>
-        <label>
+    <div class="contest-form__block  contest-form__block--dark  contest-form__block--photos">
+      <fieldset class="form-fieldset">
+        <legend class="form-fieldset__title">Ваши фотографии из поездки *</legend>
+        <label class="upload-input">
           <input type="file" multiple name="photos[]" accept="image/*" id="upload-photos">
           <span  class="btn  btn--upload">Загрузить фото</span>
         </label>
         <ul class="upload-photos  js-upload-images">
           <li class="upload-photos__item">
-            <img alt="" src="img/photo-sm-1.jpg">
-            <span>img-1.jpg</span>
-            <a class="user-photo__delete  js-delete-image">Удалить</a>
+            <div class="upload-photos__img-wrapper">
+              <img alt="" src="http://placehold.it/68x67">
+            </div>
+            <div class="upload-photos__img-title">img-1.jpg</div>
+            <a href="#" class="upload-photos__delete" title="Удалить">
+            </a>
           </li>
           <li class="upload-photos__item">
-            <img alt="" src="img/photo-sm-1.jpg">
-            <span>img-1.jpg</span>
-            <a class="user-photo__delete  js-delete-image">Удалить</a>
+            <div class="upload-photos__img-wrapper">
+              <img alt="" src="http://placehold.it/68x67">
+            </div>
+            <div class="upload-photos__img-title">img-1.jpg</div>
+            <a href="#" class="upload-photos__delete" title="Удалить">
+            </a>
           </li>
           <li class="upload-photos__item">
-            <img alt="" src="img/photo-sm-1.jpg">
-            <span>img-1.jpg</span>
-            <a class="user-photo__delete  js-delete-image">Удалить</a>
+            <div class="upload-photos__img-wrapper">
+              <img alt="" src="http://placehold.it/68x67">
+            </div>
+            <div class="upload-photos__img-title">img-1.jpg</div>
+            <a href="#" class="upload-photos__delete" title="Удалить">
+            </a>
+          </li>
+          <li class="upload-photos__item">
+            <div class="upload-photos__img-wrapper">
+              <img alt="" src="http://placehold.it/68x67">
+            </div>
+            <div class="upload-photos__img-title">img-1.jpg</div>
+            <a href="#" class="upload-photos__delete" title="Удалить">
+            </a>
+          </li>
+          <li class="upload-photos__item">
+            <div class="upload-photos__img-wrapper">
+              <img alt="" src="http://placehold.it/68x67">
+            </div>
+            <div class="upload-photos__img-title">img-1.jpg</div>
+            <a href="#" class="upload-photos__delete" title="Удалить">
+            </a>
+          </li>
+          <li class="upload-photos__item">
+            <div class="upload-photos__img-wrapper">
+              <img alt="" src="http://placehold.it/68x67">
+            </div>
+            <div class="upload-photos__img-title">img-1.jpg</div>
+            <a href="#" class="upload-photos__delete" title="Удалить">
+            </a>
+          </li>
+          <li class="upload-photos__item">
+            <div class="upload-photos__img-wrapper">
+              <img alt="" src="http://placehold.it/68x67">
+            </div>
+            <div class="upload-photos__img-title">img-1.jpg</div>
+            <a href="#" class="upload-photos__delete" title="Удалить">
+            </a>
           </li>
         
         </div>
       </fieldset>
     </div>
 
-    <div class="contest-form__ending">
-      <input type="submit" value="Отправить форму" class="btn  btn--submit">
-      <div class="form-clarification">
-        <span class="form-clarification__important">*</span> &mdash; обязательные поля
+    <div class="contest-form__block  contest-form__block--ending">
+      <div class="form-ending">
+        <input type="submit" value="Отправить форму" class="btn  btn--submit">
+        <div class="form-clarification">
+          <span class="form-clarification__important">*</span> &mdash; обязательные поля
+        </div>
       </div>
     </div>
 

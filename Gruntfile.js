@@ -1,11 +1,17 @@
 module.exports = function(grunt) {
 
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-combine-media-queries');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-csscomb');
+
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-githooks');
   grunt.loadNpmTasks('grunt-lintspaces');
+
   grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -15,7 +21,39 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          'css/style.css': 'less/style.less'
+          'css/style.css': ['less/style.less']
+        }
+      }
+    },
+
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'ie 10']
+      },
+      style: {
+        src: "css/style.css"
+      },
+    },
+
+    cmq: {
+      options: {
+        log: false
+      },
+      style: {
+        files: {
+          'css/style.css': ['css/style.css']
+        }
+      },
+    },
+
+    cssmin: {
+      style: {
+        options: {
+          keepSpecialComments: 0,
+          report: "gzip"
+        },
+        files: {
+          "css/style.min.css": ['css/style.css']
         }
       }
     },
@@ -67,7 +105,7 @@ module.exports = function(grunt) {
       less: {
         // We watch and compile less files as normal but don't live reload here
         files: ['less/*', 'less/*/*'],
-        tasks: ['less'],
+        tasks: ['less', 'autoprefixer'],
       },
       livereload: {
         // Here we watch the files the less task will compile to
@@ -84,6 +122,13 @@ module.exports = function(grunt) {
       ]
     }
   });
+
+  grunt.registerTask("build", [
+    "less",
+    "autoprefixer",
+    "cmq",
+    "cssmin"
+  ]);
 
   grunt.registerTask('test', ['lintspaces:test']);
 

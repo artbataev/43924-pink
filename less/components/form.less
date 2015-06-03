@@ -1,99 +1,462 @@
 .contest-form {
   line-height: 30px;
-
-  div:nth-child(2n) {
-    background: @minor-light-color;
-    @media (min-width:@md-screen) {
-      background: @main-light-color;
+  &__block {
+    padding-top: 40px;
+    padding-bottom: 5px;
+    @media (min-width: @md-screen) {
+      padding-top: 35px;
+      padding-bottom: 30px;
     }
-  }
-  &__main-info {
-    padding-top: 50px;
-    padding-bottom: 15px;
-    padding-left: @wrapper-padding;
-    padding-right: @wrapper-padding;
-  }
-  &__app {
-    padding-top: 40px;
-    padding-bottom: 5px;
-    padding-left: @wrapper-padding;
-    padding-right: @wrapper-padding;
-  }
-  &__dates {
-    padding-top: 50px;
-    padding-bottom: 25px;
-    padding-left: @wrapper-padding;
-    padding-right: @wrapper-padding;
-  }
-  &__companions {
-    padding-top: 35px;
-    padding-bottom: 5px;
-    padding-left: @wrapper-padding;
-    padding-right: @wrapper-padding;
-  }
-  &__achievements {
-    padding-top: 50px;
-    padding-bottom: 5px;
-    padding-left: @wrapper-padding;
-    padding-right: @wrapper-padding;
-  }
-  &__photos {
-    padding-top: 40px;
-    padding-bottom: 5px;
-    padding-left: @wrapper-padding;
-    padding-right: @wrapper-padding;
-  }
-  &__ending {
-    padding-top: 50px;
-    padding-bottom: 40px;
-    padding-left: @wrapper-padding;
-    padding-right: @wrapper-padding;
+    &--dark {
+      background: @minor-light-color;
+      @media (min-width:@md-screen) {
+        background: @main-light-color;
+      }
+    }
+    &--main {
+      padding-bottom: 35px;
+      @media (min-width: @md-screen) {
+        padding-top: 87px;
+        padding-bottom: 15px;
+      }
+    }
+    // &--app {
+    //   padding-top: 35px;
+    // }
+    // &--date {
+    //   padding-top: 55px;
+    //   padding-bottom: 25px;
+    // }
+    // &--companions {
+    //   padding-top: 37px;
+    //   padding-bottom: 10px;
+    // }
+    // &--achievements {
+    //   padding-top: 45px;
+    //   padding-bottom: 0;
+    // }
+    // &--photos {
+    //   padding-top: 35px;
+    //   padding-bottom: 10px;
+    // }
+    // &--ending {
+    //   padding-top: 45px;
+    // }
   }
 }
 
-/* странная фигня */
-
-fieldset {
+.form-fieldset {
   padding: 0;
 
   border: none;
 
-  .form-block-wrapper();
+  .block-wrapper();
   @media (min-width:@md-screen) {
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 58px;
+    padding-left: 58px;
 
     border: 2px solid @main-divider-color;
     border-radius: 2px;
   }
-}
+  &--no-caption {
+    @media (min-width:@md-screen) {
+      padding-right: 0;
+      padding-left: 0;
 
-legend {
-  text-align: center;
-  text-transform: uppercase;
+      border: none;
+    }
+  }
+  &__title {
+    line-height: 18px;
 
-  color: @pink-color;
-}
+    margin-bottom: 35px;
 
-.upload-photos img {
-  width: 100px;
-  height: 100px;
-}
+    text-align: center;
+    text-transform: uppercase;
 
-/* странная фигня */
+    color: @pink-color;
+    @media (min-width:@md-screen) {
+      font-size: 14px;
 
-.form-lead {
-  &__additional {
-
+      padding-right: 20px;
+      padding-left: 20px;
+    }
   }
 }
 
-.input-text {
-  display: block;
+.form-lead {
+  padding-top: 5px;
+  padding-bottom: 35px;
 
+  text-align: center;
+
+  .block-wrapper();
+  &__additional {
+    display: none;
+    @media (min-width:@md-screen) {
+      display: inline;
+    }
+  }
+}
+
+.field-block {
+  display: block;
+  &__name {
+    display: block;
+
+    margin-bottom: 5px;
+    padding-left: 22px;
+
+    text-transform: uppercase;
+
+    color: @pink-color;
+    @media (min-width: @md-screen) {
+      font-size: 14px;
+    }
+    &--after {
+      margin-top: -5px;
+      margin-bottom: 15px;
+      padding-left: 0;
+
+      text-align: center;
+    }
+  }
+  &__input {
+    font-size: 18px;
+    line-height: 30px;
+
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px 20px 14px;
+
+    border: 2px solid @main-divider-color;
+    border-radius: 2px;
+    &:readonly {
+      background: @minor-light-color;
+    }
+  }
 }
 
 
+.increment-field {
+  position: relative;
+
+  margin-bottom: 15px;
+  &__plus {
+    font-size: 0;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+
+    cursor: pointer;
+
+    border: 2px solid @main-divider-color;
+    background: @main-light-color;
+    &:before,
+    &:after {
+      display: inline-block;
+
+      width: 30px;
+      height: 3px;
+
+      content: "";
+      vertical-align: middle;
+
+      background: @main-dark-color;
+    }
+    &:after {
+      transform: translateY(-30px) rotate(90deg);
+    }
+  }
+  &__minus {
+    font-size: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 30px;
+    height: 30px;
+    padding: 15px;
+
+    cursor: pointer;
+
+    border: 2px solid @main-divider-color;
+    background: @main-light-color;
+    &:before {
+      display: inline-block;
+
+      width: 30px;
+      height: 3px;
+
+      content: "";
+      vertical-align: middle;
+
+      background: @main-dark-color;
+    }
+  }
+  &__input {
+    font-size: 18px;
+    line-height: inherit;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    padding-right: 70px;
+    padding-left: 70px;
+
+    text-align: center;
+
+    border: 2px solid @main-divider-color;
+    border-radius: 2px;
+    background: transparent;
+  }
+}
+
+
+.radio-item {
+  display: block;
+
+  margin-top: 5px;
+  margin-bottom: 42px;
+  &__input {
+    display: none;
+  }
+  &__name {
+    font-size: 18px;
+
+    position: relative;
+
+    padding-left: 60px;
+    &:before {
+      position: absolute;
+      top: -5px;
+      left: 2px;
+
+      display: block;
+
+      width: 15px;
+      height: 15px;
+
+      content: "";
+
+      border: 10px solid @main-light-color;
+      border-radius: 50%;
+      background: @main-light-color;
+      box-shadow: 0 0 0 2px @main-divider-color;
+    }
+  }
+  &__input:checked ~ &__name:before {
+    background: @pink-color;
+  }
+}
+
+.checkbox-item {
+  display: block;
+
+  margin-top: 8px;
+  margin-bottom: 50px;
+  &__input {
+    display: none;
+  }
+  &__name {
+    font-size: 18px;
+
+    position: relative;
+
+    padding-left: 60px;
+    &:before {
+      position: absolute;
+      top: -7px;
+      left: 0;
+
+      display: block;
+
+      width: 36px;
+      height: 36px;
+
+      content: "";
+
+      border: 2px solid @main-divider-color;
+      background: @main-light-color;
+    }
+  }
+  &__input:checked ~ &__name:before {
+    background: url("../img/yes.svg") no-repeat center 50%;
+  }
+}
+
+
+.form-companions-list {
+  margin: 0;
+  margin-top: 45px;
+  padding: 0;
+  padding-top: 30px;
+
+  list-style: none;
+
+  counter-reset: num-companions;
+
+  border-top: 2px solid @main-divider-color;
+  &__item {
+    margin-bottom: 25px;
+
+    .clearfix();
+  }
+  &__item-counter {
+    float: left;
+
+    width: 62px;
+  }
+  &__item-info {
+    float: left;
+
+    width: @sm-container - 62;
+  }
+}
+
+.companions-counter {
+  &__name {
+    margin-bottom: 5px;
+
+    text-align: center;
+
+    color: @pink-color;
+  }
+  &__number {
+    line-height: 30px;
+
+    width: 40px;
+    padding: 14px 9px;
+
+    text-align: center;
+
+    border: 2px solid @main-divider-color;
+    &:before {
+      content: counter(num-companions);
+      counter-increment: num-companions;
+      /* получился зависимый элемент от чужого блока? */
+    }
+  }
+}
+
+
+.upload-input {
+  display: block;
+
+  padding-bottom: 35px;
+
+  border-bottom: 2px solid @main-divider-color;
+  & > input[type="file"] {
+    display: none;
+  }
+}
+
+.upload-photos {
+  font-size: 0;
+
+  margin-right: -19px;
+  margin-left: -19px;
+  padding: 0;
+  padding-top: 35px;
+
+  list-style: none;
+  @media(min-width: @md-screen) {
+    margin-right: -35px;
+    margin-left: -35px;
+  }
+  &__item {
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+    padding-right: 19px;
+    padding-left: 19px;
+    @media(min-width: @md-screen) {
+      margin-bottom: 50px;
+      padding-right: 35px;
+      padding-left: 35px;
+    }
+  }
+  &__img-wrapper {
+    overflow: hidden;
+
+    width: 68px;
+    height: 67px;
+    @media(min-width: @md-screen) {
+      width: 120px;
+      height: 120px;
+    }
+    img {
+      width: 68px;
+      height: 67px;
+      @media(min-width: @md-screen) {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+  &__img-title {
+    font-size: 12px;
+    line-height: 18px;
+
+    padding-top: 7px;
+
+    text-transform: uppercase;
+  }
+  &__delete {
+    position: absolute;
+    top: -18px;
+    right: 3px;
+
+    width: 30px;
+    height: 30px;
+
+    border: 2px solid @main-divider-color;
+    border-radius: 50%;
+    background: @main-light-color;
+    &:before,
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 8px;
+
+      display: block;
+
+      width: 15px;
+      height: 2px;
+
+      content: "";
+
+      background: @main-divider-color;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.form-ending {
+  text-align: center;
+
+  .block-wrapper();
+}
 
 .form-clarification {
   text-transform: uppercase;
