@@ -6,6 +6,9 @@
 
   color: @main-light-color;
   background: @main-dark-color;
+  &__wrapper {
+    .block-wrapper();
+  }
   &__text {
     font-size: 14px;
     font-weight: 300;
@@ -34,8 +37,7 @@
   padding-top: 40px;
   padding-bottom: 30px;
   &__wrapper {
-    width: @sm-screen - 2 * @wrapper-padding;
-    margin: 0 auto;
+    .block-wrapper();
   }
   p {
     margin: 0;
@@ -81,8 +83,7 @@
     margin-bottom: 32px;
   }
   &__wrapper {
-    width: @sm-screen - 2 * @wrapper-padding;
-    margin: 0 auto;
+    .block-wrapper();
   }
 }
 
@@ -94,8 +95,7 @@
 
 .slider-reviews {
   &__wrapper {
-    width: @sm-screen - 2 * @wrapper-padding;
-    margin: 0 auto;
+    .block-wrapper();
   }
   &__item {
     padding-top: 40px;

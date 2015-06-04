@@ -1,17 +1,41 @@
 .single-post {
   &__wrapper {
     .block-wrapper();
+    @media(min-width: @lg-screen) {
+      padding-right: 60px;
+      padding-left: 60px;
+    }
   }
   &__header {
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
+    padding-top: 35px;
+    padding-bottom: 25px;
     text-align: center;
     border-bottom: 2px solid @main-divider-color;
+    @media(min-width: @md-screen) {
+      padding-top: 77px;
+      padding-bottom: 0;
+      border: none;
+    }
+    @media(min-width: @lg-screen) {
+      padding-top: 100px;
+    }
   }
   &__title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 36px;
+    margin: 0;
+    padding-bottom: 15px;
     @media(min-width: @md-screen) {
+      font-size: 50px;
+      line-height: 1.2em;
+      padding-bottom: 25px;
+
       order: 1;
+    }
+    @media(min-width: @lg-screen) {
     }
   }
   &__time {
@@ -20,11 +44,34 @@
     text-transform: uppercase;
     color: @pink-color;
     @media(min-width: @md-screen) {
+      font-size: 14px;
+      position: relative;
+      margin-bottom: 0;
+
       order: 3;
+      span {
+        padding: 25px;
+        background: @main-light-color;
+      }
+      &:after {
+        position: absolute;
+        z-index: -1;
+        top: 45%;
+        left: 0;
+        display: block;
+        width: 100%;
+        content: "";
+        border: 2px dotted @main-divider-color;
+      }
     }
   }
   &__lead {
+    font-size: 16px;
     @media(min-width: @md-screen) {
+      font-size: 24px;
+      line-height: 40px;
+      padding-bottom: 28px;
+
       order: 2;
     }
   }
@@ -37,17 +84,32 @@
       margin-top: 28px;
       margin-bottom: 20px;
       text-transform: uppercase;
+      @media(min-width: @md-screen) {
+        font-size: 24px;
+        margin-top: 60px;
+        &:first-child {
+          margin-top: 40px;
+        }
+      }
     }
     ul {
       margin: 0;
-      margin-top: 30px;
+      margin-top: 27px;
       padding: 0;
       list-style: none;
+      @media(min-width: @md-screen) {
+        margin-top: 30px;
+        margin-bottom: 60px;
+      }
     }
     li {
       position: relative;
       margin-bottom: 27px;
       margin-left: 20px;
+      @media(min-width: @md-screen) {
+        margin-bottom: 30px;
+        margin-left: 35px;
+      }
       &:before {
         position: absolute;
         top: 10px;
@@ -58,6 +120,9 @@
         content: "";
         border-radius: 50%;
         background: @pink-color;
+        @media(min-width: @md-screen) {
+          left: -35px;
+        }
       }
     }
     blockquote {
@@ -66,6 +131,10 @@
       padding: 0;
       padding-left: 20px;
       box-shadow: -10px 0 0 -8px @pink-color;
+      @media(min-width: @md-screen) {
+        margin-top: 30px;
+        padding-left: 35px;
+      }
     }
     cite {
       font-style: italic;
@@ -76,13 +145,25 @@
       text-decoration: underline;
       color: @pink-color;
     }
+    p {
+      margin: 0;
+      margin-bottom: 20px;
+      padding: 0;
+    }
   }
 }
 
 .post-nav {
-  margin-top: 37px;
+  margin-top: 18px;
+  @media(min-width: @md-screen) {
+    margin-top: 35px;
+  }
   &__wrapper {
     .block-wrapper();
+    @media(min-width: @lg-screen) {
+      padding-right: 60px;
+      padding-left: 60px;
+    }
   }
   &__item {
     font-size: 18px;
@@ -99,12 +180,32 @@
     border-radius: 1px;
     &--prev {
       float: left;
+      @media(min-width: @md-screen) {
+        width: 65px;
+      }
+      @media(min-width: @lg-screen) {
+        width: 180px;
+      }
     }
     &--next {
       float: right;
+      @media(min-width: @md-screen) {
+        width: 65px;
+      }
+      @media(min-width: @lg-screen) {
+        width: 180px;
+      }
     }
     &--back {
       clear: both;
+      @media(min-width: @md-screen) {
+        clear: none;
+        width: 220px;
+        margin: 0 auto;
+      }
+      @media(min-width: @lg-screen) {
+        width: 200px;
+      }
     }
   }
 }
