@@ -2,15 +2,16 @@
   &:after {
     display: table;
     clear: both;
-
     content: "";
   }
 }
 
 .block-wrapper() {
+  box-sizing: border-box;
   width: @sm-container;
   margin: 0 auto;
-  box-sizing: border-box;
+
+  .clearfix();
   @media (min-width:@md-screen) {
     width: @md-container;
   }

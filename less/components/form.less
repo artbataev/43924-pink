@@ -20,28 +20,52 @@
         padding-bottom: 15px;
       }
     }
-    // &--app {
-    //   padding-top: 35px;
-    // }
-    // &--date {
-    //   padding-top: 55px;
-    //   padding-bottom: 25px;
-    // }
-    // &--companions {
-    //   padding-top: 37px;
-    //   padding-bottom: 10px;
-    // }
-    // &--achievements {
-    //   padding-top: 45px;
-    //   padding-bottom: 0;
-    // }
-    // &--photos {
-    //   padding-top: 35px;
-    //   padding-bottom: 10px;
-    // }
-    // &--ending {
-    //   padding-top: 45px;
-    // }
+    &--app {
+      padding-top: 35px;
+      @media (min-width: @md-screen) {
+        padding-top: 35px;
+        padding-bottom: 30px;
+      }
+    }
+    &--date {
+      padding-top: 55px;
+      padding-bottom: 25px;
+      @media (min-width: @md-screen) {
+        padding-top: 35px;
+        padding-bottom: 30px;
+      }
+    }
+    &--companions {
+      padding-top: 37px;
+      padding-bottom: 10px;
+      @media (min-width: @md-screen) {
+        padding-top: 35px;
+        padding-bottom: 30px;
+      }
+    }
+    &--achievements {
+      padding-top: 45px;
+      padding-bottom: 0;
+      @media (min-width: @md-screen) {
+        padding-top: 35px;
+        padding-bottom: 30px;
+      }
+    }
+    &--photos {
+      padding-top: 35px;
+      padding-bottom: 10px;
+      @media (min-width: @md-screen) {
+        padding-top: 35px;
+        padding-bottom: 30px;
+      }
+    }
+    &--ending {
+      padding-top: 45px;
+      @media (min-width: @md-screen) {
+        padding-top: 35px;
+        padding-bottom: 30px;
+      }
+    }
   }
 }
 
@@ -456,6 +480,16 @@
   text-align: center;
 
   .block-wrapper();
+  &__text {
+    @media (min-width: @md-screen) {
+      float: right;
+    }
+  }
+  &__btn {
+    @media (min-width: @md-screen) {
+      float: left;
+    }
+  }
 }
 
 .form-clarification {

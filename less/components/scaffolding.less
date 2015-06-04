@@ -1,6 +1,5 @@
 @viewport {
   zoom: 1.0;
-
   width: device-width;
 }
 
@@ -9,19 +8,16 @@ body {
   font-size: 14px;
   font-weight: normal;
   line-height: 27px;
-
-  margin: 0;
   min-width: @sm-screen;
-
+  margin: 0;
   color: @main-dark-color;
-}
-
-@media(min-width:@md-screen) {
-  body {
+  @media(min-width:@md-screen) {
     font-size: 18px;
     line-height: 30px;
   }
 }
+
+
 
 a {
   color: @pink-color;
