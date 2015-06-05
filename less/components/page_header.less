@@ -2,13 +2,22 @@
   color: @main-light-color;
   background: @main-dark-color;
   background: @main-dark-color url("../img/background-mobile@1x.jpg") no-repeat center top;
+  @media(min-width: @md-screen) {
+    background: @main-dark-color url("../img/background-tablet@1x.jpg") no-repeat center top;
+  }
+  @media(min-width: @lg-screen) {
+    background: @main-dark-color url("../img/background-fullsize.jpg") no-repeat center top;
+    background-size: 100%;
+  }
   &--form {
     padding-bottom: 57px;
   }
   &__nav-bar {
     height: 66px;
-
     background: rgba(0, 0, 0, 0.3);
+    @media(min-width: @md-screen) {
+      height: 110px;
+    }
   }
   &__nav-bar-wrapper {
     .block-wrapper();
@@ -16,77 +25,81 @@
   &__logo-link {
     position: relative;
     z-index: 100;
-
-    display: block;
     float: left;
+    img {
+      width: 74px;
+      height: 25px;
+      padding-top: 22px;
+      @media(min-width: @md-screen) {
+        width: 145px;
+        height: 40px;
+        padding-top: 25px;
+      }
+    }
+  }
+  &__heading-block {
+    padding-top: 30px;
+    padding-bottom: 45px;
 
-    width: 74px;
-    line-height: 66px;
+    .block-wrapper();
+    @media(min-width: @md-screen) {
+      padding-top: 70px;
+      padding-bottom: 75px;
+    }
+    @media(min-width: @lg-screen) {
+      padding-top: 65px;
+      padding-bottom: 100px;
+    }
+    // &--index {
+    //   padding-bottom: 315px;
+    //   background: url("../img/iphone-hand-mobile.png") no-repeat center bottom;
+    // }
   }
   &__heading {
     font-size: 24px;
     font-weight: 300;
     line-height: 1.2em;
-
-    width: @sm-screen - 2 * @wrapper-padding;
     margin: 0;
     margin: 0 auto;
-
     text-align: center;
-  }
-  &__heading-block {
-    padding-top: 30px;
-    padding-bottom: 45px;
-    &--index {
-      padding-bottom: 315px;
-
-      background: url("../img/iphone-hand-mobile.png") no-repeat center bottom;
-    }
-  }
-}
-
-@media(min-width:@md-screen) {
-  .page-header {
-    &__nav-bar {
-      height: 112px;
-    }
-    &__nav-bar-wrapper {
-      width: @md-screen - 2 * @wrapper-padding;
-    }
-    &__logo-link {
-      line-height: 112px;
-    }
-    &__heading {
+    @media(min-width: @md-screen) {
       font-size: 50px;
-
-      width: @md-screen - 2 * @wrapper-padding;
     }
   }
 }
+
 
 .main-nav {
+  @media(min-width: @lg-screen) {
+    float: right;
+    max-width: @lg-container - 200;
+  }
   &__list {
     position: absolute;
     z-index: 10;
-
     display: none;
-    // Для теста 
-    // .page-header__nav-bar:hover & {
-    //   display: block;
-    // }
-    // Для теста 
-
     margin: 0;
     padding: 0;
-
     list-style: none;
     &--active {
       display: block;
+    }
+    @media(min-width: @lg-screen) {
+      position: static;
+      display: block;
+      margin-top: 37px;
     }
     li {
       border-top: 1px solid #495561;
       border-bottom: 1px solid #003001;
       background: @main-dark-color;
+      @media(min-width: @lg-screen) {
+        display: inline-block;
+        padding-left: 64px;
+        vertical-align: middle;
+        border: none;
+        background: none;
+      }
       &:first-child {
         border-top: none;
       }
@@ -95,42 +108,35 @@
       font-size: 18px;
       font-weight: bold;
       line-height: 32px;
-
       display: block;
-
       width: @sm-screen - 50;
       padding: 25px;
-
       text-align: center;
       text-decoration: none;
       text-transform: uppercase;
-
       color: @main-light-color;
-    }
-  }
-  &__close {
-    text-align: right;
-    a {
-      font-size: 0;
-
-      display: inline-block;
-
-      width: 23px;
-      height: 22px;
-
-      background: url("../img/btn-menu-close.png") no-repeat 50% 50%;
+      @media(min-width: @lg-screen) {
+        font-weight: normal;
+        line-height: 18px;
+        width: auto;
+        padding: 0;
+        text-transform: none;
+      }
     }
   }
   &__toggle {
     display: block;
     float: right;
-
     width: 50px;
     height: 25px;
     margin-top: 20px;
-
     content: "";
-
     background: linear-gradient(to bottom, white 5px, transparent 5px, transparent 10px, white 10px, white 15px, transparent 15px, transparent 20px, white 20px);
+    @media(min-width: @md-screen) {
+      margin-top: 42px;
+    }
+    @media(min-width: @lg-screen) {
+      display: none;
+    }
   }
 }
