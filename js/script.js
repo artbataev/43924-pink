@@ -152,6 +152,27 @@
   }
 })();
 
+(function() {
+  var toggler = document.getElementById('toggler');
+  var menu = document.getElementById('main-nav-list');
+
+  if (toggler && menu) {
+    toggler.addEventListener("click", function(event) {
+      event.preventDefault();
+      menu.classList.toggle('main-nav__list--mobile-active');
+      toggler.classList.toggle('main-nav__toggle--close');
+    });
+
+    window.addEventListener("keydown", function(event) {
+        if (event.keyCode == 27) { 
+            if (menu.classList.contains("main-nav__list--mobile-active")) { 
+                menu.classList.remove("main-nav__list--mobile-active");
+                toggler.classList.remove('main-nav__toggle--close');
+            } 
+        }
+    });
+  }
+})();
 
 (function() {
   var position = [59.938794, 30.323083];
@@ -180,6 +201,8 @@
    
   google.maps.event.addDomListener(window, 'load', showGoogleMaps);
 })();
+
+
 
 
 
