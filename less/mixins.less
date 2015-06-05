@@ -11,11 +11,15 @@
   width: @sm-container;
   margin: 0 auto;
 
-  .clearfix();
   @media (min-width:@md-screen) {
     width: @md-container;
   }
   @media (min-width:@lg-screen) {
     width: @lg-container;
   }
+}
+
+.block-wrapper--clearfix() {
+  .block-wrapper();
+  .clearfix();
 }
