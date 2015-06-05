@@ -82,12 +82,12 @@
       } 
     }
 
-    deleteLinks = document.querySelectorAll(".js-delete-image");
+    deleteLinks = document.querySelectorAll(".upload-photos__delete");
     for (var i = 0; i < deleteLinks.length; i++) {
       var link = deleteLinks[i];
       link.addEventListener("click", function(event) {
         event.preventDefault();
-        this.parentNode.remove();
+        this.parentNode.parentNode.removeChild(this.parentNode);
       });
     }
   }

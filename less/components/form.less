@@ -71,14 +71,12 @@
 
 .form-fieldset {
   padding: 0;
-
   border: none;
 
-  .block-wrapper();
+  .block-wrapper--clearfix();
   @media (min-width:@md-screen) {
     padding-right: 58px;
     padding-left: 58px;
-
     border: 2px solid @main-divider-color;
     border-radius: 2px;
   }
@@ -86,22 +84,17 @@
     @media (min-width:@md-screen) {
       padding-right: 0;
       padding-left: 0;
-
       border: none;
     }
   }
   &__title {
     line-height: 18px;
-
     margin-bottom: 35px;
-
     text-align: center;
     text-transform: uppercase;
-
     color: @pink-color;
     @media (min-width:@md-screen) {
       font-size: 14px;
-
       padding-right: 20px;
       padding-left: 20px;
     }
@@ -111,7 +104,6 @@
 .form-lead {
   padding-top: 5px;
   padding-bottom: 35px;
-
   text-align: center;
 
   .block-wrapper();
@@ -127,12 +119,9 @@
   display: block;
   &__name {
     display: block;
-
     margin-bottom: 5px;
     padding-left: 22px;
-
     text-transform: uppercase;
-
     color: @pink-color;
     @media (min-width: @md-screen) {
       font-size: 14px;
@@ -141,21 +130,17 @@
       margin-top: -5px;
       margin-bottom: 15px;
       padding-left: 0;
-
       text-align: center;
     }
   }
   &__input {
     font-size: 18px;
     line-height: 30px;
-
     display: block;
-
     box-sizing: border-box;
     width: 100%;
     margin-bottom: 15px;
     padding: 15px 20px 14px;
-
     border: 2px solid @main-divider-color;
     border-radius: 2px;
     &:readonly {
@@ -167,35 +152,26 @@
 
 .increment-field {
   position: relative;
-
   margin-bottom: 15px;
   &__plus {
     font-size: 0;
-
     position: absolute;
     top: 0;
     right: 0;
-
     display: block;
-
     width: 30px;
     height: 30px;
     padding: 15px;
-
     cursor: pointer;
-
     border: 2px solid @main-divider-color;
     background: @main-light-color;
     &:before,
     &:after {
       display: inline-block;
-
       width: 30px;
       height: 3px;
-
       content: "";
       vertical-align: middle;
-
       background: @main-dark-color;
     }
     &:after {
@@ -204,45 +180,34 @@
   }
   &__minus {
     font-size: 0;
-
     position: absolute;
     top: 0;
     left: 0;
-
     display: block;
-
     width: 30px;
     height: 30px;
     padding: 15px;
-
     cursor: pointer;
-
     border: 2px solid @main-divider-color;
     background: @main-light-color;
     &:before {
       display: inline-block;
-
       width: 30px;
       height: 3px;
-
       content: "";
       vertical-align: middle;
-
       background: @main-dark-color;
     }
   }
   &__input {
     font-size: 18px;
     line-height: inherit;
-
     box-sizing: border-box;
     width: 100%;
     padding: 15px;
     padding-right: 70px;
     padding-left: 70px;
-
     text-align: center;
-
     border: 2px solid @main-divider-color;
     border-radius: 2px;
     background: transparent;
@@ -252,30 +217,36 @@
 
 .radio-item {
   display: block;
-
   margin-top: 5px;
   margin-bottom: 42px;
+  @media(min-width: @lg-screen) {
+    float: left;
+    width: 33.3%;
+    &:nth-of-type(3n+1) {
+      text-align: left;
+    }
+    &:nth-of-type(3n+2) {
+      text-align: center;
+    }
+    &:nth-of-type(3n+3) {
+      text-align: right;
+    }
+  }
   &__input {
     display: none;
   }
   &__name {
     font-size: 18px;
-
     position: relative;
-
     padding-left: 60px;
     &:before {
       position: absolute;
       top: -5px;
       left: 2px;
-
       display: block;
-
       width: 15px;
       height: 15px;
-
       content: "";
-
       border: 10px solid @main-light-color;
       border-radius: 50%;
       background: @main-light-color;
@@ -289,30 +260,37 @@
 
 .checkbox-item {
   display: block;
-
   margin-top: 8px;
   margin-bottom: 50px;
+  @media(min-width: @lg-screen) {
+    // Неверно!!!
+    float: left;
+    width: 33.3%;
+    &:nth-of-type(3n+1) {
+      text-align: left;
+    }
+    &:nth-of-type(3n+2) {
+      text-align: center;
+    }
+    &:nth-of-type(3n+3) {
+      text-align: right;
+    }
+  }
   &__input {
     display: none;
   }
   &__name {
     font-size: 18px;
-
     position: relative;
-
     padding-left: 60px;
     &:before {
       position: absolute;
       top: -7px;
       left: 0;
-
       display: block;
-
       width: 36px;
       height: 36px;
-
       content: "";
-
       border: 2px solid @main-divider-color;
       background: @main-light-color;
     }
@@ -328,11 +306,8 @@
   margin-top: 45px;
   padding: 0;
   padding-top: 30px;
-
   list-style: none;
-
   counter-reset: num-companions;
-
   border-top: 2px solid @main-divider-color;
   &__item {
     margin-bottom: 25px;
@@ -341,12 +316,10 @@
   }
   &__item-counter {
     float: left;
-
     width: 62px;
   }
   &__item-info {
     float: left;
-
     width: @sm-container - 62;
   }
 }
@@ -354,19 +327,14 @@
 .companions-counter {
   &__name {
     margin-bottom: 5px;
-
     text-align: center;
-
     color: @pink-color;
   }
   &__number {
     line-height: 30px;
-
     width: 40px;
     padding: 14px 9px;
-
     text-align: center;
-
     border: 2px solid @main-divider-color;
     &:before {
       content: counter(num-companions);
@@ -379,9 +347,7 @@
 
 .upload-input {
   display: block;
-
   padding-bottom: 35px;
-
   border-bottom: 2px solid @main-divider-color;
   & > input[type="file"] {
     display: none;
@@ -390,34 +356,37 @@
 
 .upload-photos {
   font-size: 0;
-
   margin-right: -19px;
   margin-left: -19px;
   padding: 0;
   padding-top: 35px;
-
   list-style: none;
   @media(min-width: @md-screen) {
     margin-right: -35px;
     margin-left: -35px;
   }
+  @media(min-width: @lg-screen) {
+    margin-right: -27px;
+    margin-left: -28px;
+  }
   &__item {
     position: relative;
-
     display: inline-block;
-
+    margin-right: 19px;
     margin-bottom: 20px;
-    padding-right: 19px;
-    padding-left: 19px;
+    margin-left: 19px;
     @media(min-width: @md-screen) {
+      margin-right: 35px;
       margin-bottom: 50px;
-      padding-right: 35px;
-      padding-left: 35px;
+      margin-left: 35px;
+    }
+    @media(min-width: @lg-screen) {
+      margin-right: 28px;
+      margin-left: 27px;
     }
   }
   &__img-wrapper {
     overflow: hidden;
-
     width: 68px;
     height: 67px;
     @media(min-width: @md-screen) {
@@ -436,36 +405,38 @@
   &__img-title {
     font-size: 12px;
     line-height: 18px;
-
     padding-top: 7px;
-
     text-transform: uppercase;
   }
   &__delete {
     position: absolute;
-    top: -18px;
-    right: 3px;
-
+    top: -30px / 2;
+    right: -30px / 2;
     width: 30px;
     height: 30px;
-
     border: 2px solid @main-divider-color;
     border-radius: 50%;
     background: @main-light-color;
+    @media(min-width: @md-screen) {
+      top: -54px / 2;
+      right: -54px / 2;
+      width: 54px;
+      height: 54px;
+    }
     &:before,
     &:after {
       position: absolute;
       top: 50%;
       left: 8px;
-
       display: block;
-
       width: 15px;
       height: 2px;
-
       content: "";
-
       background: @main-divider-color;
+      @media(min-width: @md-screen) {
+        left: 12px;
+        width: 30px;
+      }
     }
     &:before {
       transform: rotate(45deg);

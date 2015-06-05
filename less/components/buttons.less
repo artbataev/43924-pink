@@ -45,6 +45,13 @@
     padding: 13px;
     border: 2px solid @main-divider-color;
     background: @main-light-color;
+    @media(min-width: @md-screen) {
+      width: 100%;
+    }
+    @media(min-width: @lg-screen) {
+      background: @pink-color;
+      color: @main-light-color;
+    }
   }
   &--submit {
     width: 280px;
