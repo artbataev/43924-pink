@@ -226,31 +226,60 @@
   </section>
   
   <footer class="index-footer">
-    <div class="index-footer__contacts">
-      <div class="index-footer__heading">
-        Остались вопросы? Свяжитесь с нами!
-      </div>
-      <div class="index-footer__contact-item">
-        <div class="index-footer__contact-heading">
-          Звоните:
+    <div class="index-footer__wrapper">
+      <div class="index-footer__contacts">
+        <div class="index-footer__heading">
+          Остались вопросы? Свяжитесь с нами!
         </div>
-        <a class="index-footer__contact-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
-      </div>
-      <div class="index-footer__contact-item">
-        <div class="index-footer__contact-heading">
-          Пишите:
+        <div class="index-footer__contact-item  index-footer__contact-item--call">
+          <div class="index-footer__contact-heading">
+            Звоните:
+          </div>
+          <a class="index-footer__contact-link" href="tel:+78125556666">+7 (812) 555-66-66</a>
         </div>
-        <a class="index-footer__contact-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </div>
-      <div class="index-footer__contact-item">
-        <div class="index-footer__contact-heading">
-          Приезжайте в гости:
+        <div class="index-footer__contact-item  index-footer__contact-item--write">
+          <div class="index-footer__contact-heading">
+            Пишите:
+          </div>
+          <a class="index-footer__contact-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
-        <a class="index-footer__contact-link" href="http://maps.google.com">ул. Большая Конюшенная, 19/8</a>
+        <div class="index-footer__contact-item  index-footer__contact-item--go">
+          <div class="index-footer__contact-heading">
+            Приезжайте в гости:
+          </div>
+          <a class="index-footer__contact-link" href="http://maps.google.com">ул. Большая Конюшенная, 19/8</a>
+        </div>
+      </div>
+    </div>
+    <div id="index-map" class="index-footer__map"></div>
+  </footer>
+
+  <footer class="page-footer  page-footer--index">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__logo">
+        <a href="/">
+          <picture>
+            <source media="(min-width:940px)" srcset="img/logotype-blue-desktop.svg">
+            <img src="img/logotype-blue-tablet.svg" alt="Pink"></a>
+          </picture>
+        </a>
+      </div>
+      <div class="page-footer__social">
+        <ul class="social-links">
+          <li><a class="social-links__item  social-links__item--twitter" href="#">Мы в Твиттере</a></li>
+          <li><a class="social-links__item  social-links__item--fb" href="#">Мы в Facebook</a></li>
+          <li><a class="social-links__item  social-links__item--youtube" href="#">Мы в Youtube</a></li>
+        </ul>
+      </div>
+      <div class="page-footer__developer">
+        Разработано 
+        <a class="developer-htmlacademy" href="http://htmlacademy.ru">HTML Academy</a>
       </div>
     </div>
   </footer>
-  <!-- <script src="js/script.js"></script> -->
+
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
