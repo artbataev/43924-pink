@@ -1,0 +1,189 @@
+
+.price {
+  line-height: 30px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 68px;
+  background: @minor-light-color;
+  @media(min-width: @md-screen) {
+    padding-bottom: 70px;
+  }
+  @media(min-width: @lg-screen) {
+    padding-bottom: 97px;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+    border-bottom: 35px solid transparent;
+    border-left: 100vw solid @main-light-color;
+  }
+  &__wrapper {
+    @media(min-width: @md-screen) {
+      .block-wrapper();
+    }
+  }
+  &__table {
+    width: 836px;
+    border-collapse: collapse;
+    transform: translateX(-50%) translateX(50vw);
+    @media(min-width: @md-screen) {
+      width: auto;
+      transform: none;
+    }
+    td,
+    th {
+      border: 2px solid @main-divider-color;
+      border-top: none;
+    }
+  }
+  &__heading {
+    width: 276px;
+    padding-top: 16px;
+    padding-bottom: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: @main-light-color;
+    background: @main-dark-color;
+    @media(min-width: @md-screen) {
+      width: 152px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    @media(min-width: @lg-screen) {
+      width: 232px;
+      padding-top: 16px;
+      padding-bottom: 21px;
+    }
+    &--no-content {
+      display: none;
+      @media (min-width: @md-screen) {
+        display: table-cell;
+        visibility: hidden;
+      }
+    }
+    &--hit {
+      position: relative;
+      overflow: hidden;
+      &:before {
+        font-size: 14px;
+        font-weight: 600;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        padding: 0 45px;
+        content: "Хит";
+        transform: rotate(-45deg) translateX(-35px) translateY(-19px);
+        color: @main-light-color;
+        background: @pink-color;
+        @media(min-width: @md-screen) {
+          transform: rotate(-45deg) translateX(-31px) translateY(-25px);
+        }
+        @media(min-width: @lg-screen) {
+          transform: rotate(-45deg) translateX(-31px) translateY(-16px);
+        }
+      }
+    }
+  }
+  &__name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    @media(min-width: @md-screen) {
+      font-size: 16px;
+    }
+    @media(min-width: @lg-screen) {
+      font-size: 18px;
+    }
+  }
+  &__price {
+    font-size: 24px;
+    font-weight: 300;
+    @media(min-width: @md-screen) {
+      font-size: 18px;
+    }
+    @media(min-width: @lg-screen) {
+      font-size: 24px;
+    }
+  }
+  &__feature {
+    font-size: 14px;
+    padding: 14px 22px;
+    text-transform: uppercase;
+    color: @main-dark-color;
+    background: @main-light-color;
+    @media(min-width: @md-screen) {
+      padding: 7px 14px;
+      text-transform: none;
+    }
+    @media(min-width: @lg-screen) {
+      font-size: 18px;
+      padding: 14px 20px;
+    }
+    &--start {
+      display: none;
+      @media(min-width: @md-screen) {
+        display: table-cell;
+      }
+    }
+    &--yes {
+      position: relative;
+      @media(min-width: @md-screen) {
+        font-size: 0;
+      }
+      &:after {
+        position: absolute;
+        top: 11px;
+        right: 25px;
+        display: inline-block;
+        width: 10px;
+        height: 25px;
+        content: "";
+        transform: rotate(45deg);
+        border-right: 2px solid #3dc644;
+        border-bottom: 2px solid #3dc644;
+        @media(min-width: @md-screen) {
+          top: 5px;
+          right: 70px;
+        }
+        @media(min-width: @lg-screen) {
+          top: 13px;
+          right: 111px;
+        }
+      }
+    }
+    &--no {
+      position: relative;
+      @media(min-width: @md-screen) {
+        font-size: 0;
+      }
+      &:after,
+      &:before {
+        position: absolute;
+        top: 12px;
+        right: 30px;
+        display: block;
+        width: 2px;
+        height: 35px;
+        content: "";
+        background: #f25b26;
+        @media(min-width: @md-screen) {
+          top: 5px;
+          right: 50%;
+        }
+        @media(min-width: @lg-screen) {
+          top: 13px;
+        }
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

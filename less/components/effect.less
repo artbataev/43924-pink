@@ -1,0 +1,86 @@
+.effect {
+  display: none;
+  @media(min-width: @md-screen) {
+    display: block;
+    padding-top: 60px;
+  }
+  @media(min-width: @lg-screen) {
+    position: relative;
+    z-index: -1;
+    background: @minor-light-color;
+  }
+  &__wrapper {
+    .block-wrapper();
+    .clearfix();
+  }
+  &__time {
+    font-size: 104.6px;
+    font-weight: bold;
+    line-height: 200px;
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 192px;
+    height: 192px;
+    margin-top: 65px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    text-align: center;
+    color: @pink-color;
+    border: 13px solid @pink-color;
+    border-radius: 50%;
+    @media(min-width: @lg-screen) {
+      font-size: 120px;
+      line-height: 222px;
+      width: 220px;
+      height: 220px;
+      margin-top: 75px;
+    }
+    // z-index: 100;
+    &:after {
+      position: absolute;
+      // z-index: 10;
+      z-index: -1;
+      top: -75px;
+      left: -35px;
+      display: block;
+      width: 262px;
+      height: 302px;
+      content: "";
+      background: url("../img/timer.svg") no-repeat center top;
+      background-size: cover;
+      @media(min-width: @lg-screen) {
+        top: -86px;
+        left: -40px;
+        width: 299px;
+        height: 346px;
+        background: url("../img/timer-desktop.svg") no-repeat center top;
+      }
+    }
+  }
+  &__description {
+    font-size: 14px;
+    line-height: 24px;
+    margin-left: 310px;
+    @media(min-width: @lg-screen) {
+      font-size: 18px;
+      line-height: 30px;
+      margin-left: 370px;
+    }
+    span {
+      display: block;
+      @media(min-width: @lg-screen) {
+        display: inline;
+      }
+    }
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 36px;
+  }
+  &__text {
+  }
+  &__link {
+  }
+}

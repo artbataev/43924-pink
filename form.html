@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pink - Конкурс</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
@@ -45,10 +46,10 @@
         <span class="form-lead__additional">Пожалуйста, заполните форму ниже:</span>
       </div>
 
-      <fieldset class="form-fieldset  form-fieldset--no-caption">
+      <fieldset class="form-fieldset  form-fieldset--no-legend">
         <label class="field-block">
           <span class="field-block__name">Имя: * </span>
-          <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="person-name" required autofocus>
+          <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="person-name" required>
         </label>
         <label class="field-block">
           <span class="field-block__name">Фамилия: * </span>
@@ -64,17 +65,17 @@
     <div class="contest-form__block  contest-form__block--dark  contest-form__block--app">
       <fieldset class="form-fieldset">
         <legend class="form-fieldset__title">С каким приложением путешествовали? *</legend>
-        <label class="radio-item">
-          <input class="radio-item__input" type="radio" value="iOS" name="app-type" checked>
-          <span class="radio-item__name">Pink для iOS</span>
+        <label class="field-radio">
+          <input class="field-radio__input" type="radio" value="iOS" name="app-type" checked>
+          <span class="field-radio__name">Pink для iOS</span>
         </label>
-        <label class="radio-item">
-          <input class="radio-item__input" type="radio" value="Android" name="app-type">
-          <span class="radio-item__name">Pink на Android</span>
+        <label class="field-radio">
+          <input class="field-radio__input" type="radio" value="Android" name="app-type">
+          <span class="field-radio__name">Pink на Android</span>
         </label>
-        <label class="radio-item">
-          <input class="radio-item__input" type="radio" value="Windows-Phone" name="app-type">
-          <span class="radio-item__name">Windows Phone</span>
+        <label class="field-radio">
+          <input class="field-radio__input" type="radio" value="Windows-Phone" name="app-type">
+          <span class="field-radio__name">Windows Phone</span>
         </label>
       </fieldset>
     </div>
@@ -86,10 +87,10 @@
           <input class="field-block__input" type="text" placeholder="1 апреля 2015" name="date-start" required>
           <span class="field-block__name  field-block__name--after">Дата выезда</span>
         </label>    
-        <div class="increment-field">
-          <a class="increment-field__minus">-</a>
-          <input class="increment-field__input" type="text" placeholder="10 дней" name="duration" id="duration">
-          <a class="increment-field__plus">+</a>
+        <div class="field-increment">
+          <a class="field-increment__minus">-</a>
+          <input class="field-increment__input" type="text" placeholder="10 дней" name="duration" id="duration" value="10 дней">
+          <a class="field-increment__plus">+</a>
         </div>
         <label for="duration" class="field-block"><span class="field-block__name  field-block__name--after">Продолжительность</span></label> 
         <label class="field-block">
@@ -102,10 +103,10 @@
     <div class="contest-form__block  contest-form__block--dark  contest-form__block--companions">
       <fieldset class="form-fieldset">
         <legend class="form-fieldset__title">Количество попутчиков *</legend>
-          <div class="increment-field">
-            <a class="increment-field__minus">-</a>
-            <input class="increment-field__input" type="text" placeholder="2 чел" name="cnt-persons">
-            <a class="increment-field__plus">+</a>
+          <div class="field-increment">
+            <a class="field-increment__minus">-</a>
+            <input class="field-increment__input" type="text" placeholder="2 чел" name="cnt-persons" value="2 чел">
+            <a class="field-increment__plus">+</a>
           </div>
           
 
@@ -150,29 +151,29 @@
     <div class="contest-form__block  contest-form__block--achievements">
       <fieldset class="form-fieldset">
         <legend class="form-fieldset__title">Ваши безбашенные достижения в путешествии</legend>
-        <label class="checkbox-item">
-          <input class="checkbox-item__input" type="checkbox" name="achievements-selfi" checked>
-          <span class="checkbox-item__name">Сделал селфи с акулой</span>
+        <label class="field-checkbox">
+          <input class="field-checkbox__input" type="checkbox" name="achievements-selfi" checked>
+          <span class="field-checkbox__name">Сделал селфи с акулой</span>
         </label>
-        <label class="checkbox-item">
-          <input class="checkbox-item__input" type="checkbox" name="achievements-suntan" checked>
-          <span class="checkbox-item__name">Обгорел на пляже</span>
+        <label class="field-checkbox">
+          <input class="field-checkbox__input" type="checkbox" name="achievements-suntan" checked>
+          <span class="field-checkbox__name">Обгорел на пляже</span>
         </label>
-        <label class="checkbox-item">
-          <input class="checkbox-item__input" type="checkbox" name="achievements-norris" id="norris">
-          <span class="checkbox-item__name">Видел Чака Норриса</span>
+        <label class="field-checkbox">
+          <input class="field-checkbox__input" type="checkbox" name="achievements-norris" id="norris">
+          <span class="field-checkbox__name">Видел Чака Норриса</span>
         </label>
-        <label class="checkbox-item">
-          <input class="checkbox-item__input" type="checkbox" name="achievements-souvenirs" id="souvenirs">
-          <span class="checkbox-item__name">Накупил сувениров</span>
+        <label class="field-checkbox">
+          <input class="field-checkbox__input" type="checkbox" name="achievements-souvenirs" id="souvenirs">
+          <span class="field-checkbox__name">Накупил сувениров</span>
         </label>
-        <label class="checkbox-item">
-          <input class="checkbox-item__input" type="checkbox" name="achievements-mind" id="mind" checked>
-          <span class="checkbox-item__name">Удержал башню</span>
+        <label class="field-checkbox">
+          <input class="field-checkbox__input" type="checkbox" name="achievements-mind" id="mind" checked>
+          <span class="field-checkbox__name">Удержал башню</span>
         </label>
-        <label class="checkbox-item">
-          <input class="checkbox-item__input" type="checkbox" name="achievements-defeat" id="defeat">
-          <span class="checkbox-item__name">Разгромил отель</span>
+        <label class="field-checkbox">
+          <input class="field-checkbox__input" type="checkbox" name="achievements-defeat" id="defeat">
+          <span class="field-checkbox__name">Разгромил отель</span>
         </label>
       </fieldset>
     </div>

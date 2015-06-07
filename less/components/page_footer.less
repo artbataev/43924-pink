@@ -192,15 +192,29 @@
   }
   &__item {
     display: block;
-    height: 100%;
+    line-height: 45px;
+    text-align: center;
+    svg {
+      fill: @pink-color;
+      vertical-align: middle;
+    }
     &--twitter {
-      background: url("../img/twitter.svg") no-repeat center 50%;
+      svg {
+        width: 19px;
+        height: 15px;
+      }
     }
     &--fb {
-      background: url("../img/facebook.svg") no-repeat center 50%;
+      svg {
+        width: 9px;
+        height: 19px;
+      }
     }
     &--youtube {
-      background: url("../img/youtube.svg") no-repeat center 50%;
+      svg {
+        width: 15px;
+        height: 14px;
+      }
     }
   }
 }
@@ -212,5 +226,9 @@
   height: 34px;
   margin-left: 10px;
   vertical-align: middle;
-  background: url("../img/htmlacademy.svg") no-repeat center 50%;
+  svg {
+    fill: @pink-color;
+    width: 27px;
+    height: 34px;
+  }
 }

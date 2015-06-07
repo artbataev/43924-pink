@@ -97,7 +97,7 @@
 // поле с инкрементом/декрементом
 // можно вписать "2", можно вписать "2 чел", можно вписать "2 клевых чела" - работать будет
 (function() {
-  var incrementElements = document.querySelectorAll(".increment-field");
+  var incrementElements = document.querySelectorAll(".field-increment");
   if(incrementElements){
     for (var i = 0; i < incrementElements.length; i++) {
       initIncrementField(incrementElements[i]);
@@ -105,8 +105,8 @@
 
     function initIncrementField(parentBlock) {
       var input = parentBlock.querySelector("input");
-      var minus = parentBlock.querySelector(".increment-field__minus");
-      var plus = parentBlock.querySelector(".increment-field__plus");
+      var minus = parentBlock.querySelector(".field-increment__minus");
+      var plus = parentBlock.querySelector(".field-increment__plus");
 
       if(minus) {
         minus.addEventListener("click", function(){
@@ -121,7 +121,6 @@
 
       input.addEventListener("keydown", function(event) {
         var key = event.keyCode;
-        console.log(event.keyCode);
         if(key==38) { changeNumber(true); } // стрелка вверх
         if(key==40) { changeNumber(false); } // стрелка вниз
       });
@@ -175,31 +174,33 @@
 })();
 
 (function() {
-  var position = [59.938794, 30.323083];
-  function showGoogleMaps() {  
-      var latLng = new google.maps.LatLng(position[0], position[1]);
-   
-      var mapOptions = {
-          zoom: 16, // initialize zoom level - the max value is 21
-          streetViewControl: false, // hide the yellow Street View pegman
-          scaleControl: true, // allow users to zoom the Google Map
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          center: latLng
-      };
-   
-      map = new google.maps.Map(document.getElementById('index-map'),
-          mapOptions);
-   
-      // Show the default red marker at the location
-      marker = new google.maps.Marker({
-          position: latLng,
-          map: map,
-          draggable: false,
-          animation: google.maps.Animation.DROP
-      });
+  if(document.getElementById('index-map')) {
+    var position = [59.938794, 30.323083];
+    function showGoogleMaps() {  
+        var latLng = new google.maps.LatLng(position[0], position[1]);
+     
+        var mapOptions = {
+            zoom: 16, // initialize zoom level - the max value is 21
+            streetViewControl: false, // hide the yellow Street View pegman
+            scaleControl: true, // allow users to zoom the Google Map
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: latLng
+        };
+     
+        map = new google.maps.Map(document.getElementById('index-map'),
+            mapOptions);
+     
+        // Show the default red marker at the location
+        marker = new google.maps.Marker({
+            position: latLng,
+            map: map,
+            draggable: false,
+            animation: google.maps.Animation.DROP
+        });
+    }
+     
+    google.maps.event.addDomListener(window, 'load', showGoogleMaps);
   }
-   
-  google.maps.event.addDomListener(window, 'load', showGoogleMaps);
 })();
 
 

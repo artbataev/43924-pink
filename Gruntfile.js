@@ -14,6 +14,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-svgstore');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -112,6 +113,17 @@ module.exports = function(grunt) {
         // These files are sent to the live reload server after less compiles to them
         options: { livereload: true },
         files: ['css/style.css',"*.html",'js/script.js'],
+      },
+    },
+
+    svgstore: {
+      options: {
+        prefix : 'icon-'
+      },
+      default : {
+        files: {
+          'img/sprite.svg': ['img/sprite/*.svg'],
+        },
       },
     },
 

@@ -73,14 +73,15 @@
   padding: 0;
   border: none;
 
-  .block-wrapper--clearfix();
+  .block-wrapper();
+  .clearfix();
   @media (min-width:@md-screen) {
     padding-right: 58px;
     padding-left: 58px;
     border: 2px solid @main-divider-color;
     border-radius: 2px;
   }
-  &--no-caption {
+  &--no-legend {
     @media (min-width:@md-screen) {
       padding-right: 0;
       padding-left: 0;
@@ -150,7 +151,7 @@
 }
 
 
-.increment-field {
+.field-increment {
   position: relative;
   margin-bottom: 15px;
   &__plus {
@@ -214,8 +215,7 @@
   }
 }
 
-
-.radio-item {
+.field-radio {
   display: block;
   margin-top: 5px;
   margin-bottom: 42px;
@@ -238,7 +238,9 @@
   &__name {
     font-size: 18px;
     position: relative;
+    display: block;
     padding-left: 60px;
+    text-align: left;
     &:before {
       position: absolute;
       top: -5px;
@@ -258,7 +260,7 @@
   }
 }
 
-.checkbox-item {
+.field-checkbox {
   display: block;
   margin-top: 8px;
   margin-bottom: 50px;
@@ -266,15 +268,6 @@
     // Неверно!!!
     float: left;
     width: 33.3%;
-    &:nth-of-type(3n+1) {
-      text-align: left;
-    }
-    &:nth-of-type(3n+2) {
-      text-align: center;
-    }
-    &:nth-of-type(3n+3) {
-      text-align: right;
-    }
   }
   &__input {
     display: none;
@@ -282,7 +275,9 @@
   &__name {
     font-size: 18px;
     position: relative;
+    display: block;
     padding-left: 60px;
+    text-align: left;
     &:before {
       position: absolute;
       top: -7px;
@@ -295,8 +290,17 @@
       background: @main-light-color;
     }
   }
-  &__input:checked ~ &__name:before {
-    background: url("../img/yes.svg") no-repeat center 50%;
+  &__input:checked ~ &__name:after {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    display: block;
+    width: 10px;
+    height: 20px;
+    content: "";
+    transform: rotate(45deg);
+    border-right: 2px solid @pink-color;
+    border-bottom: 2px solid @pink-color;
   }
 }
 
@@ -372,10 +376,13 @@
   &__item {
     position: relative;
     display: inline-block;
+    width: 68px;
     margin-right: 19px;
     margin-bottom: 20px;
     margin-left: 19px;
+    vertical-align: top;
     @media(min-width: @md-screen) {
+      width: 120px;
       margin-right: 35px;
       margin-bottom: 50px;
       margin-left: 35px;
@@ -451,6 +458,7 @@
   text-align: center;
 
   .block-wrapper();
+  .clearfix();
   &__text {
     @media (min-width: @md-screen) {
       float: right;
