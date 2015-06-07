@@ -1,0 +1,30 @@
+.index-promo {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  @media(min-width: @md-screen) {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    font-size: 40px;
+    line-height: 1.2em;
+  }
+  @media(min-width: @lg-screen) {
+    padding-top: 66px;
+    padding-bottom: 170px;
+    font-size: 50px;
+  }
+  &__wrapper {
+    text-align: center;
+
+    .block-wrapper();
+  }
+  p {
+    margin: 0;
+    margin-bottom: 30px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
