@@ -1,9 +1,9 @@
 
 .price {
-  line-height: 30px;
   position: relative;
   overflow: hidden;
   padding-top: 68px;
+  line-height: 30px;
   background: @minor-light-color;
   @media(min-width: @md-screen) {
     padding-bottom: 70px;
@@ -12,10 +12,10 @@
     padding-bottom: 97px;
   }
   &:before {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
     content: "";
     border-bottom: 35px solid transparent;
     border-left: 100vw solid @main-light-color;
@@ -40,10 +40,10 @@
     }
   }
   &__heading {
+    text-align: center;
     width: 276px;
     padding-top: 16px;
     padding-bottom: 22px;
-    text-align: center;
     text-transform: uppercase;
     color: @main-light-color;
     background: @main-dark-color;
@@ -68,13 +68,13 @@
       position: relative;
       overflow: hidden;
       &:before {
-        font-size: 14px;
-        font-weight: 600;
+        display: block;
         position: absolute;
         top: 0;
         left: 0;
-        display: block;
         padding: 0 45px;
+        font-size: 14px;
+        font-weight: 600;
         content: "Хит";
         transform: rotate(-45deg) translateX(-35px) translateY(-19px);
         color: @main-light-color;
@@ -89,9 +89,9 @@
     }
   }
   &__name {
+    margin: 0;
     font-size: 18px;
     font-weight: bold;
-    margin: 0;
     @media(min-width: @md-screen) {
       font-size: 16px;
     }
@@ -110,8 +110,8 @@
     }
   }
   &__feature {
-    font-size: 14px;
     padding: 14px 22px;
+    font-size: 14px;
     text-transform: uppercase;
     color: @main-dark-color;
     background: @main-light-color;
@@ -120,8 +120,8 @@
       text-transform: none;
     }
     @media(min-width: @lg-screen) {
-      font-size: 18px;
       padding: 14px 20px;
+      font-size: 18px;
     }
     &--start {
       display: none;
@@ -135,10 +135,11 @@
         font-size: 0;
       }
       &:after {
+        display: inline-block;
+        vertical-align: top;
         position: absolute;
         top: 11px;
         right: 25px;
-        display: inline-block;
         width: 10px;
         height: 25px;
         content: "";
@@ -162,10 +163,10 @@
       }
       &:after,
       &:before {
+        display: block;
         position: absolute;
         top: 12px;
         right: 30px;
-        display: block;
         width: 2px;
         height: 35px;
         content: "";

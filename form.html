@@ -47,102 +47,131 @@
       </div>
 
       <fieldset class="form-fieldset  form-fieldset--no-legend">
-        <label class="field-block">
-          <span class="field-block__name">Имя: * </span>
-          <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="person-name" required>
-        </label>
-        <label class="field-block">
-          <span class="field-block__name">Фамилия: * </span>
-          <input class="field-block__input" type="text" placeholder="Укажите фамилию" name="person-surname" required>
-        </label>
-        <label class="field-block">
-          <span class="field-block__name">Отчество: </span>
-          <input class="field-block__input" type="text" placeholder="Ну и отчество тоже" name="person-patronymic">
-        </label>
+        <div class="row-inline-lg">
+          <div class="col-inline-lg">
+            <label class="field-block">
+              <span class="field-block__name">Имя: * </span>
+              <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="person-name" required>
+            </label>
+          </div>
+          <div class="col-inline-lg"
+            <label class="field-block">
+              <span class="field-block__name">Фамилия: * </span>
+              <input class="field-block__input" type="text" placeholder="Укажите фамилию" name="person-surname" required>
+            </label>
+          </div>
+          <div class="col-inline-lg">
+            <label class="field-block">
+              <span class="field-block__name">Отчество: </span>
+              <input class="field-block__input" type="text" placeholder="Ну и отчество тоже" name="person-patronymic">
+            </label>
+          </div>
+        </div>
       </fieldset>
     </div>
     
     <div class="contest-form__block  contest-form__block--dark  contest-form__block--app">
       <fieldset class="form-fieldset">
         <legend class="form-fieldset__title">С каким приложением путешествовали? *</legend>
-        <label class="field-radio">
-          <input class="field-radio__input" type="radio" value="iOS" name="app-type" checked>
-          <span class="field-radio__name">Pink для iOS</span>
-        </label>
-        <label class="field-radio">
-          <input class="field-radio__input" type="radio" value="Android" name="app-type">
-          <span class="field-radio__name">Pink на Android</span>
-        </label>
-        <label class="field-radio">
-          <input class="field-radio__input" type="radio" value="Windows-Phone" name="app-type">
-          <span class="field-radio__name">Windows Phone</span>
-        </label>
+        <div class="row-inline-lg  row-inline-lg--fset">
+          <div class="col-inline-lg  col-inline-lg--fset">
+            <label class="field-radio">
+              <input class="field-radio__input" type="radio" value="iOS" name="app-type" checked>
+              <span class="field-radio__name">Pink для iOS</span>
+            </label>
+          </div>
+          <div class="col-inline-lg  col-inline-lg--fset">
+            <label class="field-radio">
+              <input class="field-radio__input" type="radio" value="Android" name="app-type">
+              <span class="field-radio__name">Pink на Android</span>
+            </label>
+          </div>
+          <div class="col-inline-lg  col-inline-lg--fset">
+            <label class="field-radio">
+              <input class="field-radio__input" type="radio" value="Windows-Phone" name="app-type">
+              <span class="field-radio__name">Windows Phone</span>
+            </label>
+          </div>
+        </div>
       </fieldset>
     </div>
 
     <div class="contest-form__block  contest-form__block--date">
       <fieldset class="form-fieldset">
         <legend class="form-fieldset__title">Когда вы путешествовали? *</legend>
-        <label class="field-block">
-          <input class="field-block__input" type="text" placeholder="1 апреля 2015" name="date-start" required>
-          <span class="field-block__name  field-block__name--after">Дата выезда</span>
-        </label>    
-        <div class="field-increment">
-          <a class="field-increment__minus">-</a>
-          <input class="field-increment__input" type="text" placeholder="10 дней" name="duration" id="duration" value="10 дней">
-          <a class="field-increment__plus">+</a>
+        <div class="row-inline-md">
+          <div class="col-inline-md">
+            <label class="field-block">
+              <input class="field-block__input" type="text" placeholder="1 апреля 2015" name="date-start" required>
+              <span class="field-block__name  field-block__name--after">Дата выезда</span>
+            </label>    
+          </div>
+          <div class="col-inline-md">
+            <div class="field-increment">
+              <a class="field-increment__minus">-</a>
+              <input class="field-increment__input" type="text" placeholder="10 дней" name="duration" id="duration" value="10 дней">
+              <a class="field-increment__plus">+</a>
+            </div>
+            <label for="duration" class="field-block"><span class="field-block__name  field-block__name--after">Продолжительность</span></label> 
+          </div>
+          <div class="col-inline-md">
+            <label class="field-block">
+              <input type="text" class="field-block__input" placeholder="1 апреля 2015" name="date-end" readonly>
+              <span class="field-block__name  field-block__name--after">Дата возвращения</span>
+            </label>
+          </div>
         </div>
-        <label for="duration" class="field-block"><span class="field-block__name  field-block__name--after">Продолжительность</span></label> 
-        <label class="field-block">
-          <input type="text" class="field-block__input" placeholder="1 апреля 2015" name="date-end" readonly>
-          <span class="field-block__name  field-block__name--after">Дата возвращения</span>
-        </label>
       </fieldset>
     </div>
     
     <div class="contest-form__block  contest-form__block--dark  contest-form__block--companions">
       <fieldset class="form-fieldset">
         <legend class="form-fieldset__title">Количество попутчиков *</legend>
-          <div class="field-increment">
+          <div class="field-increment  field-increment--companions">
             <a class="field-increment__minus">-</a>
-            <input class="field-increment__input" type="text" placeholder="2 чел" name="cnt-persons" value="2 чел">
+            <input class="field-increment__input  field-increment__input--companions" type="text" placeholder="2 чел" name="cnt-persons" value="2 чел">
             <a class="field-increment__plus">+</a>
           </div>
-          
 
           <ol class="form-companions-list">
             <li class="form-companions-list__item">
-              <div class="form-companions-list__item-counter  companions-counter">
-                <div class="companions-counter__name">№</div>
-                <div class="companions-counter__number"></div>
-              </div>
               <div class="form-companions-list__item-info">
-                <label class="field-block">
-                  <span class="field-block__name">Имя: *</span>
-                  <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="companion-1-name" required>
-                </label>
-                <label class="field-block">
-                  <span class="field-block__name">Прозвище:</span>
-                  <input class="field-block__input" type="text" placeholder="Ну как же без этого!" name="companion-1-nickname" required>
-                </label>
+                <div class="row-inline-lg">
+                  <div class="col-inline-lg">
+                    <label class="field-block">
+                      <span class="field-block__name">Имя: *</span>
+                      <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="companion-1-name" required>
+                    </label>
+                  </div>
+                  <div class="col-inline-lg">
+                    <label class="field-block">
+                      <span class="field-block__name">Прозвище:</span>
+                      <input class="field-block__input" type="text" placeholder="Ну как же без этого!" name="companion-1-nickname" required>
+                    </label>
+                  </div>
+                </div>
               </div>
+              <a href="#" class="form-companions-list__delete">Удалить</a>
             </li>
             
             <li class="form-companions-list__item">
-              <div class="form-companions-list__item-counter  companions-counter">
-                <div class="companions-counter__name">№</div>
-                <div class="companions-counter__number"></div>
-              </div>
               <div class="form-companions-list__item-info">
-                <label class="field-block">
-                  <span class="field-block__name">Имя: *</span>
-                  <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="companion-2-name" required>
-                </label>
-                <label class="field-block">
-                  <span class="field-block__name">Прозвище:</span>
-                  <input class="field-block__input" type="text" placeholder="Ну как же без этого!" name="companion-2-nickname" required>
-                </label>
+                <div class="row-inline-lg">
+                  <div class="col-inline-lg">
+                    <label class="field-block">
+                      <span class="field-block__name">Имя: *</span>
+                      <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="companion-2-name" required>
+                    </label>
+                  </div>
+                  <div class="col-inline-lg">
+                    <label class="field-block">
+                      <span class="field-block__name">Прозвище:</span>
+                      <input class="field-block__input" type="text" placeholder="Ну как же без этого!" name="companion-2-nickname" required>
+                    </label>
+                  </div>
+                </div>
               </div>
+              <a href="#" class="form-companions-list__delete">Удалить</a>
             </li> 
           </ol>
       </fieldset>
@@ -151,30 +180,44 @@
     <div class="contest-form__block  contest-form__block--achievements">
       <fieldset class="form-fieldset">
         <legend class="form-fieldset__title">Ваши безбашенные достижения в путешествии</legend>
-        <label class="field-checkbox">
-          <input class="field-checkbox__input" type="checkbox" name="achievements-selfi" checked>
-          <span class="field-checkbox__name">Сделал селфи с акулой</span>
-        </label>
-        <label class="field-checkbox">
-          <input class="field-checkbox__input" type="checkbox" name="achievements-suntan" checked>
-          <span class="field-checkbox__name">Обгорел на пляже</span>
-        </label>
-        <label class="field-checkbox">
-          <input class="field-checkbox__input" type="checkbox" name="achievements-norris" id="norris">
-          <span class="field-checkbox__name">Видел Чака Норриса</span>
-        </label>
-        <label class="field-checkbox">
-          <input class="field-checkbox__input" type="checkbox" name="achievements-souvenirs" id="souvenirs">
-          <span class="field-checkbox__name">Накупил сувениров</span>
-        </label>
-        <label class="field-checkbox">
-          <input class="field-checkbox__input" type="checkbox" name="achievements-mind" id="mind" checked>
-          <span class="field-checkbox__name">Удержал башню</span>
-        </label>
-        <label class="field-checkbox">
-          <input class="field-checkbox__input" type="checkbox" name="achievements-defeat" id="defeat">
-          <span class="field-checkbox__name">Разгромил отель</span>
-        </label>
+        <div class="row-inline-lg  row-inline-lg--fset">
+          <div class="col-inline-lg  col-inline-lg--fset">
+            <label class="field-checkbox">
+              <input class="field-checkbox__input" type="checkbox" name="achievements-selfi" checked>
+              <span class="field-checkbox__name">Сделал селфи с акулой</span>
+            </label>
+          </div>
+          <div class="col-inline-lg  col-inline-lg--fset">
+            <label class="field-checkbox">
+              <input class="field-checkbox__input" type="checkbox" name="achievements-suntan" checked>
+              <span class="field-checkbox__name">Обгорел на пляже</span>
+            </label>
+          </div>
+          <div class="col-inline-lg  col-inline-lg--fset">
+            <label class="field-checkbox">
+              <input class="field-checkbox__input" type="checkbox" name="achievements-norris" id="norris">
+              <span class="field-checkbox__name">Видел Чака Норриса</span>
+            </label>
+          </div>
+          <div class="col-inline-lg  col-inline-lg--fset">
+            <label class="field-checkbox">
+              <input class="field-checkbox__input" type="checkbox" name="achievements-souvenirs" id="souvenirs">
+              <span class="field-checkbox__name">Накупил сувениров</span>
+            </label>
+          </div>
+          <div class="col-inline-lg  col-inline-lg--fset">
+            <label class="field-checkbox">
+              <input class="field-checkbox__input" type="checkbox" name="achievements-mind" id="mind" checked>
+              <span class="field-checkbox__name">Удержал башню</span>
+            </label>
+          </div>
+          <div class="col-inline-lg  col-inline-lg--fset">
+            <label class="field-checkbox">
+              <input class="field-checkbox__input" type="checkbox" name="achievements-defeat" id="defeat">
+              <span class="field-checkbox__name">Разгромил отель</span>
+            </label>
+          </div>
+        </div>
       </fieldset>
     </div>
     
@@ -186,57 +229,64 @@
           <span  class="btn  btn--upload">Загрузить фото</span>
         </label>
         <ul class="upload-photos  js-upload-images">
-          <li class="upload-photos__item">
-            <div class="upload-photos__img-wrapper">
-              <img alt="" src="http://placehold.it/68x67">
+          <li class="upload-photos__item  js-upload-template">
+            <div class="upload-photos__img  js-upload-template__img">
             </div>
-            <div class="upload-photos__img-title">img-1.jpg</div>
-            <a href="#" class="upload-photos__delete" title="Удалить">
+            <div class="upload-photos__img-title  js-upload-template__img-title">img-1.jpg</div>
+            <a href="#" class="upload-photos__delete  js-upload-template__delete" title="Удалить">
             </a>
           </li>
           <li class="upload-photos__item">
-            <div class="upload-photos__img-wrapper">
-              <img alt="" src="http://placehold.it/68x67">
+            <div class="upload-photos__img">
             </div>
             <div class="upload-photos__img-title">img-2.jpg</div>
             <a href="#" class="upload-photos__delete" title="Удалить">
             </a>
           </li>
           <li class="upload-photos__item">
-            <div class="upload-photos__img-wrapper">
-              <img alt="" src="http://placehold.it/68x67">
+            <div class="upload-photos__img">
             </div>
             <div class="upload-photos__img-title">img-3.jpg</div>
             <a href="#" class="upload-photos__delete" title="Удалить">
             </a>
           </li>
           <li class="upload-photos__item">
-            <div class="upload-photos__img-wrapper">
-              <img alt="" src="http://placehold.it/68x67">
+            <div class="upload-photos__img">
             </div>
             <div class="upload-photos__img-title">img-1.jpg</div>
             <a href="#" class="upload-photos__delete" title="Удалить">
             </a>
           </li>
           <li class="upload-photos__item">
-            <div class="upload-photos__img-wrapper">
-              <img alt="" src="http://placehold.it/68x67">
+            <div class="upload-photos__img">
             </div>
             <div class="upload-photos__img-title">img-1.jpg</div>
             <a href="#" class="upload-photos__delete" title="Удалить">
             </a>
           </li>
           <li class="upload-photos__item">
-            <div class="upload-photos__img-wrapper">
-              <img alt="" src="http://placehold.it/68x67">
+            <div class="upload-photos__img">
             </div>
             <div class="upload-photos__img-title">img-1.jpg</div>
             <a href="#" class="upload-photos__delete" title="Удалить">
             </a>
           </li>
           <li class="upload-photos__item">
-            <div class="upload-photos__img-wrapper">
-              <img alt="" src="http://placehold.it/68x67">
+            <div class="upload-photos__img">
+            </div>
+            <div class="upload-photos__img-title">img-1.jpg</div>
+            <a href="#" class="upload-photos__delete" title="Удалить">
+            </a>
+          </li>
+          <li class="upload-photos__item">
+            <div class="upload-photos__img">
+            </div>
+            <div class="upload-photos__img-title">img-1.jpg</div>
+            <a href="#" class="upload-photos__delete" title="Удалить">
+            </a>
+          </li>
+          <li class="upload-photos__item">
+            <div class="upload-photos__img">
             </div>
             <div class="upload-photos__img-title">img-1.jpg</div>
             <a href="#" class="upload-photos__delete" title="Удалить">

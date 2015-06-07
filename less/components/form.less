@@ -89,23 +89,23 @@
     }
   }
   &__title {
-    line-height: 18px;
-    margin-bottom: 35px;
     text-align: center;
+    margin-bottom: 35px;
+    line-height: 18px;
     text-transform: uppercase;
     color: @pink-color;
     @media (min-width:@md-screen) {
-      font-size: 14px;
       padding-right: 20px;
       padding-left: 20px;
+      font-size: 14px;
     }
   }
 }
 
 .form-lead {
+  text-align: center;
   padding-top: 5px;
   padding-bottom: 35px;
-  text-align: center;
 
   .block-wrapper();
   &__additional {
@@ -128,51 +128,60 @@
       font-size: 14px;
     }
     &--after {
+      text-align: center;
       margin-top: -5px;
       margin-bottom: 15px;
       padding-left: 0;
-      text-align: center;
     }
   }
   &__input {
-    font-size: 18px;
-    line-height: 30px;
     display: block;
     box-sizing: border-box;
     width: 100%;
     margin-bottom: 15px;
     padding: 15px 20px 14px;
+    font-size: 18px;
+    line-height: 30px;
     border: 2px solid @main-divider-color;
     border-radius: 2px;
-    &:readonly {
+
+    .placeholder(@main-dark-color);
+    &[readonly] {
       background: @minor-light-color;
     }
   }
 }
 
 
+
+
 .field-increment {
   position: relative;
   margin-bottom: 15px;
+  &--companions {
+    @media(min-width: @md-screen) {
+      width: 254px;
+    }
+  }
   &__plus {
-    font-size: 0;
+    display: block;
     position: absolute;
     top: 0;
     right: 0;
-    display: block;
     width: 30px;
     height: 30px;
     padding: 15px;
+    font-size: 0;
     cursor: pointer;
     border: 2px solid @main-divider-color;
     background: @main-light-color;
     &:before,
     &:after {
       display: inline-block;
+      vertical-align: middle;
       width: 30px;
       height: 3px;
       content: "";
-      vertical-align: middle;
       background: @main-dark-color;
     }
     &:after {
@@ -180,38 +189,43 @@
     }
   }
   &__minus {
-    font-size: 0;
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
-    display: block;
     width: 30px;
     height: 30px;
     padding: 15px;
+    font-size: 0;
     cursor: pointer;
     border: 2px solid @main-divider-color;
     background: @main-light-color;
     &:before {
       display: inline-block;
+      vertical-align: middle;
       width: 30px;
       height: 3px;
       content: "";
-      vertical-align: middle;
       background: @main-dark-color;
     }
   }
   &__input {
-    font-size: 18px;
-    line-height: inherit;
+    text-align: center;
     box-sizing: border-box;
     width: 100%;
     padding: 15px;
     padding-right: 70px;
     padding-left: 70px;
-    text-align: center;
+    font-size: 18px;
+    line-height: inherit;
     border: 2px solid @main-divider-color;
     border-radius: 2px;
     background: transparent;
+
+    .placeholder(@main-dark-color);
+    &--companions {
+      border: 2px solid transparent;
+    }
   }
 }
 
@@ -219,33 +233,20 @@
   display: block;
   margin-top: 5px;
   margin-bottom: 42px;
-  @media(min-width: @lg-screen) {
-    float: left;
-    width: 33.3%;
-    &:nth-of-type(3n+1) {
-      text-align: left;
-    }
-    &:nth-of-type(3n+2) {
-      text-align: center;
-    }
-    &:nth-of-type(3n+3) {
-      text-align: right;
-    }
-  }
   &__input {
     display: none;
   }
   &__name {
-    font-size: 18px;
-    position: relative;
     display: block;
-    padding-left: 60px;
     text-align: left;
+    position: relative;
+    padding-left: 60px;
+    font-size: 18px;
     &:before {
+      display: block;
       position: absolute;
       top: -5px;
       left: 2px;
-      display: block;
       width: 15px;
       height: 15px;
       content: "";
@@ -264,25 +265,24 @@
   display: block;
   margin-top: 8px;
   margin-bottom: 50px;
-  @media(min-width: @lg-screen) {
-    // Неверно!!!
-    float: left;
-    width: 33.3%;
-  }
   &__input {
     display: none;
   }
   &__name {
-    font-size: 18px;
-    position: relative;
     display: block;
-    padding-left: 60px;
     text-align: left;
+    position: relative;
+    padding-left: 60px;
+    font-size: 18px;
+    @media(min-width: @lg-screen) {
+      font-size: 16px;
+      // костыль! дизайнер - ***?
+    }
     &:before {
+      display: block;
       position: absolute;
       top: -7px;
       left: 0;
-      display: block;
       width: 36px;
       height: 36px;
       content: "";
@@ -291,10 +291,10 @@
     }
   }
   &__input:checked ~ &__name:after {
+    display: block;
     position: absolute;
     top: 0;
     left: 15px;
-    display: block;
     width: 10px;
     height: 20px;
     content: "";
@@ -314,39 +314,77 @@
   counter-reset: num-companions;
   border-top: 2px solid @main-divider-color;
   &__item {
+    position: relative;
     margin-bottom: 25px;
-
-    .clearfix();
-  }
-  &__item-counter {
-    float: left;
-    width: 62px;
-  }
-  &__item-info {
-    float: left;
-    width: @sm-container - 62;
-  }
-}
-
-.companions-counter {
-  &__name {
-    margin-bottom: 5px;
-    text-align: center;
-    color: @pink-color;
-  }
-  &__number {
-    line-height: 30px;
-    width: 40px;
-    padding: 14px 9px;
-    text-align: center;
-    border: 2px solid @main-divider-color;
+    padding-left: 62px;
+    @media(min-width: @md-screen) {
+      padding-right: 115px;
+    }
+    @media(min-width: @lg-screen) {
+      padding-left: 85px;
+    }
     &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 28px;
+      content: "№";
+      color: @pink-color;
+    }
+    &:after {
+      display: inline;
+      text-align: center;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      overflow: hidden;
+      box-sizing: border-box;
+      width: 64px;
+      height: 63px;
+      font-size: 18px;
+      line-height: 62px;
       content: counter(num-companions);
       counter-increment: num-companions;
-      /* получился зависимый элемент от чужого блока? */
+      border: 2px solid @main-divider-color;
+      background: @minor-light-color;
+    }
+  }
+  &__item-info {
+  }
+  &__delete {
+    display: none;
+    @media(min-width: @md-screen) {
+      display: block;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      font-size: 14px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: @main-dark-color;
     }
   }
 }
+
+// .companions-counter {
+//   &__name {
+//     margin-bottom: 5px;
+//     text-align: center;
+//     color: @pink-color;
+//   }
+//   &__number {
+//     line-height: 30px;
+//     width: 40px;
+//     padding: 14px 9px;
+//     text-align: center;
+//     border: 2px solid @main-divider-color;
+//     &:before {
+//       content: counter(num-companions);
+//       counter-increment: num-companions;
+//       /* получился зависимый элемент от чужого блока? */
+//     }
+//   }
+// }
 
 
 .upload-input {
@@ -358,12 +396,13 @@
   }
 }
 
+
 .upload-photos {
-  font-size: 0;
   margin-right: -19px;
   margin-left: -19px;
   padding: 0;
   padding-top: 35px;
+  font-size: 0;
   list-style: none;
   @media(min-width: @md-screen) {
     margin-right: -35px;
@@ -374,13 +413,13 @@
     margin-left: -28px;
   }
   &__item {
-    position: relative;
     display: inline-block;
+    vertical-align: top;
+    position: relative;
     width: 68px;
     margin-right: 19px;
     margin-bottom: 20px;
     margin-left: 19px;
-    vertical-align: top;
     @media(min-width: @md-screen) {
       width: 120px;
       margin-right: 35px;
@@ -392,27 +431,20 @@
       margin-left: 27px;
     }
   }
-  &__img-wrapper {
-    overflow: hidden;
+  &__img {
     width: 68px;
     height: 67px;
+    background-color: @main-divider-color;
+    background-size: cover;
     @media(min-width: @md-screen) {
       width: 120px;
       height: 120px;
     }
-    img {
-      width: 68px;
-      height: 67px;
-      @media(min-width: @md-screen) {
-        width: 120px;
-        height: 120px;
-      }
-    }
   }
   &__img-title {
+    padding-top: 7px;
     font-size: 12px;
     line-height: 18px;
-    padding-top: 7px;
     text-transform: uppercase;
   }
   &__delete {
@@ -432,10 +464,10 @@
     }
     &:before,
     &:after {
+      display: block;
       position: absolute;
       top: 50%;
       left: 8px;
-      display: block;
       width: 15px;
       height: 2px;
       content: "";
@@ -452,6 +484,10 @@
       transform: rotate(-45deg);
     }
   }
+}
+
+.js-upload-template {
+  display: none;
 }
 
 .form-ending {

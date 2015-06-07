@@ -15,7 +15,7 @@
       allFiles.forEach(function(element) {
         data.append("images", element.file);
       });
-      console.log(data);
+      // console.log(data);
       
       request(data, function(response) {
         console.log(response);
@@ -45,34 +45,45 @@
           this.value = "";
       });
 
+      function removePreview(img) {
+        allFiles = allFiles.filter(function(element) {
+          return element.img != img;
+        });
+        var li = img.parentNode;
+        li.parentNode.removeChild(li);
+      };
+
+      deleteLinks = document.querySelectorAll(".upload-photos__delete");
+      for (var i = 0; i < deleteLinks.length; i++) {
+        var link = deleteLinks[i];
+        link.addEventListener("click", function(event) {
+          event.preventDefault();
+          this.parentNode.parentNode.removeChild(this.parentNode);
+        });
+      }
+
       function preview(file) {
         if (file.type.match(/image.*/)) {
           var reader = new FileReader();
 
           reader.addEventListener("load", function(event) {
-            var container = document.createElement("li");
-            container.classList.add("user-photo");
 
-            var img = document.createElement("img");
-            img.src = event.target.result; 
-            img.alt = file.name;
+            var container = document.querySelector(".js-upload-template").cloneNode(true);
+            container.classList.remove("js-upload-template");
 
+            var img = container.querySelector(".js-upload-template__img");
+            img.title = file.name;
+            img.style.backgroundImage = "url(" + event.target.result + ")";
             allFiles.push({file: file, img: img});
 
-            var subscription = document.createElement("span");
+            var subscription = container.querySelector(".js-upload-template__img-title");
             subscription.innerText = file.name;
 
-            var deleteLink = document.createElement("a");
-            deleteLink.innerText = "Удалить";
-            deleteLink.classList.add("js-delete-image");
+            var deleteLink = container.querySelector(".js-upload-template__delete");
             deleteLink.addEventListener("click", function(event) {
               event.preventDefault();
-              this.parentNode.remove();
+              removePreview(img);
             });
-
-            container.appendChild(img);
-            container.appendChild(subscription);
-            container.appendChild(deleteLink);
 
             area.appendChild(container);
           });
@@ -82,14 +93,7 @@
       } 
     }
 
-    deleteLinks = document.querySelectorAll(".upload-photos__delete");
-    for (var i = 0; i < deleteLinks.length; i++) {
-      var link = deleteLinks[i];
-      link.addEventListener("click", function(event) {
-        event.preventDefault();
-        this.parentNode.parentNode.removeChild(this.parentNode);
-      });
-    }
+    
   }
 })();
 

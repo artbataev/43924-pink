@@ -1,15 +1,15 @@
 @viewport {
-  zoom: 1.0;
   width: device-width;
+  zoom: 1.0;
 }
 
 body {
+  min-width: @sm-screen;
+  margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: @font-size-sm;
   font-weight: normal;
   line-height: @line-height-sm;
-  min-width: @sm-screen;
-  margin: 0;
   color: @main-dark-color;
   @media(min-width:@md-screen) {
     font-size: @font-size-md;

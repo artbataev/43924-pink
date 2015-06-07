@@ -11,16 +11,30 @@
   // min-width: @sm-container;
   // padding-left: 20px;
   // padding-right: 20px;
-
   width: @sm-container;
   margin: 0 auto;
-
   @media (min-width:@md-screen) {
-    margin: 0 auto;
     width: @md-container;
+    margin: 0 auto;
     padding: 0;
   }
   @media (min-width:@lg-screen) {
     width: @lg-container;
   }
 }
+
+.placeholder(@color) {
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+  &::-moz-placeholder {
+    color: @color;
+  }
+  &:-moz-placeholder {
+    color: @color;
+  }
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+}
+

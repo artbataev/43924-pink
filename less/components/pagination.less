@@ -1,40 +1,43 @@
 .pagination {
-  font-size: 0;
   padding-top: 25px;
+  font-size: 0;
   @media(min-width: @lg-screen) {
     padding-top: 45px;
   }
   &__text {
     display: none;
     @media(min-width: @md-screen) {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 22px;
       font-size: 18px;
       font-weight: bold;
-      display: inline-block;
-      margin-right: 22px;
       text-transform: uppercase;
     }
   }
   &__list {
     display: inline-block;
+    vertical-align: top;
     margin: 0;
     margin-right: -10px;
     padding: 0;
     list-style: none;
   }
   &__item {
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 30px;
     display: inline-block;
+    vertical-align: top;
     margin: 0;
     margin-right: 10px;
     margin-bottom: 10px;
     padding: 0;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
     a,
     span {
       display: block;
-      padding: 14px 24px;
       vertical-align: top;
+      padding: 14px 24px;
       text-decoration: none;
       color: @main-dark-color;
       border: 2px solid @main-divider-color;

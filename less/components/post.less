@@ -20,10 +20,10 @@
   }
   &:before {
     @media(min-width: @md-screen) {
+      display: block;
       position: absolute;
       top: 50px;
       left: -58px;
-      display: block;
       width: 30px;
       height: 30px;
       content: "";
@@ -34,11 +34,11 @@
     }
   }
   &__title {
-    font-size: 18px;
-    font-weight: bold;
     margin: 0;
     padding: 0;
     padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
     @media(min-width: @md-screen) {
       font-size: 27px;
     }
@@ -48,14 +48,14 @@
     }
   }
   &__time {
-    font-size: 12px;
-    margin-bottom: 13px;
     display: block;
+    margin-bottom: 13px;
+    font-size: 12px;
     text-transform: uppercase;
     color: @pink-color;
     @media(min-width: @md-screen) {
-      font-size: 14px;
       margin-bottom: 20px;
+      font-size: 14px;
     }
   }
   &__lead {
