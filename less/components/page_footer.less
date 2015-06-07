@@ -100,6 +100,15 @@
     font-weight: 300;
     text-decoration: none;
     color: @pink-color;
+    &:hover {
+      text-decoration: underline;
+      color: @main-dark-color;
+    }
+    &:active {
+      text-decoration: none;
+      color: @main-dark-color;
+      opacity: 0.3;
+    }
   }
   &__map {
     width: 100%;
@@ -142,12 +151,17 @@
     .block-wrapper();
     align-items: center;
     justify-content: center;
+    text-align: center;
     flex-wrap: wrap;
     @media(min-width: @md-screen) {
       justify-content: space-between;
     }
     & > div {
       flex-shrink: 0;
+      flex-basis: 100%;
+      @media(min-width: @md-screen) {
+        flex-basis: auto;
+      }
     }
   }
   &__logo {
@@ -155,7 +169,8 @@
       margin-top: 10px;
     }
     img {
-      display: block;
+      display: inline-block;
+      vertical-align: top;
       width: 147px;
       height: 41px;
     }
@@ -189,6 +204,12 @@
     padding: 0;
     border: 4px solid #e9ebec;
     border-radius: 50%;
+    &:hover {
+      border: 4px solid @main-dark-color; 
+    }
+    &:active {
+      border: 4px solid rgba(40, 54, 69, 0.1);
+    }
   }
   &__item {
     display: block;
@@ -196,8 +217,10 @@
     line-height: 45px;
     svg {
       vertical-align: middle;
-
       fill: @pink-color;
+    }
+    &:active {
+      opacity: 0.3;
     }
     &--twitter {
       svg {
@@ -232,5 +255,12 @@
     height: 34px;
 
     fill: @pink-color;
+  }
+  &:hover svg{
+    fill: @main-dark-color;
+  }
+  &:active svg{
+    fill: @main-dark-color;
+    opacity: 0.3;
   }
 }

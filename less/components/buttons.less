@@ -19,24 +19,6 @@
   }
 }
 
-.btn-download {
-  display: block;
-  margin-bottom: 25px;
-  padding: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 18px;
-  text-decoration: none;
-  color: @main-light-color;
-  border: 4px solid @main-light-color;
-  border-radius: 30px;
-  @media(min-width: @md-screen) {
-    // width: 245px;
-  }
-  @media(min-width: @lg-screen) {
-    font-size: 21px;
-  }
-}
 
 .btn {
   display: block;
@@ -45,7 +27,28 @@
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  border-radius: 1px;
+  border-radius: 2px;
+  &--download {
+    margin-bottom: 25px;
+    padding: 15px;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: none;
+    color: @main-light-color;
+    border: 4px solid @main-light-color;
+    border-radius: 30px;
+    @media(min-width: @lg-screen) {
+      font-size: 21px;
+    }
+    &:hover {
+      color: @pink-color;
+      background: @main-light-color;
+    }
+    &:active {
+      color: rgba(210, 40, 86, 0.3);
+      background: @main-light-color;
+    }
+  }
   &--upload {
     width: 100%;
     padding: 13px;
@@ -53,17 +56,46 @@
     background: @main-light-color;
     @media(min-width: @md-screen) {
     }
+    &:hover {
+      border: 2px solid @main-dark-color;
+    }
+    &:active {
+      color: @main-light-color;
+      background: @main-dark-color;
+    }
     @media(min-width: @lg-screen) {
       color: @main-light-color;
+      border: 2px solid @pink-color;
       background: @pink-color;
+      /* Не было в макете! */
+      &:hover {
+        background: saturate(darken(@pink-color, 10%), 10%);
+        border: 2px solid saturate(darken(@pink-color, 10%), 10%);
+      }
+      &:active {
+        color: rgba(255, 255, 255, 0.3);
+        background: @pink-color;
+      }
     }
   }
   &--submit {
-    width: 280px;
+    width: 100%;
     margin-bottom: 35px;
     padding: 20px;
     color: @main-light-color;
     border: none;
     background: #2aab6d;
+    &:hover {
+      background: #1c9b5e;
+    }
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+    &:disabled {
+      background: @main-divider-color;
+    }
+    @media(min-width: @md-screen) {
+      width: 300px;
+    }
   }
 }

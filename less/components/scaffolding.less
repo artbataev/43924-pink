@@ -27,3 +27,17 @@ p {
   margin: 0;
   margin-bottom: 20px;
 }
+
+.hidden-sm {
+  display: none;
+  @media (min-width:@md-screen) {
+    display: initial;
+  }
+}
+
+.hidden-md {
+  display: none;
+  @media(min-width: @lg-screen) {
+    display: initial;
+  }
+}

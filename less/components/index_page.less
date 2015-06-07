@@ -266,6 +266,17 @@
     svg {
       fill: #bec2c7;
     }
+    &:hover {
+      svg {
+        fill: #7e868f;
+      }
+    }
+    &:active {
+      svg {
+        fill: @main-dark-color;
+        opacity: 0.1;
+      }
+    }
     &--left {
       float: left;
     }
@@ -307,13 +318,37 @@
     cursor: pointer;
     border: 3px solid transparent;
     border-radius: 50%;
-    background: #bec2c7;
+    &:after {
+      display: block;
+      width: 6px;
+      height: 6px;
+      content: "";
+      border-radius: 50%;
+      background: #bec2c7;
+    }
+    &:hover {
+      &:after {
+        background: #7e868f;
+      }
+    }
+    &:active {
+      &:after {
+        opacity: 0.1;
+      }
+    }
     &:last-child {
       margin-right: 0;
     }
     &--active {
       border: 3px solid @main-dark-color;
-      background: @main-light-color;
+      &:after {
+        background: @main-light-color;
+      }
+      &:hover {
+        &:after {
+          background: @main-light-color;
+        }
+      }
     }
   }
 }

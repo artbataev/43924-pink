@@ -19,12 +19,19 @@
         padding-top: 87px;
         padding-bottom: 15px;
       }
+      @media(min-width: @lg-screen) {
+        padding-top: 90px;
+        padding-bottom: 5px;
+      }
     }
     &--app {
       padding-top: 35px;
       @media (min-width: @md-screen) {
         padding-top: 35px;
         padding-bottom: 30px;
+      }
+      @media (min-width: @lg-screen) {
+        padding-bottom: 50px;
       }
     }
     &--date {
@@ -67,6 +74,34 @@
       }
     }
   }
+  &__lead {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 35px;
+
+    .block-wrapper();
+    @media(min-width: @lg-screen) {
+      padding-right: 90px;
+      padding-bottom: 70px;
+      padding-left: 90px;
+    }
+  }
+  &__ending {
+    text-align: center;
+
+    .block-wrapper();
+    .clearfix();
+    &__text {
+      @media (min-width: @md-screen) {
+        float: right;
+      }
+    }
+  }
+  &__ending-btn {
+    @media (min-width: @md-screen) {
+      float: left;
+    }
+  }
 }
 
 .form-fieldset {
@@ -102,20 +137,6 @@
   }
 }
 
-.form-lead {
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 35px;
-
-  .block-wrapper();
-  &__additional {
-    display: none;
-    @media (min-width:@md-screen) {
-      display: inline;
-    }
-  }
-}
-
 .field-block {
   display: block;
   &__name {
@@ -146,8 +167,21 @@
     border-radius: 2px;
 
     .placeholder(@main-dark-color);
+    &:hover {
+      border: 2px solid @main-dark-color;
+    }
+    &:focus {
+      border: 2px solid @pink-color;
+      outline: none;
+    }
     &[readonly] {
       background: @minor-light-color;
+      &:hover {
+        border: 2px solid @main-divider-color;
+      }
+      &:focus {
+        border: 2px solid @main-divider-color;
+      }
     }
   }
 }
@@ -187,6 +221,16 @@
     &:after {
       transform: translateY(-30px) rotate(90deg);
     }
+    &:hover {
+      border: 2px solid @main-dark-color;
+    }
+    &:active {
+      background: @main-dark-color;
+      &:before,
+      &:after {
+        background: @main-light-color;
+      }
+    }
   }
   &__minus {
     display: block;
@@ -208,6 +252,15 @@
       content: "";
       background: @main-dark-color;
     }
+    &:hover {
+      border: 2px solid @main-dark-color;
+    }
+    &:active {
+      background: @main-dark-color;
+      &:before {
+        background: @main-light-color;
+      }
+    }
   }
   &__input {
     text-align: center;
@@ -223,6 +276,11 @@
     background: transparent;
 
     .placeholder(@main-dark-color);
+    &:hover {
+    }
+    &:focus {
+      outline: none;
+    }
     &--companions {
       border: 2px solid transparent;
     }
@@ -255,9 +313,23 @@
       background: @main-light-color;
       box-shadow: 0 0 0 2px @main-divider-color;
     }
+    &:hover {
+      &:before {
+        box-shadow: 0 0 0 2px @main-dark-color;
+      }
+    }
+    &:active {
+      &:before {
+        background: @pink-color;
+        box-shadow: 0 0 0 2px @pink-color;
+      }
+    }
   }
   &__input:checked ~ &__name:before {
     background: @pink-color;
+  }
+  &__input:checked ~ &__name:active:before {
+    background: @main-light-color;
   }
 }
 
@@ -289,18 +361,37 @@
       border: 2px solid @main-divider-color;
       background: @main-light-color;
     }
+    &:after {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 15px;
+      width: 10px;
+      height: 20px;
+      content: "";
+      transform: rotate(45deg);
+      border-right: 2px solid @pink-color;
+      border-bottom: 2px solid @pink-color;
+    }
+    &:hover {
+      &:before {
+        border: 2px solid @main-dark-color;
+      }
+    }
+    &:active {
+      &:before {
+        border: 2px solid @pink-color;
+      }
+      &:after {
+        display: block;
+      }
+    }
   }
   &__input:checked ~ &__name:after {
     display: block;
-    position: absolute;
-    top: 0;
-    left: 15px;
-    width: 10px;
-    height: 20px;
-    content: "";
-    transform: rotate(45deg);
-    border-right: 2px solid @pink-color;
-    border-bottom: 2px solid @pink-color;
+  }
+  &__input:checked ~ &__name:active:after {
+    display: none;
   }
 }
 
@@ -362,30 +453,17 @@
       text-decoration: none;
       text-transform: uppercase;
       color: @main-dark-color;
+      &:hover {
+        text-decoration: underline;
+        color: @pink-color;
+      }
+      &:active {
+        text-decoration: none;
+        opacity: 0.3;
+      }
     }
   }
 }
-
-// .companions-counter {
-//   &__name {
-//     margin-bottom: 5px;
-//     text-align: center;
-//     color: @pink-color;
-//   }
-//   &__number {
-//     line-height: 30px;
-//     width: 40px;
-//     padding: 14px 9px;
-//     text-align: center;
-//     border: 2px solid @main-divider-color;
-//     &:before {
-//       content: counter(num-companions);
-//       counter-increment: num-companions;
-//       /* получился зависимый элемент от чужого блока? */
-//     }
-//   }
-// }
-
 
 .upload-input {
   display: block;
@@ -483,28 +561,25 @@
     &:after {
       transform: rotate(-45deg);
     }
+    &:hover {
+      border: 2px solid @main-dark-color;
+      &:before,
+      &:after {
+        background: @main-dark-color;
+      }
+    }
+    &:active {
+      background: @main-dark-color;
+      &:before,
+      &:after {
+        background: @main-light-color;
+      }
+    }
   }
 }
 
 .js-upload-template {
   display: none;
-}
-
-.form-ending {
-  text-align: center;
-
-  .block-wrapper();
-  .clearfix();
-  &__text {
-    @media (min-width: @md-screen) {
-      float: right;
-    }
-  }
-  &__btn {
-    @media (min-width: @md-screen) {
-      float: left;
-    }
-  }
 }
 
 .form-clarification {
