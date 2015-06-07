@@ -2,13 +2,16 @@
 .price {
   position: relative;
   overflow: hidden;
-  padding-top: 68px;
+  padding-top: 93px;
+  padding-bottom: 5px;
   line-height: 30px;
   background: @minor-light-color;
   @media(min-width: @md-screen) {
+    padding-top: 63px;
     padding-bottom: 70px;
   }
   @media(min-width: @lg-screen) {
+    padding-top: 155px;
     padding-bottom: 97px;
   }
   &:before {
@@ -19,6 +22,12 @@
     content: "";
     border-bottom: 35px solid transparent;
     border-left: 100vw solid @main-light-color;
+    @media(min-width: @md-screen) {
+      border-bottom: 55px solid transparent;
+    }
+    @media(min-width: @lg-screen) {
+      border-bottom: 100px solid transparent;
+    }
   }
   &__wrapper {
     @media(min-width: @md-screen) {
