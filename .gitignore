@@ -6,6 +6,7 @@ prepros.cfg
 *.sublime*
 *.map
 css/*
+*/css
 _design/
 build
 bower_components
