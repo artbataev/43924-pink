@@ -44,16 +44,32 @@
     @media(min-width: @md-screen) {
       margin-top: 10px;
     }
-    &:hover {
-    }
-    &:active {
-      opacity: 0.3;
-    }
-    img {
+    a {
       display: inline-block;
       vertical-align: top;
       width: 147px;
       height: 41px;
+      font-size: 0;
+      background-image: url("../img/logotype-blue-tablet.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      @media(min-width: @lg-screen) {
+        background-image: url("../img/logotype-blue-desktop.svg");
+      }
+      &:hover {
+        background-image: url("../img/logotype-blue-tablet-hover.svg");
+        @media(min-width: @lg-screen) {
+          background-image: url("../img/logotype-blue-desktop-hover.svg");
+        }
+      }
+      &:active {
+        opacity: 0.3;
+        background-image: url("../img/logotype-blue-tablet.svg");
+        @media(min-width: @lg-screen) {
+          background-image: url("../img/logotype-blue-desktop.svg");
+        }
+      }
     }
   }
   &__social {

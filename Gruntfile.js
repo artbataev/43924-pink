@@ -60,7 +60,7 @@ module.exports = function(grunt) {
           'build/css/style.css': ['source/less/style.less']
         }
       },
-      light: {
+      lite: {
         files: {
           'source/css/style.css': ['source/less/style.less']
         }
@@ -70,6 +70,9 @@ module.exports = function(grunt) {
     autoprefixer: {
       options: {
         browsers: ['last 2 versions', 'ie 10']
+      },
+      lite: {
+        src: "source/css/style.css"
       },
       style: {
         src: "build/css/style.css"
@@ -159,7 +162,7 @@ module.exports = function(grunt) {
       less: {
         // We watch and compile less files as normal but don't live reload here
         files: ['source/less/*', 'source/less/*/*'],
-        tasks: ['less:light'],
+        tasks: ['less:lite', 'autoprefixer:lite'],
       },
       livereload: {
         // Here we watch the files the less task will compile to
@@ -188,7 +191,7 @@ module.exports = function(grunt) {
     "clean", 
     "copy",
     "less:style",
-    "autoprefixer",
+    "autoprefixer:style",
     // "cmq",
     "cssmin",
     "imagemin"

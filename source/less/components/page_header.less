@@ -39,17 +39,40 @@
     float: left;
     position: relative;
     z-index: 100;
+    width: 74px;
+    height: 25px;
+    margin-top: 22px;
+    font-size: 0;
+    background-image: url("../img/logotype-white-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: fill;
+    @media(min-width: @md-screen) {
+      width: 145px;
+      height: 40px;
+      margin-top: 25px;
+      background-image: url("../img/logotype-white-tablet.svg");
+    }
+    @media(min-width: @lg-screen) {
+      background-image: url("../img/logotype-white-desktop.svg");
+    }
+    &:hover {
+      background-image: url("../img/logotype-white-mobile-hover.svg");
+      @media(min-width: @md-screen) {
+        background-image: url("../img/logotype-white-tablet-hover.svg");
+      }
+      @media(min-width: @lg-screen) {
+        background-image: url("../img/logotype-white-desktop-hover.svg");
+      }
+    }
     &:active {
       opacity: 0.3;
-    }
-    img {
-      width: 74px;
-      height: 25px;
-      padding-top: 22px;
+      background-image: url("../img/logotype-white-mobile.svg");
       @media(min-width: @md-screen) {
-        width: 145px;
-        height: 40px;
-        padding-top: 25px;
+        background-image: url("../img/logotype-white-tablet.svg");
+      }
+      @media(min-width: @lg-screen) {
+        background-image: url("../img/logotype-white-desktop.svg");
       }
     }
   }

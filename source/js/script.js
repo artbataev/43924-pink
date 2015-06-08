@@ -103,10 +103,6 @@
 (function() {
   var incrementElements = document.querySelectorAll(".field-increment");
   if(incrementElements.length > 0) {
-    for (var i = 0; i < incrementElements.length; i++) {
-      initIncrementField(incrementElements[i]);
-    }
-
     var inputCompanions = document.querySelector(".js-input-companions");
     var area = document.querySelector(".js-companion-template").parentNode;
     
@@ -233,6 +229,10 @@
         if(key==38) { changeNumber(input, true); } // стрелка вверх
         if(key==40) { changeNumber(input, false); } // стрелка вниз
       });
+    }
+    
+    for (var i = 0; i < incrementElements.length; i++) {
+      initIncrementField(incrementElements[i]);
     }
   }
 })();
