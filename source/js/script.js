@@ -102,7 +102,7 @@
 // можно вписать "2", можно вписать "2 чел", можно вписать "2 клевых чела" - работать будет
 (function() {
   var incrementElements = document.querySelectorAll(".field-increment");
-  if(incrementElements){
+  if(incrementElements.length > 0) {
     for (var i = 0; i < incrementElements.length; i++) {
       initIncrementField(incrementElements[i]);
     }

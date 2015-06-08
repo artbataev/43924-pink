@@ -187,7 +187,7 @@ module.exports = function(grunt) {
   grunt.registerTask("build", [
     "clean", 
     "copy",
-    "less",
+    "less:style",
     "autoprefixer",
     "cmq",
     "cssmin",
