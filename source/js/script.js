@@ -10,6 +10,8 @@
 
     form.addEventListener("submit", function(event) {
       event.preventDefault();
+      var submitBtn = form.querySelector(".btn--submit");
+      submitBtn.classList.add("btn--loading");
 
       var data = new FormData(form);
       allFiles.forEach(function(element) {
@@ -17,9 +19,13 @@
       });
       // console.log(data);
       
-      request(data, function(response) {
-        console.log(response);
-      });
+      setTimeout(function() {
+        request(data, function(response) {
+          console.log(response);
+        });
+        submitBtn.classList.remove("btn--loading");
+      }, 3000);
+      // через setTimeout, чтобы анимация была видна!
 
     });
 
@@ -132,6 +138,7 @@
       var allInputs = companion.querySelectorAll("input");
       for(var i = 0; i < allInputs.length; i++) {
         allInputs[i].name += "-" + countAllCompaionsForInputName;
+        allInputs[i].value = "";
       }
       area.appendChild(companion);
       companion.querySelector(".js-companion-delete").addEventListener("click", function(event) {

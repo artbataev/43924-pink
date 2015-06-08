@@ -98,4 +98,16 @@
       width: 300px;
     }
   }
+  &--loading {
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animetion-timing-function: linear;
+  }
+}
+
+@keyframes loading {
+  0% { color: fade(@main-light-color, 30%); }
+  100% { color: fade(@main-light-color, 70%); }
 }
