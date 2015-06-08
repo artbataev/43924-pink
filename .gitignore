@@ -7,3 +7,5 @@ prepros.cfg
 *.map
 css/*
 _design/
+build
+bower_components
