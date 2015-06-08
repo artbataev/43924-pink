@@ -189,7 +189,7 @@ module.exports = function(grunt) {
     "copy",
     "less:style",
     "autoprefixer",
-    "cmq",
+    // "cmq",
     "cssmin",
     "imagemin"
   ]);
