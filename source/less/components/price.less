@@ -3,7 +3,7 @@
   overflow: hidden;
   padding-top: 93px;
   padding-bottom: 5px;
-  line-height: 30px;
+  line-height: @line-height-md;
   background: @minor-light-color;
   @media(min-width: @md-screen) {
     padding-top: 63px;
@@ -83,7 +83,7 @@
         top: 0;
         left: 0;
         padding: 0 45px;
-        font-size: 14px;
+        font-size: @font-size-sm;
         font-weight: 600;
         content: "Хит";
         transform: rotate(-45deg) translateX(-35px) translateY(-19px);
@@ -100,28 +100,28 @@
   }
   &__name {
     margin: 0;
-    font-size: 18px;
+    font-size: @font-size-md;
     font-weight: bold;
     @media(min-width: @md-screen) {
-      font-size: 16px;
+      font-size: @font-size-md - 2;
     }
     @media(min-width: @lg-screen) {
-      font-size: 18px;
+      font-size: @font-size-md;
     }
   }
   &__price {
-    font-size: 24px;
+    font-size: @font-size-md + 6;
     font-weight: 300;
     @media(min-width: @md-screen) {
-      font-size: 18px;
+      font-size: @font-size-md;
     }
     @media(min-width: @lg-screen) {
-      font-size: 24px;
+      font-size: @font-size-md + 6;
     }
   }
   &__feature {
     padding: 14px 22px;
-    font-size: 14px;
+    font-size: @font-size-sm;
     text-transform: uppercase;
     color: @main-dark-color;
     border-bottom: 2px solid @main-divider-color;
@@ -136,7 +136,7 @@
     }
     @media(min-width: @lg-screen) {
       padding: 14px 20px;
-      font-size: 18px;
+      font-size: @font-size-md;
     }
     &--start {
       display: none;

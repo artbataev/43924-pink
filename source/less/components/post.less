@@ -37,10 +37,10 @@
     margin: 0;
     padding: 0;
     padding-bottom: 5px;
-    font-size: 18px;
+    font-size: @font-size-md;
     font-weight: bold;
     @media(min-width: @md-screen) {
-      font-size: 27px;
+      font-size: @font-size-md + 9;
     }
     a {
       text-decoration: none;
@@ -53,12 +53,12 @@
   &__time {
     display: block;
     margin-bottom: 13px;
-    font-size: 12px;
+    font-size: @font-size-sm - 2;
     text-transform: uppercase;
     color: @pink-color;
     @media(min-width: @md-screen) {
       margin-bottom: 20px;
-      font-size: 14px;
+      font-size: @font-size-sm;
     }
   }
   &__lead {

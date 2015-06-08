@@ -1,5 +1,5 @@
 .contest-form {
-  line-height: 30px;
+  line-height: @line-height-md;
   &__block {
     padding-top: 40px;
     padding-bottom: 5px;
@@ -134,7 +134,7 @@
     @media (min-width:@md-screen) {
       padding-right: 20px;
       padding-left: 20px;
-      font-size: 14px;
+      font-size: @font-size-sm;
     }
   }
 }
@@ -148,7 +148,7 @@
     text-transform: uppercase;
     color: @pink-color;
     @media (min-width: @md-screen) {
-      font-size: 14px;
+      font-size: @font-size-sm;
     }
     &--after {
       text-align: center;
@@ -166,8 +166,8 @@
     height: 63px;
     margin-bottom: 15px;
     padding: 15px 20px 14px;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: @font-size-md;
+    line-height: @line-height-md;
     border: 2px solid @main-divider-color;
     border-radius: 2px;
 
@@ -273,7 +273,7 @@
     width: 100%;
     height: 63px;
     padding: 15px 70px 14px;
-    font-size: 18px;
+    font-size: @font-size-md;
     line-height: inherit;
     border: 2px solid @main-divider-color;
     border-radius: 2px;
@@ -304,7 +304,7 @@
     text-align: left;
     position: relative;
     padding-left: 60px;
-    font-size: 18px;
+    font-size: @font-size-md;
     &:before {
       display: block;
       position: absolute;
@@ -351,7 +351,7 @@
     text-align: left;
     position: relative;
     padding-left: 60px;
-    font-size: 18px;
+    font-size: @font-size-md;
     @media(min-width: @lg-screen) {
     }
     &:before {
@@ -436,7 +436,7 @@
       box-sizing: border-box;
       width: 64px;
       height: 63px;
-      font-size: 18px;
+      font-size: @font-size-md;
       line-height: 62px;
       content: counter(num-companions);
       counter-increment: num-companions;
@@ -453,7 +453,7 @@
       position: absolute;
       top: 50px;
       right: 0;
-      font-size: 14px;
+      font-size: @font-size-sm;
       text-decoration: none;
       text-transform: uppercase;
       color: @main-dark-color;
@@ -525,9 +525,11 @@
   }
   &__img-title {
     padding-top: 7px;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: @font-size-sm - 2;
+    line-height: 1.5em;
     text-transform: uppercase;
+    overflow: hidden;
+    word-break: break-all;
   }
   &__delete {
     position: absolute;

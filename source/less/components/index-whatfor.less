@@ -1,16 +1,16 @@
 .index-whatfor {
   position: relative;
   padding-top: 47px;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: @font-size-sm;
+  line-height: @line-height-sm - 3;
   background: @minor-light-color;
   @media(min-width: @md-screen) {
     padding-top: 20px;
   }
   @media(min-width: @lg-screen) {
     padding-top: 200px;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: @font-size-md;
+    line-height: @line-height-md;
   }
   &__wrapper {
     text-align: center;
@@ -29,17 +29,17 @@
   &__heading {
     margin: 0;
     margin-bottom: 12px;
-    font-size: 18px;
+    font-size: @font-size-md;
     font-weight: bold;
-    line-height: 24px;
+    line-height: @line-height-sm - 3;
     @media(min-width: @md-screen) {
       margin-bottom: 15px;
     }
     @media(min-width: @lg-screen) {
       margin-bottom: 25px;
       padding-top: 55px;
-      font-size: 30px;
-      line-height: 30px;
+      font-size: @font-size-md + 12;
+      line-height: @line-height-md;
     }
   }
   &__item {

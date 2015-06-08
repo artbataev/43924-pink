@@ -23,46 +23,46 @@
   &__header {
     margin: 0;
     padding-bottom: 15px;
-    font-size: 18px;
+    font-size: @font-size-md;
     font-weight: bold;
-    line-height: 30px;
+    line-height: @line-height-md;
     @media(min-width: @md-screen) {
       order: 2;
     }
   }
   &__author {
     display: block;
-    font-size: 18px;
+    font-size: @font-size-md;
     font-weight: bold;
     font-style: normal;
     color: black;
     @media(min-width: @md-screen) {
       padding-bottom: 5px;
-      font-size: 20px;
+      font-size: @font-size-md + 2;
     }
     @media(min-width: @lg-screen) {
-      font-size: 24px;
+      font-size: @font-size-md + 6;
     }
   }
   &__author-info {
     display: none;
     @media(min-width: @md-screen) {
       display: block;
-      font-size: 14px;
+      font-size: @font-size-sm;
       font-weight: normal;
       font-style: normal;
     }
     @media(min-width: @lg-screen) {
-      font-size: 18px;
+      font-size: @font-size-md;
     }
   }
   &__text {
     margin: 0;
-    font-size: 14px;
-    line-height: 30px;
+    font-size: @font-size-sm;
+    line-height: @line-height-md;
     @media(min-width: @md-screen) {
       margin-bottom: 30px;
-      font-size: 18px;
+      font-size: @font-size-md;
 
       order: 1;
     }

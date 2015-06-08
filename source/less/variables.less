@@ -20,10 +20,10 @@
 @wrapper-padding: 20px;
 
 @font-size-sm: 14px;
-@line-height-sm: 27px; 
+@line-height-sm: @font-size-sm * 2 - 1;  // 27px
 
-@font-size-md: 18px;
-@line-height-md: 30px;
+@font-size-md: @font-size-sm + 4; // 18px 
+@line-height-md: @line-height-sm + 3; // 30px
 
 @z-front: 999;
 @z-middle: 100;

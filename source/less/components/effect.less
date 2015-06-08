@@ -7,7 +7,7 @@
   }
   @media(min-width: @lg-screen) {
     position: relative;
-    z-index: -1;
+    z-index: @z-back;
     padding-top: 35px;
     padding-bottom: 60px;
     background: @minor-light-color;
@@ -41,12 +41,10 @@
       font-size: 120px;
       line-height: 205px;
     }
-    // z-index: 100;
     &:after {
       display: block;
       position: absolute;
-      // z-index: 10;
-      z-index: -1;
+      z-index: @z-back;
       top: -75px;
       left: -35px;
       width: 262px;
@@ -65,11 +63,11 @@
   }
   &__description {
     margin-left: 310px;
-    font-size: 14px;
+    font-size: @font-size-sm;
     line-height: 24px;
     @media(min-width: @lg-screen) {
       margin-left: 370px;
-      font-size: 18px;
+      font-size: @font-size-md;
       line-height: 30px;
     }
     span {
@@ -82,7 +80,7 @@
   &__title {
     padding-top: 40px;
     padding-bottom: 10px;
-    font-size: 30px;
+    font-size: @font-size-md + 12;
     font-weight: bold;
     line-height: 36px;
     @media(min-width: @lg-screen) {

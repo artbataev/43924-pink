@@ -33,19 +33,19 @@
   }
   &__heading {
     margin-bottom: 33px;
-    font-size: 24px;
+    font-size: @font-size-md + 6;
     font-weight: 300;
-    line-height: 28px;
+    line-height: @line-height-sm + 1;
     @media(min-width: @md-screen) {
       margin-bottom: 40px;
       padding-right: 100px;
       padding-left: 100px;
-      font-size: 40px;
+      font-size: @font-size-md * 2 + 4;
       line-height: 1.2em;
     }
     @media(min-width: @lg-screen) {
       margin-bottom: 55px;
-      font-size: 50px;
+      font-size: @font-size-md * 2 + 12;
     }
   }
   &__contacts {
@@ -90,14 +90,14 @@
     }
   }
   &__contact-heading {
-    font-size: 18px;
+    font-size: @font-size-md;
     font-weight: bold;
     @media(min-width: @lg-screen) {
       padding-bottom: 17px;
     }
   }
   &__contact-link {
-    font-size: 24px;
+    font-size: @font-size-md + 6;
     font-weight: 300;
     text-decoration: none;
     color: @pink-color;

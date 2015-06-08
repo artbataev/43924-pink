@@ -38,7 +38,7 @@
   &__logo-link {
     float: left;
     position: relative;
-    z-index: 100;
+    z-index: @z-middle;
     width: 74px;
     height: 25px;
     margin-top: 22px;
@@ -109,11 +109,11 @@
   &__heading {
     text-align: center;
     margin: 0;
-    font-size: 24px;
+    font-size: @font-size-md + 6;
     font-weight: 300;
     line-height: 1.2em;
     @media(min-width: @md-screen) {
-      font-size: 50px;
+      font-size: @font-size-md + 32;
     }
     &--index {
       position: relative;
@@ -128,11 +128,11 @@
         padding-top: 92px;
         padding-bottom: 2px;
         padding-left: 30px;
-        font-size: 40px;
+        font-size: @font-size-md + 22;
       }
       @media(min-width: @lg-screen) {
         padding-top: 110px;
-        font-size: 50px;
+        font-size: @font-size-md + 32;
       }
     }
   }
@@ -182,9 +182,9 @@
       display: block;
       text-align: center;
       padding: 25px;
-      font-size: 18px;
+      font-size: @font-size-md;
       font-weight: bold;
-      line-height: 32px;
+      line-height: @line-height-md + 2;
       text-decoration: none;
       text-transform: uppercase;
       color: @main-light-color;
@@ -200,7 +200,7 @@
         padding: 0;
         padding-bottom: 10px;
         font-weight: normal;
-        line-height: 18px;
+        line-height: @font-size-md;
         text-transform: none;
         &:hover {
           color: @main-light-color;
@@ -305,7 +305,7 @@
   }
   &__wrapper {
     position: relative;
-    z-index: 100;
+    z-index: @z-middle;
     width: @sm-container;
     margin: 0 auto;
     padding-top: 27px;
@@ -324,7 +324,7 @@
     &:before {
       display: block;
       position: absolute;
-      z-index: -1;
+      z-index: @z-back;
       top: -285px;
       left: -20px;
       width: 257px;
@@ -363,13 +363,13 @@
   &__text {
     padding-right: 20px;
     padding-left: 20px;
-    font-size: 14px;
+    font-size: @font-size-sm;
     font-weight: 300;
-    line-height: 24px;
+    line-height: @line-height-sm - 3;
     @media(min-width: @md-screen) {
       padding-right: 0;
       padding-left: 0;
-      font-size: 18px;
+      font-size: @font-size-md;
     }
   }
   &__buttons {
