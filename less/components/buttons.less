@@ -45,7 +45,7 @@
       background: @main-light-color;
     }
     &:active {
-      color: rgba(210, 40, 86, 0.3);
+      color: fade(@pink-color, 30%);
       background: @main-light-color;
     }
   }
@@ -73,7 +73,7 @@
         border: 2px solid saturate(darken(@pink-color, 10%), 10%);
       }
       &:active {
-        color: rgba(255, 255, 255, 0.3);
+        color: fade(@main-light-color, 30%);
         background: @pink-color;
       }
     }
@@ -89,7 +89,7 @@
       background: #1c9b5e;
     }
     &:active {
-      color: rgba(255, 255, 255, 0.3);
+      color: fade(@main-light-color, 30%);
     }
     &:disabled {
       background: @main-divider-color;

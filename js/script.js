@@ -107,50 +107,132 @@
       initIncrementField(incrementElements[i]);
     }
 
+    var inputCompanions = document.querySelector(".js-input-companions");
+    var area = document.querySelector(".js-companion-template").parentNode;
+    
+    inputCompanions.addEventListener("change", function(event) {
+      var initText = inputCompanions.value;
+      var needNumber = parseInt(initText, 10);
+      console.log(needNumber);
+
+      var curItems = area.querySelectorAll("li").length - 1;
+      console.log(curItems);
+      while(curItems > needNumber) {
+        curItems--;
+        removeCompanion();
+      }
+      while(curItems < needNumber) {
+        curItems++;
+        addCompanion();
+      }
+    });
+
+    var countAllCompaionsForInputName = 2;
+
+    function addCompanion() {
+      var companion = document.querySelector(".js-companion-template").cloneNode(true);
+      companion.classList.remove("js-companion-template");
+      countAllCompaionsForInputName++;
+      var allInputs = companion.querySelectorAll("input");
+      for(var i = 0; i < allInputs.length; i++) {
+        allInputs[i].name += "-" + countAllCompaionsForInputName;
+      }
+      area.appendChild(companion);
+      companion.querySelector(".js-companion-delete").addEventListener("click", function(event) {
+        event.preventDefault();
+        area.removeChild(this.parentNode);
+        changeNumberFlat(inputCompanions, false);
+      });
+    }
+
+    function removeCompanion() {
+      var count = area.querySelectorAll("li").length;
+      if(count > 1) {
+        area.removeChild(area.querySelectorAll("li")[count - 1]);
+      }
+    }
+
+    var deleteCompanionsLinks = document.querySelectorAll(".js-companion-delete");
+    for (var i = 0; i < deleteCompanionsLinks.length; i++) {
+      var link = deleteCompanionsLinks[i];
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        this.parentNode.parentNode.removeChild(this.parentNode);
+        changeNumberFlat(inputCompanions, false);
+      });
+    }
+
+    function changeNumberFlat(input, operation) {
+      var initText = input.value;
+      var initNumber = parseInt(initText, 10);
+      var textPosition = 0;
+
+      while(textPosition < initText.length && !isNaN(parseFloat(initText[textPosition]))) {
+        textPosition++;
+      }
+      if(isNaN(initNumber) || initNumber < 0) {
+        input.value = 0;
+      } 
+      else {
+        if(operation) {
+          initNumber++;
+        }
+        else {
+          initNumber = Math.max(0, initNumber - 1);
+        }
+        input.value =  initNumber + initText.substr(textPosition);
+      }
+    }
+
+    function changeNumber(input, operation) {
+      var initText = input.value;
+      var initNumber = parseInt(initText, 10);
+      var textPosition = 0;
+
+      while(textPosition < initText.length && !isNaN(parseFloat(initText[textPosition]))) {
+        textPosition++;
+      }
+      if(isNaN(initNumber) || initNumber < 0) {
+        input.value = 0;
+      } 
+      else {
+        if(operation) {
+          initNumber++;
+          if (input == inputCompanions) {
+            addCompanion();
+          }
+        }
+        else {
+          initNumber = Math.max(0, initNumber - 1);
+          if (input == inputCompanions) {
+            removeCompanion();
+          }
+        }
+        input.value =  initNumber + initText.substr(textPosition);
+      }
+    }
+
     function initIncrementField(parentBlock) {
       var input = parentBlock.querySelector("input");
       var minus = parentBlock.querySelector(".field-increment__minus");
-      var plus = parentBlock.querySelector(".field-increment__plus");
+      var plus = parentBlock.querySelector(".field-increment__plus");  
 
       if(minus) {
         minus.addEventListener("click", function(){
-          changeNumber(false);
+          changeNumber(input, false);
         });
       }
       if(plus) {
         plus.addEventListener("click", function(){
-          changeNumber(true);
+          changeNumber(input, true);
         });
       }
 
       input.addEventListener("keydown", function(event) {
         var key = event.keyCode;
-        if(key==38) { changeNumber(true); } // стрелка вверх
-        if(key==40) { changeNumber(false); } // стрелка вниз
+        if(key==38) { changeNumber(input, true); } // стрелка вверх
+        if(key==40) { changeNumber(input, false); } // стрелка вниз
       });
-    
-      function changeNumber(operation) {
-        var initText = input.value;
-        var initNumber = parseInt(initText, 10);
-        var textPosition = 0;
-
-        while(textPosition < initText.length && !isNaN(parseFloat(initText[textPosition]))) {
-          textPosition++;
-        }
-        if(isNaN(initNumber) || initNumber < 0) {
-          input.value = 0;
-        } 
-        else {
-          if(operation) {
-            initNumber++;
-          }
-          else {
-            initNumber = Math.max(0, initNumber - 1);
-          }
-          input.value =  initNumber + initText.substr(textPosition);
-        }
-      }
-
     }
   }
 })();

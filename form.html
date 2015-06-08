@@ -69,7 +69,7 @@
     <div class="contest-form__block  contest-form__block--main">
       <div class="contest-form__lead">
         Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту! 
-        <span class="hidden-sm">Пожалуйста, заполните форму ниже:</span>
+        <span class="hidden-inline-sm">Пожалуйста, заполните форму ниже:</span>
       </div>
 
       <fieldset class="form-fieldset  form-fieldset--no-legend">
@@ -155,29 +155,48 @@
         <legend class="form-fieldset__title">Количество попутчиков *</legend>
           <div class="field-increment  field-increment--companions">
             <a class="field-increment__minus">-</a>
-            <input class="field-increment__input  field-increment__input--companions" type="text" placeholder="2 чел" name="cnt-persons" value="2 чел">
+            <input class="field-increment__input  field-increment__input--companions  js-input-companions" type="text" placeholder="2 чел" name="cnt-persons" value="2 чел">
             <a class="field-increment__plus">+</a>
           </div>
 
           <ol class="form-companions-list">
+            <li class="form-companions-list__item  js-companion-template">
+              <div class="form-companions-list__item-info">
+                <div class="row-inline-lg">
+                  <div class="col-inline-lg">
+                    <label class="field-block">
+                      <span class="field-block__name">Имя: *</span>
+                      <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="companion-name" required>
+                    </label>
+                  </div>
+                  <div class="col-inline-lg">
+                    <label class="field-block">
+                      <span class="field-block__name">Прозвище:</span>
+                      <input class="field-block__input" type="text" placeholder="Ну как же без этого!" name="companion-nickname" required>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="form-companions-list__delete  js-companion-delete">Удалить</a>
+            </li>
             <li class="form-companions-list__item">
               <div class="form-companions-list__item-info">
                 <div class="row-inline-lg">
                   <div class="col-inline-lg">
                     <label class="field-block">
                       <span class="field-block__name">Имя: *</span>
-                      <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="companion-1-name" required>
+                      <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="companion-name-1" required>
                     </label>
                   </div>
                   <div class="col-inline-lg">
                     <label class="field-block">
                       <span class="field-block__name">Прозвище:</span>
-                      <input class="field-block__input" type="text" placeholder="Ну как же без этого!" name="companion-1-nickname" required>
+                      <input class="field-block__input" type="text" placeholder="Ну как же без этого!" name="companion-nickname-1" required>
                     </label>
                   </div>
                 </div>
               </div>
-              <a href="#" class="form-companions-list__delete">Удалить</a>
+              <a href="#" class="form-companions-list__delete  js-companion-delete">Удалить</a>
             </li>
             
             <li class="form-companions-list__item">
@@ -186,18 +205,18 @@
                   <div class="col-inline-lg">
                     <label class="field-block">
                       <span class="field-block__name">Имя: *</span>
-                      <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="companion-2-name" required>
+                      <input class="field-block__input" type="text" placeholder="Введите ваше имя" name="companion-name-2" required>
                     </label>
                   </div>
                   <div class="col-inline-lg">
                     <label class="field-block">
                       <span class="field-block__name">Прозвище:</span>
-                      <input class="field-block__input" type="text" placeholder="Ну как же без этого!" name="companion-2-nickname" required>
+                      <input class="field-block__input" type="text" placeholder="Ну как же без этого!" name="companion-nickname-2" required>
                     </label>
                   </div>
                 </div>
               </div>
-              <a href="#" class="form-companions-list__delete">Удалить</a>
+              <a href="#" class="form-companions-list__delete  js-companion-delete">Удалить</a>
             </li> 
           </ol>
       </fieldset>
@@ -210,13 +229,13 @@
           <div class="col-inline-lg  col-inline-lg--fset">
             <label class="field-checkbox">
               <input class="field-checkbox__input" type="checkbox" name="achievements-selfi" checked>
-              <span class="field-checkbox__name">Сделал селфи с акулой</span>
+              <span class="field-checkbox__name">Сделал селфи с&nbsp;акулой</span>
             </label>
           </div>
           <div class="col-inline-lg  col-inline-lg--fset">
             <label class="field-checkbox">
               <input class="field-checkbox__input" type="checkbox" name="achievements-suntan" checked>
-              <span class="field-checkbox__name">Обгорел на пляже</span>
+              <span class="field-checkbox__name">Обгорел на&nbsp;пляже</span>
             </label>
           </div>
           <div class="col-inline-lg  col-inline-lg--fset">
@@ -327,7 +346,7 @@
       <div class="contest-form__ending">
         <input type="submit" value="Отправить форму" class="contest-form__ending-btn  btn  btn--submit">
         <div class="contest-form__ending__text  form-clarification">
-        <span class="form-clarification__important">*</span> &mdash; обязательные <span class="hidden-md">для заполнения</span> поля
+        <span class="form-clarification__important">*</span> &mdash; обязательные <span class="hidden-inline-md">для заполнения</span> поля
         </div>
       </div>
     </div>

@@ -18,9 +18,13 @@ body {
 }
 
 
-
 a {
+  text-decoration: underline;
   color: @pink-color;
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
 }
 
 p {
@@ -28,16 +32,3 @@ p {
   margin-bottom: 20px;
 }
 
-.hidden-sm {
-  display: none;
-  @media (min-width:@md-screen) {
-    display: initial;
-  }
-}
-
-.hidden-md {
-  display: none;
-  @media(min-width: @lg-screen) {
-    display: initial;
-  }
-}

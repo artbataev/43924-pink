@@ -23,6 +23,13 @@
     color: @main-dark-color;
     border: 2px solid @main-divider-color;
     border-radius: 1px;
+    &:hover {
+      border: 2px solid @main-dark-color;
+    }
+    &:active {
+      color: @main-light-color;
+      background: @main-dark-color;
+    }
     &--prev {
       float: left;
       @media(min-width: @md-screen) {

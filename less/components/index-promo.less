@@ -1,18 +1,20 @@
 .index-promo {
   padding-top: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 65px;
   font-size: 24px;
   font-weight: 300;
   line-height: 29px;
+  position: relative;
+  overflow: hidden;
   @media(min-width: @md-screen) {
     padding-top: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 115px;
     font-size: 40px;
     line-height: 1.2em;
   }
   @media(min-width: @lg-screen) {
     padding-top: 66px;
-    padding-bottom: 170px;
+    padding-bottom: 205px;
     font-size: 50px;
   }
   &__wrapper {
@@ -25,6 +27,21 @@
     margin-bottom: 30px;
     &:last-of-type {
       margin-bottom: 0;
+    }
+  }
+  &:after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    border-top: 35px solid transparent;
+    border-right: 100vw solid @minor-light-color;
+    @media(min-width: @md-screen) {
+      border-top: 55px solid transparent;
+    }
+    @media(min-width: @lg-screen) {
+      border-top: 100px solid transparent;
     }
   }
 }
